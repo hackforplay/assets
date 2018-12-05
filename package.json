@@ -1,0 +1,23 @@
+{
+  "name": "@hackforplay/assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackforplay/assets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackforplay/assets/issues"
+  },
+  "homepage": "https://github.com/hackforplay/assets#readme",
+  "devDependencies": {
+    "ava": "1.0.0-rc.2",
+    "prettier": "^1.15.3"
+  }
+}
