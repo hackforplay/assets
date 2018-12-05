@@ -19,5 +19,8 @@
   "devDependencies": {
     "ava": "1.0.0-rc.2",
     "prettier": "^1.15.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
   }
 }
