@@ -7,3 +7,11 @@ exports.ゲームがはじまったとき = {
 	},
 	defaultActiveCategory: categories.キャラクター
 };
+
+exports.たおされたとき = {
+	name: {
+		ja: 'たおされたとき',
+		en: 'killed'
+	},
+	defaultActiveCategory: categories.キャラクター
+};
