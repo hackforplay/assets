@@ -45,46 +45,56 @@ test('Check configs', t => {
 		const config = require(path.relative(__dirname, abs)); // config is /index.js
 		const configs = Array.isArray(config) ? config : [config];
 		// Check configs
-		const m = name => `${domain}の ${name} を指定してください`;
 		for (const config of configs) {
-			t.is(typeof config.name.ja, 'string', m`name.ja`);
-			t.is(typeof config.name.en, 'string', m`name.en`);
-			if (config.scopes !== null) {
-				for (const scope of config.scopes) {
-					t.truthy(
-						includes(_scopes, scope),
-						m`scopes にはスコープの配列`
-					);
-				}
-			}
-			if (config.insert !== null) {
-				t.is(typeof config.insert, 'string', m`insert には文字列`);
-				const filePath = path.join(abs, config.insert);
-				const isExist = fs.existsSync(filePath);
+			assertAsset(config, domain, abs);
+		}
+	}
+
+	// assert recursive
+	function assertAsset(config, domain, abs) {
+		const m = name => `${domain}の ${name} を指定してください`;
+		t.is(typeof config.name.ja, 'string', m`name.ja`);
+		t.is(typeof config.name.en, 'string', m`name.en`);
+		if (config.scopes !== null) {
+			for (const scope of config.scopes) {
 				t.truthy(
-					isExist,
-					`${domain}に指定された insert のパス ${filePath} は存在しません`
+					includes(_scopes, scope),
+					m`scopes にはスコープの配列`
 				);
 			}
-			if (config.module !== null) {
-				t.is(typeof config.module, 'string', m`module には文字列`);
-				const filePath = path.join(abs, config.module);
-				const isExist = fs.existsSync(filePath);
-				t.truthy(
-					isExist,
-					`${domain}に指定された module のパス ${filePath} は存在しません`
-				);
-			}
-			t.truthy(includes(_categories, config.category), m`category`);
-			t.is(typeof config.icon, 'string', m`icon には文字列`);
-			const imagePath = path.join(abs, config.icon);
-			const isExist = fs.existsSync(imagePath);
+		}
+		if (config.insert !== null) {
+			t.is(typeof config.insert, 'string', m`insert には文字列`);
+			const filePath = path.join(abs, config.insert);
+			const isExist = fs.existsSync(filePath);
 			t.truthy(
 				isExist,
-				`${domain}に指定された画像パス ${imagePath} は存在しません`
+				`${domain}に指定された insert のパス ${filePath} は存在しません`
 			);
-			t.is(typeof config.production, 'boolean', m`production`);
-			t.is(config.plan, 'free', m`plan には 'free'`);
+		}
+		if (config.module !== null) {
+			t.is(typeof config.module, 'string', m`module には文字列`);
+			const filePath = path.join(abs, config.module);
+			const isExist = fs.existsSync(filePath);
+			t.truthy(
+				isExist,
+				`${domain}に指定された module のパス ${filePath} は存在しません`
+			);
+		}
+		t.truthy(includes(_categories, config.category), m`category`);
+		t.is(typeof config.icon, 'string', m`icon には文字列`);
+		const imagePath = path.join(abs, config.icon);
+		const isExist = fs.existsSync(imagePath);
+		t.truthy(
+			isExist,
+			`${domain}に指定された画像パス ${imagePath} は存在しません`
+		);
+		t.is(typeof config.production, 'boolean', m`production`);
+		t.is(config.plan, 'free', m`plan には 'free'`);
+		if (Array.isArray(config.children)) {
+			for (const child of config.children) {
+				assertAsset(child, domain, abs);
+			}
 		}
 	}
 });
