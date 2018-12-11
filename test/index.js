@@ -13,8 +13,7 @@ test('Check categories', t => {
 	for (const key of Object.keys(categories)) {
 		const config = categories[key];
 		const m = name => `${key}の ${name} を指定してください`;
-		t.is(typeof config.name.ja, 'string', m`name.ja`);
-		t.is(typeof config.name.en, 'string', m`name.en`);
+		t.is(typeof config.name, 'string', m`name`);
 		t.is(typeof config.icon, 'string', m`icon`);
 	}
 });
@@ -25,8 +24,7 @@ test('Check scopes', t => {
 	for (const key of Object.keys(scopes)) {
 		const config = scopes[key];
 		const m = name => `${key}の ${name} を指定してください`;
-		t.is(typeof config.name.ja, 'string', m`name.ja`);
-		t.is(typeof config.name.en, 'string', m`name.en`);
+		t.is(typeof config.name, 'string', m`name`);
 		t.truthy(
 			includes(_categories, config.defaultActiveCategory),
 			m`defaultActiveCategory`
@@ -53,10 +51,8 @@ test('Check configs', t => {
 	// assert recursive
 	function assertAsset(config, domain, abs) {
 		const m = name => `${domain}の ${name} を指定してください`;
-		t.is(typeof config.name.ja, 'string', m`name.ja`);
-		t.is(typeof config.name.en, 'string', m`name.en`);
-		t.is(typeof config.description.ja, 'string', m`description.ja`);
-		t.is(typeof config.description.en, 'string', m`description.en`);
+		t.is(typeof config.name, 'string', m`name`);
+		t.is(typeof config.description, 'string', m`description`);
 		if (config.scopes !== null) {
 			t.true(Array.isArray(config.scopes), m`scopes`);
 			for (const scope of config.scopes) {
