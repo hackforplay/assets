@@ -56,6 +56,7 @@ test('Check configs', t => {
 		t.is(typeof config.name.ja, 'string', m`name.ja`);
 		t.is(typeof config.name.en, 'string', m`name.en`);
 		if (config.scopes !== null) {
+			t.true(Array.isArray(config.scopes), m`scopes`);
 			for (const scope of config.scopes) {
 				t.truthy(
 					includes(_scopes, scope),
