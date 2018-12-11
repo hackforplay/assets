@@ -19,7 +19,7 @@ module.exports = {
 	},
 	insert: './dragon-red.ins.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 	module: './dragon-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './dragon.png', // アセットのアイコンへのパス
+	icon: './red_dragon.png', // アセットのアイコンへのパス
 	children: [
 		// 複数のアセットをまとめる. アセットの配列を指定する
 		{
@@ -30,7 +30,7 @@ module.exports = {
 			},
 			insert: './dragon-black.ins.js',
 			module: './dragon-black.js',
-			icon: './dragon.png'
+			icon: './black_dragon.png'
 		},
 		{
 			...base,
@@ -40,7 +40,7 @@ module.exports = {
 			},
 			insert: './dragon-blue.ins.js',
 			module: './dragon-blue.js',
-			icon: './dragon.png'
+			icon: './blue_dragon.png'
 		},
 		{
 			...base,
@@ -50,7 +50,7 @@ module.exports = {
 			},
 			insert: './dragon-green.ins.js',
 			module: './dragon-green.js',
-			icon: './dragon.png'
+			icon: './green_dragon.png'
 		},
 		{
 			...base,
@@ -60,7 +60,7 @@ module.exports = {
 			},
 			insert: './dragon-white.ins.js',
 			module: './dragon-white.js',
-			icon: './dragon.png'
+			icon: './white_dragon.png'
 		},
 		{
 			...base,
@@ -70,7 +70,7 @@ module.exports = {
 			},
 			insert: './dragon-yellow.ins.js',
 			module: './dragon-yellow.js',
-			icon: './dragon.png'
+			icon: './yellow_dragon.png'
 		}
 	]
 };

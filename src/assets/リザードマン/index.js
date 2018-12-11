@@ -19,7 +19,7 @@ module.exports = {
 	},
 	insert: './lizardman-green.ins.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 	module: './lizardman-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './lizardman.png', // アセットのアイコンへのパス
+	icon: './green_lizardman.png', // アセットのアイコンへのパス
 	children: [
 		// 複数のアセットをまとめる. アセットの配列を指定する
 		{
@@ -30,7 +30,7 @@ module.exports = {
 			},
 			insert: './lizardman-black.ins.js',
 			module: './lizardman-black.js',
-			icon: './lizardman.png'
+			icon: './black_lizardman.png'
 		},
 		{
 			...base,
@@ -40,7 +40,7 @@ module.exports = {
 			},
 			insert: './lizardman-blue.ins.js',
 			module: './lizardman-blue.js',
-			icon: './lizardman.png'
+			icon: './blue_lizardman.png'
 		},
 		{
 			...base,
@@ -50,7 +50,7 @@ module.exports = {
 			},
 			insert: './lizardman-red.ins.js',
 			module: './lizardman-red.js',
-			icon: './lizardman.png'
+			icon: './red_lizardman.png'
 		},
 		{
 			...base,
@@ -60,7 +60,7 @@ module.exports = {
 			},
 			insert: './lizardman-white.ins.js',
 			module: './lizardman-white.js',
-			icon: './lizardman.png'
+			icon: './white_lizardman.png'
 		},
 		{
 			...base,
@@ -70,7 +70,7 @@ module.exports = {
 			},
 			insert: './lizardman-yellow.ins.js',
 			module: './lizardman-yellow.js',
-			icon: './lizardman.png'
+			icon: './yellow_lizardman.png'
 		}
 	]
 };

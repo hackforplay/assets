@@ -19,7 +19,7 @@ module.exports = {
 	},
 	insert: './reaper-purple.ins.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 	module: './reaper-purple.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './reaper.png', // アセットのアイコンへのパス
+	icon: './purple_reaper.png', // アセットのアイコンへのパス
 	children: [
 		// 複数のアセットをまとめる. アセットの配列を指定する
 		{
@@ -30,7 +30,7 @@ module.exports = {
 			},
 			insert: './reaper-black.ins.js',
 			module: './reaper-black.js',
-			icon: './reaper.png'
+			icon: './black_reaper.png'
 		},
 		{
 			...base,
@@ -40,7 +40,7 @@ module.exports = {
 			},
 			insert: './reaper-green.ins.js',
 			module: './reaper-green.js',
-			icon: './reaper.png'
+			icon: './green_reaper.png'
 		},
 		{
 			...base,
@@ -50,7 +50,7 @@ module.exports = {
 			},
 			insert: './reaper-red.ins.js',
 			module: './reaper-red.js',
-			icon: './reaper.png'
+			icon: './red_reaper.png'
 		},
 		{
 			...base,
@@ -60,7 +60,7 @@ module.exports = {
 			},
 			insert: './reaper-white.ins.js',
 			module: './reaper-white.js',
-			icon: './reaper.png'
+			icon: './white_reaper.png'
 		},
 		{
 			...base,
@@ -70,7 +70,7 @@ module.exports = {
 			},
 			insert: './reaper-yellow.ins.js',
 			module: './reaper-yellow.js',
-			icon: './reaper.png'
+			icon: './yellow_reaper.png'
 		}
 	]
 };

@@ -20,7 +20,7 @@ module.exports = {
 	},
 	insert: './slime-blue.ins.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 	module: './slime-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './slime.png', // アセットのアイコンへのパス
+	icon: './blue_slime.png', // アセットのアイコンへのパス
 	children: [
 		// 複数のアセットをまとめる. アセットの配列を指定する
 		{
@@ -31,7 +31,7 @@ module.exports = {
 			},
 			insert: './slime-black.ins.js',
 			module: './slime-black.js',
-			icon: './slime.png'
+			icon: './black_slime.png'
 		},
 		{
 			...base,
@@ -41,7 +41,7 @@ module.exports = {
 			},
 			insert: './slime-green.ins.js',
 			module: './slime-green.js',
-			icon: './slime.png'
+			icon: './green_slime.png'
 		},
 		{
 			...base,
@@ -51,7 +51,7 @@ module.exports = {
 			},
 			insert: './slime-red.ins.js',
 			module: './slime-red.js',
-			icon: './slime.png'
+			icon: './red_slime.png'
 		},
 		{
 			...base,
@@ -61,7 +61,7 @@ module.exports = {
 			},
 			insert: './slime-white.ins.js',
 			module: './slime-white.js',
-			icon: './slime.png'
+			icon: './white_slime.png'
 		},
 		{
 			...base,
@@ -71,7 +71,7 @@ module.exports = {
 			},
 			insert: './slime-yellow.ins.js',
 			module: './slime-yellow.js',
-			icon: './slime.png'
+			icon: './yellow_slime.png'
 		}
 	]
 };
