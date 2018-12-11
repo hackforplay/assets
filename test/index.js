@@ -55,6 +55,8 @@ test('Check configs', t => {
 		const m = name => `${domain}の ${name} を指定してください`;
 		t.is(typeof config.name.ja, 'string', m`name.ja`);
 		t.is(typeof config.name.en, 'string', m`name.en`);
+		t.is(typeof config.description.ja, 'string', m`description.ja`);
+		t.is(typeof config.description.en, 'string', m`description.en`);
 		if (config.scopes !== null) {
 			t.true(Array.isArray(config.scopes), m`scopes`);
 			for (const scope of config.scopes) {

@@ -33,6 +33,7 @@ const converter = (domain: string) => (config: Config): Output => {
 
 	return {
 		name: config.name,
+		description: config.description,
 		scopes: _scopes,
 		category,
 		insertCode: readAsText(config.insert),
