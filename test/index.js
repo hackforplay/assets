@@ -6,7 +6,7 @@ import categories from '../src/preference/categories';
 import scopes from '../src/preference/scopes';
 
 const pathes = {
-	skins: path.resolve(__dirname, '../src/assets')
+	assets: path.resolve(__dirname, '../src/assets')
 };
 
 test('Check categories', t => {
@@ -38,8 +38,8 @@ test('Check configs', t => {
 	const _categories = values(categories);
 	const _scopes = values(scopes);
 
-	for (const domain of fs.readdirSync(pathes.skins)) {
-		const abs = path.join(pathes.skins, domain);
+	for (const domain of fs.readdirSync(pathes.assets)) {
+		const abs = path.join(pathes.assets, domain);
 		if (!fs.statSync(abs).isDirectory()) continue; // skin is directory
 		t.log('Testing: ' + domain);
 		const config = require(path.relative(__dirname, abs)); // config is /index.js
@@ -81,11 +81,11 @@ test('Check configs', t => {
 				`${domain}に指定された module のパス ${filePath} は存在しません`
 			);
 		}
-		t.truthy(includes(_categories, config.category), m`category`);
+		t.true(includes(_categories, config.category), m`category`);
 		t.is(typeof config.icon, 'string', m`icon には文字列`);
 		const imagePath = path.join(abs, config.icon);
 		const isExist = fs.existsSync(imagePath);
-		t.truthy(
+		t.true(
 			isExist,
 			`${domain}に指定された画像パス ${imagePath} は存在しません`
 		);

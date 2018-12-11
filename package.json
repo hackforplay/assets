@@ -1,26 +1,34 @@
 {
-  "name": "@hackforplay/assets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "ava"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hackforplay/assets.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hackforplay/assets/issues"
-  },
-  "homepage": "https://github.com/hackforplay/assets#readme",
-  "devDependencies": {
-    "ava": "1.0.0-rc.2",
-    "prettier": "^1.15.3"
-  },
-  "dependencies": {
-    "lodash": "^4.17.11"
-  }
+	"name": "@hackforplay/assets",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "ava",
+		"build": "tsc && node lib/index.js",
+		"cors": "gsutil cors set cors.json gs://hackforplay-assets"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hackforplay/assets.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hackforplay/assets/issues"
+	},
+	"homepage": "https://github.com/hackforplay/assets#readme",
+	"devDependencies": {
+		"@types/node": "^10.12.12",
+		"ava": "1.0.0-rc.2",
+		"prettier": "^1.15.3",
+		"ts-node": "^7.0.1",
+		"typescript": "^3.2.1"
+	},
+	"dependencies": {
+		"@types/lodash": "^4.14.119",
+		"@types/mkdirp": "^0.5.2",
+		"lodash": "^4.17.11",
+		"mkdirp": "^0.5.1"
+	}
 }

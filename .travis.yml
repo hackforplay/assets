@@ -1,0 +1,23 @@
+language: node_js
+dist: trusty
+sudo: false
+node_js:
+  - '8'
+cache:
+  directories:
+    - node_modules
+script:
+  - npm run test
+  - npm run build
+deploy:
+  provider: gcs
+  access_key_id: GOOGI7DAF2KATQLNX6L4YLTD
+  secret_access_key:
+    secure: Ye2ol1QGhaXIWWTvg5N4/6ZmrF183Dy8oCHzhmA4/7piJsUI0lszffAA5ZMn/AQrayD8nZYbhUQRWB+GePGp58uiVKGh/YwjO1VcBhehlxPu4bbFb2rOwkLBS1EgvAD72X7spacHxy6gWNATbI28SzHRwlsBx20ukHQO43rFYooOf8t+XjtiEj8jc+paA3Iv/OwDrSAxvD6KBzlANRacgomWa88ZB9L/9ORxvm+HKD89PEqwd6K5Ixy7skobfRosEurF0EH5QG4Bz1KwztCRjyqJbjopzHhH9aKXNOcFe9XUx4LsOdw70c2BKAcA7MyLoMn/GSgJkjq/q4NRxrPIxiJKSRRw4kxnJk0B24CuinRVVHFteOw+lchLtcjL4GfsTqz+qKWVTnkzY2baPaa6JvJ71nGjop6lR2zxB5eyC2SEJRJcooHcbkzdQFfO5jAlcHG6jsYRbFs0te/wBNNNMIRBt7y3l/vNeATvVvhUl+yWHbV1M/kzD+VmLSmTktgXXXJdOby0f4C7eW/GdADx7Gr/sya1F0FTfIHo9XW8+UUv5SoorSKm6FNhFjiZDSr8jV+n/UWiMZsH8xVSq6QDz7G7tqMk8x12W9OmrRJvyiu01rAnACGPxaLmoYyHVCVseVIcdpFYNTkqY1m2rf2RrhDwdQb5mGUGfG7aTYWb908=
+  bucket: hackforplay-assets
+  skip_cleanup: true
+  local-dir: dist
+  on:
+    repo: hackforplay/assets
+notifications:
+  slack: hackforplay:3ZXJmUzsYmjM86Ty3oXOvqpC
