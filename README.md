@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/hackforplay/assets.svg?token=MWypqXEVpyP6LnsePjMy&branch=master)](https://travis-ci.com/hackforplay/assets)
+
 # アセット
 
 ## Setup
