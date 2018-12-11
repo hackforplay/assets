@@ -2,19 +2,19 @@ language: node_js
 dist: trusty
 sudo: false
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run test
-  - npm run build
-  - pwd && ls
+- npm run test
+- npm run build
+- pwd && ls
 deploy:
   provider: gcs
   access_key_id: GOOGI7DAF2KATQLNX6L4YLTD
   secret_access_key:
-    secure: Ye2ol1QGhaXIWWTvg5N4/6ZmrF183Dy8oCHzhmA4/7piJsUI0lszffAA5ZMn/AQrayD8nZYbhUQRWB+GePGp58uiVKGh/YwjO1VcBhehlxPu4bbFb2rOwkLBS1EgvAD72X7spacHxy6gWNATbI28SzHRwlsBx20ukHQO43rFYooOf8t+XjtiEj8jc+paA3Iv/OwDrSAxvD6KBzlANRacgomWa88ZB9L/9ORxvm+HKD89PEqwd6K5Ixy7skobfRosEurF0EH5QG4Bz1KwztCRjyqJbjopzHhH9aKXNOcFe9XUx4LsOdw70c2BKAcA7MyLoMn/GSgJkjq/q4NRxrPIxiJKSRRw4kxnJk0B24CuinRVVHFteOw+lchLtcjL4GfsTqz+qKWVTnkzY2baPaa6JvJ71nGjop6lR2zxB5eyC2SEJRJcooHcbkzdQFfO5jAlcHG6jsYRbFs0te/wBNNNMIRBt7y3l/vNeATvVvhUl+yWHbV1M/kzD+VmLSmTktgXXXJdOby0f4C7eW/GdADx7Gr/sya1F0FTfIHo9XW8+UUv5SoorSKm6FNhFjiZDSr8jV+n/UWiMZsH8xVSq6QDz7G7tqMk8x12W9OmrRJvyiu01rAnACGPxaLmoYyHVCVseVIcdpFYNTkqY1m2rf2RrhDwdQb5mGUGfG7aTYWb908=
+    secure: L2txzEIZxiyeBXCZ/Vy+Q0nAtwfSJxkkJRAlmgm9ykAiCt5aeGHJBRfV5iNtvkqik1hihj1t7cU288mZBpH+hufOfx6ze7TYuIa/1i/IQ226uI2pZL8ORL73hGSgpRPSs4RSCspqTShAsuvLQpdRFV99tYb20NCzFqJgCgkaAXraFokNnsFheTr1BX/hb29qhOK86pL8GfxGtSfllr+2kpUEQqYa4COuLfluB0/U/XUetk7m0pXzB8YzvPcA9WZBjnaR9rdvU6B6bJRaJWVDbbokT9FLOvSApxuuFVmCvGxv+JrqIWGdzYSd3Tw4JbbTNolzNfeqZVvtuyAhVkNS8MT1IgAQAuWLG6NWE8jj7wl0arBSmh06wRfa2MP/Gs/sJL0OCOkHc7uXRmZ4u60m+dGNNRPBYevj4g2quy0nlhy3fEX5+DgrCquijG6Ksdy8rAZJ1G26Tc5cWZno8sl4LgPkaAit7j6llK3W626vdA2jbJpTSjhqXdv1euzt36KzxgiGeV/KfEovKSAGMiaLoFNNAxXaY3OjxcNkq1nOV2C8Drz+4CCEdDxDPabHBFbGIwlGvB55qxC/JDDTs4gRa1R5YEQQU7sCnPq/lb3I62c8fxqLyoXC7smlvukEwoLKbWxYlLTVZCYtw1Xoy7szYajwcpzO3H40Ma1g+3ZV4FM=
   bucket: hackforplay-assets
   skip_cleanup: true
   local-dir: dist
