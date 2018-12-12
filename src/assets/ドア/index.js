@@ -2,7 +2,7 @@ const sco = require('../../preference/scopes');
 const cat = require('../../preference/categories');
 
 const base = {
-	category: cat.アイテム, // カテゴリーの参照を配列で指定する
+	category: cat.せっち, // カテゴリーの参照を配列で指定する
 	description: 'このドアは 同じ色のかぎで ひらく', // 説明文（日本語）
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする

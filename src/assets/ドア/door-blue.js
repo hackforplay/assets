@@ -15,7 +15,7 @@ rule.メッセージされたとき(async function() {
 	/*+ メッセージされたとき */
 });
 
-rule.item = 'プレイヤー'; // ふむ キャラクター
+rule.item = ('▼ あいて', Rule.Anyone); // ふむ キャラクター
 rule.ふまれたとき(async function(item) {
 	item.warp(this); // ゲートのもう片方にワープ
 	/*+ ふまれたとき */
