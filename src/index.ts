@@ -31,7 +31,7 @@ const converter = (domain: string) => (config: Config): Output => {
 			? fs.readFileSync(path.join(abs, file), { encoding: 'utf8' })
 			: null;
 
-	return {
+	const item: Output = {
 		name: config.name,
 		description: config.description,
 		scopes: _scopes,
@@ -40,7 +40,19 @@ const converter = (domain: string) => (config: Config): Output => {
 		moduleCode: readAsText(config.module),
 		iconUrl: readAsDataURL(path.join(abs, config.icon)),
 		production: config.production,
-		plan: config.plan
+		plan: config.plan,
+		variations: null
+	};
+
+	if (!config.children) {
+		return item;
+	}
+
+	// バリエーションの分も計算して追加
+	const variations = [item].concat(config.children.map(converter(domain)));
+	return {
+		...item,
+		variations // variations を持つのは親オブジェクトだけ
 	};
 };
 
