@@ -10,7 +10,12 @@ interface Package {
 	version: string;
 	categories: any[];
 	scopes: any[];
+	module: { [id: string]: Module };
 	buttons: Output[];
+}
+
+interface Module {
+	code: string;
 }
 
 // Index で指定するため参照が同じままの配列にする
@@ -31,13 +36,20 @@ const converter = (domain: string) => (config: Config): Output => {
 			? fs.readFileSync(path.join(abs, file), { encoding: 'utf8' })
 			: null;
 
+	// モジュール登録
+	if (!json.module[config.name]) {
+		const code = readAsText(config.module);
+		if (code) {
+			json.module[config.name] = { code };
+		}
+	}
+
 	const item: Output = {
 		name: config.name,
 		description: config.description,
 		scopes: _scopes,
 		category,
 		insertCode: readAsText(config.insert),
-		moduleCode: readAsText(config.module),
 		iconUrl: readAsDataURL(path.join(abs, config.icon)),
 		production: config.production,
 		plan: config.plan,
@@ -63,6 +75,7 @@ const json: Package = {
 	version: 'beta-1',
 	categories: [],
 	scopes: [],
+	module: {},
 	buttons: []
 };
 
