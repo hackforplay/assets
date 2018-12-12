@@ -2,75 +2,134 @@ const sco = require('../../preference/scopes');
 const cat = require('../../preference/categories');
 
 const base = {
-	scopes: [
-		// スコープの参照を配列で指定する. null の場合は常に表示
-		sco.しょうかんされたとき
-	],
 	category: cat.モンスター, // カテゴリーの参照を配列で指定する
+	description: 'プレイヤーを おいかける こわいモンスター', // 説明文（日本語）
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
 };
 
-module.exports = {
+const purple = {
 	...base,
-	name: {
-		ja: '紫色のしにがみ', // 日本語でアセットを使う場合の名前
-		en: 'purple reaper' // 英語でアセットを使う場合の名前
-	},
-	insert: './reaper-purple.ins.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+	name: '紫色のしにがみ',
 	module: './reaper-purple.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './purple_reaper.png', // アセットのアイコンへのパス
-	children: [
-		// 複数のアセットをまとめる. アセットの配列を指定する
-		{
-			...base,
-			name: {
-				ja: '黒色のしにがみ',
-				en: 'black reaper'
-			},
-			insert: './reaper-black.ins.js',
-			module: './reaper-black.js',
-			icon: './black_reaper.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '緑色のしにがみ',
-				en: 'green reaper'
-			},
-			insert: './reaper-green.ins.js',
-			module: './reaper-green.js',
-			icon: './green_reaper.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '赤色のしにがみ',
-				en: 'red reaper'
-			},
-			insert: './reaper-red.ins.js',
-			module: './reaper-red.js',
-			icon: './red_reaper.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '白色のしにがみ',
-				en: 'white reaper'
-			},
-			insert: './reaper-white.ins.js',
-			module: './reaper-white.js',
-			icon: './white_reaper.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '黄色のしにがみ',
-				en: 'yellow reaper'
-			},
-			insert: './reaper-yellow.ins.js',
-			module: './reaper-yellow.js',
-			icon: './yellow_reaper.png'
-		}
-	]
+	icon: './reaper_purple.png' // アセットのアイコンへのパス
 };
+
+const black = {
+	...base,
+	name: '黒色のしにがみ',
+	module: './reaper-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './reaper_black.png' // アセットのアイコンへのパス
+};
+
+const green = {
+	...base,
+	name: '緑色のしにがみ',
+	module: './reaper-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './reaper_green.png' // アセットのアイコンへのパス
+};
+
+const red = {
+	...base,
+	name: '赤色のしにがみ',
+	module: './reaper-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './reaper_red.png' // アセットのアイコンへのパス
+};
+
+const white = {
+	...base,
+	name: '白色のしにがみ',
+	module: './reaper-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './reaper_white.png' // アセットのアイコンへのパス
+};
+
+const yellow = {
+	...base,
+	name: '黄色のしにがみ',
+	module: './reaper-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './reaper_yellow.png' // アセットのアイコンへのパス
+};
+
+const scopeCreate = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.ゲームがはじまったとき
+];
+
+const scopeSummon = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.こうげきされたとき,
+	sco.たおされたとき,
+	sco.つねに,
+	sco.ふまれたとき,
+	sco.ぶつかったとき,
+	sco.メッセージされたとき
+];
+
+module.exports = [
+	// 「ステージ」ファイルに入るコード
+	{
+		...purple,
+		scopes: scopeCreate,
+		insert: './reaper-purple-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...black,
+				scopes: scopeCreate,
+				insert: './reaper-black-create.js'
+			},
+			{
+				...green,
+				scopes: scopeCreate,
+				insert: './reaper-green-create.js'
+			},
+			{
+				...red,
+				scopes: scopeCreate,
+				insert: './reaper-red-create.js'
+			},
+			{
+				...white,
+				scopes: scopeCreate,
+				insert: './reaper-white-create.js'
+			},
+			{
+				...yellow,
+				scopes: scopeCreate,
+				insert: './reaper-yellow-create.js'
+			}
+		]
+	},
+	// 「◯◯を改造する」ファイルに入るコード
+	{
+		...purple,
+		scopes: scopeSummon,
+		insert: './reaper-purple-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...black,
+				scopes: scopeSummon,
+				insert: './reaper-black-summon.js'
+			},
+			{
+				...green,
+				scopes: scopeSummon,
+				insert: './reaper-green-summon.js'
+			},
+			{
+				...red,
+				scopes: scopeSummon,
+				insert: './reaper-red-summon.js'
+			},
+			{
+				...white,
+				scopes: scopeSummon,
+				insert: './reaper-white-summon.js'
+			},
+			{
+				...yellow,
+				scopes: scopeSummon,
+				insert: './reaper-yellow-summon.js'
+			}
+		]
+	}
+];

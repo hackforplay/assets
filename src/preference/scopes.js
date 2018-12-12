@@ -1,73 +1,46 @@
 const categories = require('./categories');
 
 exports.ゲームがはじまったとき = {
-	name: {
-		ja: 'ゲームがはじまったとき',
-		en: 'gameStarted'
-	},
+	name: 'ゲームがはじまったとき',
 	defaultActiveCategory: categories.モンスター
 };
 
 exports.たおされたとき = {
-	name: {
-		ja: 'たおされたとき',
-		en: 'killed'
-	},
+	name: 'たおされたとき',
 	defaultActiveCategory: categories.システム
 };
 
 exports.しょうかんされたとき = {
-	name: {
-		ja: 'しょうかんされたとき',
-		en: 'summoned'
-	},
+	name: 'しょうかんされたとき',
 	defaultActiveCategory: categories.スキル
 };
 
 exports.つくられたとき = {
-	name: {
-		ja: 'つくられたとき',
-		en: 'maked'
-	},
+	name: 'つくられたとき',
 	defaultActiveCategory: categories.スキル
 };
 
 exports.ぶつかったとき = {
-	name: {
-		ja: 'ぶつかったとき',
-		en: 'collided'
-	},
+	name: 'ぶつかったとき',
 	defaultActiveCategory: categories.システム
 };
 
 exports.こうげきされたとき = {
-	name: {
-		ja: 'こうげきされたとき',
-		en: 'attacked'
-	},
+	name: 'こうげきされたとき',
 	defaultActiveCategory: categories.システム
 };
 
 exports.つねに = {
-	name: {
-		ja: 'つねに',
-		en: 'constant'
-	},
+	name: 'つねに',
 	defaultActiveCategory: categories.システム
 };
 
 exports.ふまれたとき = {
-	name: {
-		ja: 'ふまれたとき',
-		en: 'steped on'
-	},
+	name: 'ふまれたとき',
 	defaultActiveCategory: categories.システム
 };
 
 exports.メッセージされたとき = {
-	name: {
-		ja: 'メッセージされたとき',
-		en: 'messaged'
-	},
+	name: 'メッセージされたとき',
 	defaultActiveCategory: categories.システム
 };

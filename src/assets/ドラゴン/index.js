@@ -2,75 +2,134 @@ const sco = require('../../preference/scopes');
 const cat = require('../../preference/categories');
 
 const base = {
-	scopes: [
-		// スコープの参照を配列で指定する. null の場合は常に表示
-		sco.ゲームがはじまったとき
-	],
 	category: cat.モンスター, // カテゴリーの参照を配列で指定する
+	description: '火を吹いてこうげき', // 説明文（日本語）
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
 };
 
-module.exports = {
+const black = {
 	...base,
-	name: {
-		ja: '赤色のドラゴン', // 日本語でアセットを使う場合の名前
-		en: 'red dragon' // 英語でアセットを使う場合の名前
-	},
-	insert: './dragon-red.ins.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-	module: './dragon-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './red_dragon.png', // アセットのアイコンへのパス
-	children: [
-		// 複数のアセットをまとめる. アセットの配列を指定する
-		{
-			...base,
-			name: {
-				ja: '黒色のドラゴン',
-				en: 'black dragon'
-			},
-			insert: './dragon-black.ins.js',
-			module: './dragon-black.js',
-			icon: './black_dragon.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '青色のドラゴン',
-				en: 'blue dragon'
-			},
-			insert: './dragon-blue.ins.js',
-			module: './dragon-blue.js',
-			icon: './blue_dragon.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '緑色のドラゴン',
-				en: 'green dragon'
-			},
-			insert: './dragon-green.ins.js',
-			module: './dragon-green.js',
-			icon: './green_dragon.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '白色のドラゴン',
-				en: 'white dragon'
-			},
-			insert: './dragon-white.ins.js',
-			module: './dragon-white.js',
-			icon: './white_dragon.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '黄色のドラゴン',
-				en: 'yellow dragon'
-			},
-			insert: './dragon-yellow.ins.js',
-			module: './dragon-yellow.js',
-			icon: './yellow_dragon.png'
-		}
-	]
+	name: '黒色のドラゴン',
+	module: './dragon-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './dragon_black.png' // アセットのアイコンへのパス
 };
+
+const blue = {
+	...base,
+	name: '青色のドラゴン',
+	module: './dragon-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './dragon_blue.png' // アセットのアイコンへのパス
+};
+
+const green = {
+	...base,
+	name: '緑色のドラゴン',
+	module: './dragon-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './dragon_green.png' // アセットのアイコンへのパス
+};
+
+const red = {
+	...base,
+	name: '赤色のドラゴン',
+	module: './dragon-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './dragon_red.png' // アセットのアイコンへのパス
+};
+
+const white = {
+	...base,
+	name: '白色のドラゴン',
+	module: './dragon-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './dragon_white.png' // アセットのアイコンへのパス
+};
+
+const yellow = {
+	...base,
+	name: '黄色のドラゴン',
+	module: './dragon-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './dragon_yellow.png' // アセットのアイコンへのパス
+};
+
+const scopeCreate = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.ゲームがはじまったとき
+];
+
+const scopeSummon = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.こうげきされたとき,
+	sco.たおされたとき,
+	sco.つねに,
+	sco.ふまれたとき,
+	sco.ぶつかったとき,
+	sco.メッセージされたとき
+];
+
+module.exports = [
+	// 「ステージ」ファイルに入るコード
+	{
+		...red,
+		scopes: scopeCreate,
+		insert: './dragon-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...black,
+				scopes: scopeCreate,
+				insert: './dragon-black-create.js'
+			},
+			{
+				...blue,
+				scopes: scopeCreate,
+				insert: './dragon-blue-create.js'
+			},
+			{
+				...green,
+				scopes: scopeCreate,
+				insert: './dragon-green-create.js'
+			},
+			{
+				...white,
+				scopes: scopeCreate,
+				insert: './dragon-white-create.js'
+			},
+			{
+				...yellow,
+				scopes: scopeCreate,
+				insert: './dragon-yellow-create.js'
+			}
+		]
+	},
+	// 「◯◯を改造する」ファイルに入るコード
+	{
+		...red,
+		scopes: scopeSummon,
+		insert: './dragon-red-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...black,
+				scopes: scopeSummon,
+				insert: './dragon-black-summon.js'
+			},
+			{
+				...blue,
+				scopes: scopeSummon,
+				insert: './dragon-blue-summon.js'
+			},
+			{
+				...green,
+				scopes: scopeSummon,
+				insert: './dragon-green-summon.js'
+			},
+			{
+				...white,
+				scopes: scopeSummon,
+				insert: './dragon-white-summon.js'
+			},
+			{
+				...yellow,
+				scopes: scopeSummon,
+				insert: './dragon-yellow-summon.js'
+			}
+		]
+	}
+];

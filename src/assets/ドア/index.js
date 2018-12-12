@@ -2,56 +2,100 @@ const sco = require('../../preference/scopes');
 const cat = require('../../preference/categories');
 
 const base = {
-	scopes: [
-		// スコープの参照を配列で指定する. null の場合は常に表示
-		sco.ゲームがはじまったとき
-	],
-	category: cat.せっち, // カテゴリーの参照を配列で指定する
+	category: cat.アイテム, // カテゴリーの参照を配列で指定する
+	description: 'このドアは 同じ色のかぎで ひらく', // 説明文（日本語）
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
 };
 
-// ゲートの例
-module.exports = {
+const yellow = {
 	...base,
-	name: {
-		ja: '黄色のドア', // 日本語でアセットを使う場合の名前
-		en: 'yellow door' // 英語でアセットを使う場合の名前
-	},
-	insert: './door-yellow.ins.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+	name: '黄色のドア',
 	module: './door-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './door_y_c.png', // アセットのアイコンへのパス
-	children: [
-		// 複数のアセットをまとめる. アセットの配列を指定する
-		{
-			...base,
-			name: {
-				ja: '青色のドア',
-				en: 'blue door'
-			},
-			insert: './door-blue.ins.js',
-			module: './door-blue.js',
-			icon: './door_b_c.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '緑色のドア',
-				en: 'green door'
-			},
-			insert: './door-green.ins.js',
-			module: './door-green.js',
-			icon: './door_g_c.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '赤色のドア',
-				en: 'red door'
-			},
-			insert: './door-red.ins.js',
-			module: './door-red.js',
-			icon: './door_r_c.png'
-		}
-	]
+	icon: './door_yellow.png' // アセットのアイコンへのパス
 };
+
+const blue = {
+	...base,
+	name: '青色のドア',
+	module: './door-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './door_blue.png' // アセットのアイコンへのパス
+};
+
+const green = {
+	...base,
+	name: '緑色のドア',
+	module: './door-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './door_green.png' // アセットのアイコンへのパス
+};
+
+const red = {
+	...base,
+	name: '赤色のドア',
+	module: './door-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './door_red.png' // アセットのアイコンへのパス
+};
+
+const scopeCreate = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.ゲームがはじまったとき
+];
+
+const scopeSummon = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.こうげきされたとき,
+	sco.たおされたとき,
+	sco.つねに,
+	sco.ふまれたとき,
+	sco.ぶつかったとき,
+	sco.メッセージされたとき
+];
+
+module.exports = [
+	// 「ステージ」ファイルに入るコード
+	{
+		...yellow,
+		scopes: scopeCreate,
+		insert: './door-yellow-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...blue,
+				scopes: scopeCreate,
+				insert: './door-blue-create.js'
+			},
+			{
+				...green,
+				scopes: scopeCreate,
+				insert: './door-green-create.js'
+			},
+			{
+				...red,
+				scopes: scopeCreate,
+				insert: './door-red-create.js'
+			}
+		]
+	},
+	// 「◯◯を改造する」ファイルに入るコード
+	{
+		...yellow,
+		scopes: scopeSummon,
+		insert: './door-yellow-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...blue,
+				scopes: scopeSummon,
+				insert: './door-blue-summon.js'
+			},
+			{
+				...green,
+				scopes: scopeSummon,
+				insert: './door-green-summon.js'
+			},
+			{
+				...red,
+				scopes: scopeSummon,
+				insert: './door-red-summon.js'
+			}
+		]
+	}
+];

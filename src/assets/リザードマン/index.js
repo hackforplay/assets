@@ -2,75 +2,134 @@ const sco = require('../../preference/scopes');
 const cat = require('../../preference/categories');
 
 const base = {
-	scopes: [
-		// スコープの参照を配列で指定する. null の場合は常に表示
-		sco.ゲームがはじまったとき
-	],
 	category: cat.モンスター, // カテゴリーの参照を配列で指定する
+	description: 'うろうろと うごいて あたりを こうげきする', // 説明文（日本語）
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
 };
 
-module.exports = {
+const black = {
 	...base,
-	name: {
-		ja: '緑色のリザードマン', // 日本語でアセットを使う場合の名前
-		en: 'green lizardman' // 英語でアセットを使う場合の名前
-	},
-	insert: './lizardman-green.ins.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-	module: './lizardman-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './green_lizardman.png', // アセットのアイコンへのパス
-	children: [
-		// 複数のアセットをまとめる. アセットの配列を指定する
-		{
-			...base,
-			name: {
-				ja: '黒色のリザードマン',
-				en: 'black lizardman'
-			},
-			insert: './lizardman-black.ins.js',
-			module: './lizardman-black.js',
-			icon: './black_lizardman.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '青色のリザードマン',
-				en: 'blue lizardman'
-			},
-			insert: './lizardman-blue.ins.js',
-			module: './lizardman-blue.js',
-			icon: './blue_lizardman.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '赤色のリザードマン',
-				en: 'red lizardman'
-			},
-			insert: './lizardman-red.ins.js',
-			module: './lizardman-red.js',
-			icon: './red_lizardman.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '白色のリザードマン',
-				en: 'white lizardman'
-			},
-			insert: './lizardman-white.ins.js',
-			module: './lizardman-white.js',
-			icon: './white_lizardman.png'
-		},
-		{
-			...base,
-			name: {
-				ja: '黄色のリザードマン',
-				en: 'yellow lizardman'
-			},
-			insert: './lizardman-yellow.ins.js',
-			module: './lizardman-yellow.js',
-			icon: './yellow_lizardman.png'
-		}
-	]
+	name: '黒色のリザードマン',
+	module: './lizardman-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './lizardman_black.png' // アセットのアイコンへのパス
 };
+
+const blue = {
+	...base,
+	name: '青色のリザードマン',
+	module: './lizardman-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './lizardman_blue.png' // アセットのアイコンへのパス
+};
+
+const green = {
+	...base,
+	name: '緑色のリザードマン',
+	module: './lizardman-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './lizardman_green.png' // アセットのアイコンへのパス
+};
+
+const red = {
+	...base,
+	name: '赤色のリザードマン',
+	module: './lizardman-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './lizardman_red.png' // アセットのアイコンへのパス
+};
+
+const white = {
+	...base,
+	name: '白色のリザードマン',
+	module: './lizardman-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './lizardman_white.png' // アセットのアイコンへのパス
+};
+
+const yellow = {
+	...base,
+	name: '黄色のリザードマン',
+	module: './lizardman-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './lizardman_yellow.png' // アセットのアイコンへのパス
+};
+
+const scopeCreate = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.ゲームがはじまったとき
+];
+
+const scopeSummon = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.こうげきされたとき,
+	sco.たおされたとき,
+	sco.つねに,
+	sco.ふまれたとき,
+	sco.ぶつかったとき,
+	sco.メッセージされたとき
+];
+
+module.exports = [
+	// 「ステージ」ファイルに入るコード
+	{
+		...green,
+		scopes: scopeCreate,
+		insert: './lizardman-green-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...black,
+				scopes: scopeCreate,
+				insert: './lizardman-black-create.js'
+			},
+			{
+				...blue,
+				scopes: scopeCreate,
+				insert: './lizardman-blue-create.js'
+			},
+			{
+				...red,
+				scopes: scopeCreate,
+				insert: './lizardman-red-create.js'
+			},
+			{
+				...white,
+				scopes: scopeCreate,
+				insert: './lizardman-white-create.js'
+			},
+			{
+				...yellow,
+				scopes: scopeCreate,
+				insert: './lizardman-yellow-create.js'
+			}
+		]
+	},
+	// 「◯◯を改造する」ファイルに入るコード
+	{
+		...green,
+		scopes: scopeSummon,
+		insert: './lizardman-green-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...black,
+				scopes: scopeSummon,
+				insert: './lizardman-black-summon.js'
+			},
+			{
+				...blue,
+				scopes: scopeSummon,
+				insert: './lizardman-blue-summon.js'
+			},
+			{
+				...red,
+				scopes: scopeSummon,
+				insert: './lizardman-red-summon.js'
+			},
+			{
+				...white,
+				scopes: scopeSummon,
+				insert: './lizardman-white-summon.js'
+			},
+			{
+				...yellow,
+				scopes: scopeSummon,
+				insert: './lizardman-yellow-summon.js'
+			}
+		]
+	}
+];

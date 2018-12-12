@@ -3,7 +3,7 @@ import '../game';
 rule.this = '緑色のドラゴン';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.ドラゴン)); // 見た目をきめる
+	this.mod(('▼ スキン', Skin.緑色のドラゴン)); // 見た目をきめる
 	this.family = ('▼ ファミリー', Family.ドクリツ); // ファミリーを決める
 	this.hp = 10; // 体力を決める
 	this.atk = 3; // こうげき力を決める
@@ -12,6 +12,7 @@ rule.つくられたとき(async function() {
 
 rule.つねに(async function() {
 	await this.attack(); // 自分が攻撃する
+	await this.wait(1); // やすむ
 	/*+ つねに */
 });
 
@@ -24,3 +25,15 @@ rule.たおされたとき(async function() {
 	Hack.score += 5; // スコアをアップする
 	/*+ たおされたとき */
 });
+
+// ここから しょうかんされたとき
+rule.しょうかんされたとき(async function(item) {
+	/*+ しょうかんされたとき */
+});
+// ここまで しょうかんされたとき
+
+// ここから ぶつかったとき
+rule.ぶつかったとき(async function(item) {
+	/*+ ぶつかったとき */
+});
+// ここまで ぶつかったとき

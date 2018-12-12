@@ -8,8 +8,14 @@ rule.つくられたとき(async function() {
 });
 
 rule.item = ('▼ あいて', 'プレイヤー');
-rule.ふまれたとき(async function(item) {
+rule.ぶつかったとき(async function(item) {
 	item.hp += 1;
 	this.destroy();
-	/*+ ふまれたとき */
+	/*+ ぶつかったとき */
 });
+
+// ここから しょうかんされたとき
+rule.しょうかんされたとき(async function(item) {
+	/*+ しょうかんされたとき */
+});
+// ここまで しょうかんされたとき

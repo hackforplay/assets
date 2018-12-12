@@ -1,47 +1,29 @@
 exports.モンスター = {
-	name: {
-		ja: 'モンスター',
-		en: 'monsters'
-	},
+	name: 'モンスター',
 	icon: './icons/slime.png'
 };
 
 exports.キャラクター = {
-	name: {
-		ja: 'キャラクター',
-		en: 'charactors'
-	},
+	name: 'キャラクター',
 	icon: './icons/heroine.png'
 };
 
 exports.アイテム = {
-	name: {
-		ja: 'アイテム',
-		en: 'items'
-	},
+	name: 'アイテム',
 	icon: './icons/heart.png'
 };
 
 exports.せっち = {
-	name: {
-		ja: 'せっち',
-		en: 'objects'
-	},
+	name: 'せっち',
 	icon: './icons/tbox_r_c.png'
 };
 
 exports.スキル = {
-	name: {
-		ja: 'スキル',
-		en: 'ability'
-	},
+	name: 'スキル',
 	icon: './icons/beam.png'
 };
 
 exports.システム = {
-	name: {
-		ja: 'システム',
-		en: 'systems'
-	},
+	name: 'システム',
 	icon: './icons/system.png'
 };
