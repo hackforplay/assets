@@ -8,4 +8,5 @@ export default interface Output {
 	iconUrl: string; // アセットのアイコンの URL
 	production: boolean; // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free'; // 'free' にする
+	variations: Output[] | null; // 色違いなどひとまとめにするアセットの情報. このアセット本体も含む配列
 }
