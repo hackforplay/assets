@@ -35,6 +35,8 @@ test('Check scopes', t => {
 test('Check configs', t => {
 	const _categories = values(categories);
 	const _scopes = values(scopes);
+	const nameFilePathMap = new Map();
+	const filePathNameMap = new Map();
 
 	for (const domain of fs.readdirSync(pathes.assets)) {
 		const abs = path.join(pathes.assets, domain);
@@ -79,6 +81,25 @@ test('Check configs', t => {
 				isExist,
 				`${domain}に指定された module のパス ${filePath} は存在しません`
 			);
+			// name と module は互いに一意に定まる関係でなければならない
+			// https://www.notion.so/teramotodaiki/7c7b2a0819764a71997faff953795019
+			const existFilePath = nameFilePathMap.get(config.name);
+			t.falsy(
+				existFilePath && existFilePath !== filePath,
+				m`${config.name} の module には ${path.relative(
+					abs,
+					existFilePath + ''
+				)}`
+			);
+			nameFilePathMap.set(config.name, filePath);
+			const existModuleName = filePathNameMap.get(filePath);
+			t.falsy(
+				existModuleName && existModuleName !== config.name,
+				`${existModuleName}と${
+					config.name
+				}で同じ module を使うことはできません`
+			);
+			filePathNameMap.set(filePath, config.name);
 		}
 		t.true(includes(_categories, config.category), m`category`);
 		t.is(typeof config.icon, 'string', m`icon には文字列`);
