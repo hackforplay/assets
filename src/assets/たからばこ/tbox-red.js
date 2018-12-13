@@ -3,7 +3,7 @@ import '../game';
 rule.this = '赤色のたからばこ';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.赤色のたからばこ)); // 見ためをきめる
+	this.skin = Hack.skin('赤色のたからばこ'); // 見ためをきめる
 	this.あいた = false; // まだ、あいていない（変数）
 	/*+ つくられたとき */
 });
@@ -11,7 +11,7 @@ rule.つくられたとき(async function() {
 rule.item = ('▼ あいて', 'プレイヤー');
 rule.こうげきされたとき(async function(item) {
 	if (this.あいた === true) return; // もし、あいていたら、ここで終わる（変数）
-	this.mod(('▼ スキン', Skin.あいた赤色のたからばこ)); // 見ためをかえる
+	this.skin = Hack.skin('あいた赤色のたからばこ'); // 見ためをかえる
 	this.あいた = true; // あいた（変数）
 	this.しょうかんする('コイン'); // コインを出す。この行をけすと、出なくなる
 	/*+ こうげきされたとき */

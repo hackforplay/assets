@@ -3,7 +3,7 @@ import '../game';
 rule.this = '赤色のリザードマン';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.リザードマン)); // 見た目をきめる
+	this.skin = Hack.skin('赤色のリザードマン'); // 見た目をきめる
 	this.family = ('▼ ファミリー', Family.ドクリツ); // ファミリーを決める
 	this.hp = 3; // 体力を決める
 	this.atk = 1; // こうげき力を決める

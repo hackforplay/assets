@@ -3,7 +3,7 @@ import '../game';
 rule.this = '緑色のドラゴン';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.緑色のドラゴン)); // 見た目をきめる
+	this.skin = Hack.skin('緑色のドラゴン'); // 見た目をきめる
 	this.family = ('▼ ファミリー', Family.ドクリツ); // ファミリーを決める
 	this.hp = 10; // 体力を決める
 	this.atk = 3; // こうげき力を決める

@@ -3,7 +3,7 @@ import '../game';
 rule.this = 'まほうつかい';
 
 rule.つくられたとき(function() {
-	this.mod(('▼ スキン', Skin.まほうつかい)); // 見た目を決める
+	this.skin = Hack.skin('まほうつかい'); // 見た目を決める
 	this.family = ('▼ ファミリー', Family.ドクリツ); // ファミリーを決める
 	this.hp = 3; // 体力を決める
 	this.atk = 1; // こうげき力を決める

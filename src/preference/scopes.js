@@ -27,12 +27,12 @@ exports.ぶつかったとき = {
 
 exports.こうげきされたとき = {
 	name: 'こうげきされたとき',
-	defaultActiveCategory: categories.システム
+	defaultActiveCategory: categories.スキル
 };
 
 exports.つねに = {
 	name: 'つねに',
-	defaultActiveCategory: categories.システム
+	defaultActiveCategory: categories.スキル
 };
 
 exports.ふまれたとき = {

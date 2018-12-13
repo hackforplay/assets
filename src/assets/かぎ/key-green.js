@@ -1,22 +1,16 @@
 import '../game';
 
-rule.this = '緑色のドア';
+rule.this = '緑色のかぎ';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.とじたゲート_グリーン)); // とじている
-	this.collisionFlag = true; // はいれないようにする
+	this.skin = Hack.skin('緑色のかぎ'); // 見た目をかえる
 	/*+ つくられたとき */
 });
 
-rule.item = '緑色のかぎ';
-rule.メッセージされたとき(async function() {
-	this.mod(('▼ スキン', Skin.ひらいたゲート_グリーン)); // ひらく！
-	this.collisionFlag = false; // はいれるようにする
-	/*+ メッセージされたとき */
-});
-
-rule.item = 'プレイヤー'; // ふむ キャラクター
+rule.item = ('▼ あいて', 'プレイヤー');
 rule.ふまれたとき(async function(item) {
-	item.warp(this); // ゲートのもう片方にワープ
+	this.message('緑色のドア'); // ゲート_イエローをひらく
+	Hack.log('緑色の ドアが ひらいた！');
+	this.destroy(); // このアイテムを消す
 	/*+ ふまれたとき */
 });

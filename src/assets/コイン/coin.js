@@ -3,7 +3,7 @@ import '../game';
 rule.this = 'コイン';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.コイン)); // 見た目をきめる
+	this.skin = Hack.skin('コイン'); // 見た目をきめる
 	/*+ つくられたとき */
 });
 

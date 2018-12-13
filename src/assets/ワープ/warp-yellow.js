@@ -3,7 +3,7 @@ import '../game';
 rule.this = '黄色のワープ';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.黄色のワープ)); // 見た目をかえる
+	this.skin = Hack.skin('黄色のワープ'); // 見た目をかえる
 	/*+ つくられたとき */
 });
 

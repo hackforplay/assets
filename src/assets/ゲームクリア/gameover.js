@@ -1,0 +1,1 @@
+Hack.gameover(); // ゲームオーバー

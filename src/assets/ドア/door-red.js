@@ -3,14 +3,14 @@ import '../game';
 rule.this = '赤色のドア';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.赤色のドア)); // とじている
+	this.skin = Hack.skin('赤色のドア'); // とじている
 	this.collisionFlag = true; // はいれないようにする
 	/*+ つくられたとき */
 });
 
 rule.item = '赤色のかぎ';
 rule.メッセージされたとき(async function() {
-	this.mod(('▼ スキン', Skin.ひらいた赤色のドア)); // ひらく！
+	this.skin = Hack.skin('ひらいた赤色のドア'); // ひらく！
 	this.collisionFlag = false; // はいれるようにする
 	/*+ メッセージされたとき */
 });

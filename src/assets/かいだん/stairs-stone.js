@@ -3,7 +3,7 @@ import '../game';
 rule.this = '石のかいだん';
 
 rule.つくられたとき(async function() {
-	this.mod(('▼ スキン', Skin.石のかいだん)); // 見た目をかえる
+	this.skin = Hack.skin('石のかいだん'); // 見た目をかえる
 	/*+ つくられたとき */
 });
 
