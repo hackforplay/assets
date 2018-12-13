@@ -14,7 +14,8 @@ rule.ふまれたとき(async function(item) {
 });
 
 // ここから メッセージされたとき
-rule.メッセージされたとき(async function() {
+rule.item = ('▼ あいて', Rule.Anyone);
+rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 });
 // ここまで メッセージされたとき

@@ -9,7 +9,7 @@ rule.つくられたとき(async function() {
 });
 
 rule.item = '緑色のかぎ';
-rule.メッセージされたとき(async function() {
+rule.メッセージされたとき(async function(item) {
 	this.skin = Hack.skin('ひらいた緑色のドア'); // ひらく！
 	this.collisionFlag = false; // はいれるようにする
 	/*+ メッセージされたとき */
