@@ -16,7 +16,8 @@ rule.つねに(async function() {
 	/*+ つねに */
 });
 
-rule.こうげきされたとき(async function() {
+rule.item = ('▼ あいて', Rule.Anyone);
+rule.こうげきされたとき(async function(item) {
 	await this.attack(); // こうげきしかえす
 	/*+ こうげきされたとき */
 });
