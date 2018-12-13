@@ -24,14 +24,14 @@ module.exports = [
 		...base,
 		name: 'スコアでゲームクリア',
 		description: 'もし、スコアが10以上なら、ゲームクリア',
-		icon: '../ゲームクリア/gameclear.png', // アセットのアイコンへのパス
+		icon: './hoge.png', // アセットのアイコンへのパス
 		insert: './score_gameclear.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...base,
 		name: 'もし、スコアが0より小さいなら、ゲームオーバー',
 		description: '',
-		icon: '../ゲームクリア/gameover.png', // アセットのアイコンへのパス
+		icon: './hoge.png', // アセットのアイコンへのパス
 		insert: './score_gameover.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ];
