@@ -16,13 +16,21 @@ rule.ぶつかったとき(async function(item) {
 });
 
 // ここから こうげきされたとき
+rule.item = ('▼ あいて', Rule.Anyone);
 rule.こうげきされたとき(async function(item) {
 	/*+ こうげきされたとき */
 });
 // ここまで こうげきされたとき
 
 // ここから しょうかんされたとき
+rule.item = ('▼ あいて', Rule.Anyone);
 rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 });
 // ここまで しょうかんされたとき
+
+// ここから メッセージされたとき
+rule.メッセージされたとき(async function() {
+	/*+ メッセージされたとき */
+});
+// ここまで メッセージされたとき

@@ -27,12 +27,14 @@ rule.たおされたとき(async function() {
 });
 
 // ここから しょうかんされたとき
+rule.item = ('▼ あいて', Rule.Anyone);
 rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 });
 // ここまで しょうかんされたとき
 
 // ここから ぶつかったとき
+rule.item = ('▼ あいて', Rule.Anyone);
 rule.ぶつかったとき(async function(item) {
 	/*+ ぶつかったとき */
 });

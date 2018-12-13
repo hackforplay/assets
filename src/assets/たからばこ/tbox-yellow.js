@@ -24,6 +24,7 @@ rule.メッセージされたとき(async function() {
 // ここまで メッセージされたとき
 
 // ここから ぶつかったとき
+rule.item = ('▼ あいて', Rule.Anyone);
 rule.ぶつかったとき(async function(item) {
 	/*+ ぶつかったとき */
 });
