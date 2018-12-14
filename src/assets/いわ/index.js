@@ -2,24 +2,24 @@ const sco = require('../../preference/scopes');
 const cat = require('../../preference/categories');
 
 const base = {
-	category: cat.スキル, // カテゴリーの参照を配列で指定する
-	description: '', // 説明文（日本語）
+	category: cat.せっち, // カテゴリーの参照を配列で指定する
+	description: 'こうげきしても　ビクともしない じゃまな いわ', // 説明文（日本語）
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
 };
 
-const beam = {
+const rock = {
 	...base,
-	name: 'ビーム',
-	module: './beam.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './beam.png' // アセットのアイコンへのパス
+	name: 'いわ',
+	module: './rock.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './rock.png' // アセットのアイコンへのパス
 };
 
-const fire = {
+const rocks = {
 	...base,
-	name: 'ほのお',
-	module: './fire.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './fire.png' // アセットのアイコンへのパス
+	name: 'たてにならんだいわ',
+	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './rocks.png' // アセットのアイコンへのパス
 };
 
 const scopeCreate = [
@@ -40,28 +40,21 @@ const scopeSummon = [
 module.exports = [
 	// 「ステージ」ファイルに入るコード
 	{
-		...beam,
+		...rock,
 		scopes: scopeCreate,
-		insert: './beam-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './rock-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
-				...fire,
+				...rocks,
 				scopes: scopeCreate,
-				insert: './fire-create.js'
+				insert: './rocks-create.js'
 			}
 		]
 	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
-		...beam,
+		...rock,
 		scopes: scopeSummon,
-		insert: './beam-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-		children: [
-			{
-				...fire,
-				scopes: scopeSummon,
-				insert: './fire-summon.js'
-			}
-		]
+		insert: './rock-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ];
