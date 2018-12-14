@@ -10,7 +10,6 @@ rule.つくられたとき(async function() {
 // ここから こうげきされたとき
 rule.item = ('▼ あいて', Rule.Anyone);
 rule.こうげきされたとき(async function(item) {
-	this.destroy(); // きえる
 	/*+ こうげきされたとき */
 });
 // ここまで こうげきされたとき

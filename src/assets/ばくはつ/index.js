@@ -5,14 +5,13 @@ const base = {
 	name: 'ばくはつ',
 	module: './explosion.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
 	category: cat.アイテム, // カテゴリーの参照を指定する
-	description: '時間がたつと ドカーン！ その時間は ちょうせつできる',
+	description: '',
 	icon: './explosion.png', // アセットのアイコンへのパス
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
 };
 
 module.exports = [
-	/*
 	{
 		...base,
 		scopes: [
@@ -21,7 +20,6 @@ module.exports = [
 		],
 		insert: './explosion-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
-	*/
 	{
 		...base,
 		scopes: [

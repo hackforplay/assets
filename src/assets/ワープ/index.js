@@ -55,15 +55,10 @@ const scopeSummon = [
 module.exports = [
 	// 「ステージ」ファイルに入るコード
 	{
-		...yellow,
+		...blue,
 		scopes: scopeCreate,
-		insert: './warp-yellow-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './warp-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
-			{
-				...blue,
-				scopes: scopeCreate,
-				insert: './warp-blue-create.js'
-			},
 			{
 				...green,
 				scopes: scopeCreate,
@@ -73,20 +68,20 @@ module.exports = [
 				...red,
 				scopes: scopeCreate,
 				insert: './warp-red-create.js'
+			},
+			{
+				...yellow,
+				scopes: scopeCreate,
+				insert: './warp-yellow-create.js'
 			}
 		]
 	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
-		...yellow,
+		...blue,
 		scopes: scopeSummon,
-		insert: './warp-yellow-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './warp-blue-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
-			{
-				...blue,
-				scopes: scopeSummon,
-				insert: './warp-blue-summon.js'
-			},
 			{
 				...green,
 				scopes: scopeSummon,
@@ -96,6 +91,11 @@ module.exports = [
 				...red,
 				scopes: scopeSummon,
 				insert: './warp-red-summon.js'
+			},
+			{
+				...yellow,
+				scopes: scopeSummon,
+				insert: './warp-yellow-summon.js'
 			}
 		]
 	}

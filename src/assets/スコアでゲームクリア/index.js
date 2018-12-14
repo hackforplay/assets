@@ -29,8 +29,8 @@ module.exports = [
 	},
 	{
 		...base,
-		name: 'もし、スコアが0より小さいなら、ゲームオーバー',
-		description: '',
+		name: 'スコアでゲームオーバー',
+		description: 'もし、スコアが0より小さいなら、ゲームオーバー',
 		icon: './hoge.png', // アセットのアイコンへのパス
 		insert: './score_gameover.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}

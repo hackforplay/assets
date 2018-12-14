@@ -29,8 +29,8 @@ module.exports = [
 	},
 	{
 		...base,
-		name: 'スコア(Hack.score)を１へらす',
-		description: '',
+		name: 'スコアダウン',
+		description: 'スコア(Hack.score)を１へらす',
 		icon: './score_down.png', // アセットのアイコンへのパス
 		insert: './score_down.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}

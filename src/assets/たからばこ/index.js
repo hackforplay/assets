@@ -54,9 +54,9 @@ const scopeSummon = [
 module.exports = [
 	// 「ステージ」ファイルに入るコード
 	{
-		...yellow,
+		...red,
 		scopes: scopeCreate,
-		insert: './tbox-yellow-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './tbox-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...blue,
@@ -69,17 +69,17 @@ module.exports = [
 				insert: './tbox-green-create.js'
 			},
 			{
-				...red,
+				...yellow,
 				scopes: scopeCreate,
-				insert: './tbox-red-create.js'
+				insert: './tbox-yellow-create.js'
 			}
 		]
 	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
-		...yellow,
+		...red,
 		scopes: scopeSummon,
-		insert: './tbox-yellow-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './tbox-red-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...blue,
@@ -92,9 +92,9 @@ module.exports = [
 				insert: './tbox-green-summon.js'
 			},
 			{
-				...red,
+				...yellow,
 				scopes: scopeSummon,
-				insert: './tbox-red-summon.js'
+				insert: './tbox-yellow-summon.js'
 			}
 		]
 	}
