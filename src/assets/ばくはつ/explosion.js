@@ -4,6 +4,20 @@ rule.this = 'ばくはつ';
 
 rule.つくられたとき(async function() {
 	this.skin = Hack.skin('ばくはつ');
+	this.mod(Hack.createDamageMod()); // ダメージオブジェクトにする
+
+	await this.wait(1); // この秒数だけ待つ
+	this.destroy(); // ばくはつ を けす
+	/*+ つくられたとき */
+});
+
+// ここから しょうかんされたとき
+rule.item = ('▼ あいて', Rule.Anyone);
+rule.しょうかんされたとき(async function(item) {});
+// ここまで しょうかんされたとき
+
+// ここから つねに
+rule.つねに(async function() {
 	this.frame = [
 		0,
 		0,
@@ -37,16 +51,6 @@ rule.つくられたとき(async function() {
 		5,
 		null
 	];
-	this.mod(Hack.createDamageMod()); // ダメージオブジェクトにする
-
-	await this.wait(1); // この秒数だけ待つ
-	this.destroy(); // ばくはつ を けす
-	/*+ つくられたとき */
+	/*+ つねに */
 });
-
-// ここから しょうかんされたとき
-rule.item = ('▼ あいて', Rule.Anyone);
-rule.しょうかんされたとき(async function(item) {
-	/*+ しょうかんされたとき */
-});
-// ここまで しょうかんされたとき
+// ここまで つねに
