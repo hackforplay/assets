@@ -4,7 +4,7 @@ const cat = require('../../preference/categories');
 const base = {
 	name: 'まほうじん',
 	module: './magic_circle.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	category: cat.アイテム, // カテゴリーの参照を指定する
+	category: cat.せっち, // カテゴリーの参照を指定する
 	description: 'スコア(score)が ふえているときに ふむと まほうじんが ひかる',
 	icon: './magic_circle.png', // アセットのアイコンへのパス
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false

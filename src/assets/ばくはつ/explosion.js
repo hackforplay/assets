@@ -29,7 +29,13 @@ rule.つくられたとき(async function() {
 		4,
 		4,
 		4,
-		4
+		4,
+		5,
+		5,
+		5,
+		5,
+		5,
+		null
 	];
 	this.mod(Hack.createDamageMod()); // ダメージオブジェクトにする
 
