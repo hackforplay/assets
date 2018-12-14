@@ -31,7 +31,7 @@ module.exports = [
 		...base,
 		name: 'おおきさをかえる',
 		description: '数字を 大きくすると そのぶん 大きくなる',
-		icon: './scale.png', // アセットのアイコンへのパス
+		icon: './hoge.png', // アセットのアイコンへのパス
 		insert: './scale.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ];

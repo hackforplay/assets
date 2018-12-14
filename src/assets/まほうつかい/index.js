@@ -4,7 +4,7 @@ const cat = require('../../preference/categories');
 const base = {
 	name: 'まほうつかい',
 	module: './wizard.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	category: cat.アイテム, // カテゴリーの参照を指定する
+	category: cat.キャラクター, // カテゴリーの参照を指定する
 	description: 'あなたの たすけを まっている。 はなしかけると ゲームクリア',
 	icon: './wizard.png', // アセットのアイコンへのパス
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false

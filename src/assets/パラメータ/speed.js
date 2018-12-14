@@ -1,1 +1,1 @@
-await this.wait(1); // やすむ
+this.speed = 2; // スピードを決める
