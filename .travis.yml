@@ -18,6 +18,7 @@ deploy:
   bucket: hackforplay-assets
   skip_cleanup: true
   local-dir: dist
+  cache_control: 'private, max-age=3600'
   on:
     repo: hackforplay/assets
 notifications:
