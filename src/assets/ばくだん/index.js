@@ -12,7 +12,7 @@ const base = {
 };
 
 module.exports = [
-	//
+	// ゲームにおく
 	{
 		...base,
 		scopes: [
@@ -21,7 +21,7 @@ module.exports = [
 		],
 		insert: './bomb-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
-	//
+	// 改造
 	{
 		...base,
 		scopes: [
@@ -34,5 +34,17 @@ module.exports = [
 			sco.メッセージされたとき
 		],
 		insert: './bomb-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	// スキルとしてものを召喚する
+	{
+		...base,
+		name: 'スキル ばくだん',
+		module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
+		category: cat.スキル, // カテゴリーの参照を指定する
+		scopes: [
+			// スコープの参照を配列で指定する. null の場合は常に表示
+			sco.ゲームがはじまったとき
+		],
+		insert: './bomb-skill.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ];

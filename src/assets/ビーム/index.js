@@ -42,26 +42,22 @@ module.exports = [
 	{
 		...beam,
 		scopes: scopeCreate,
-		insert: './beam-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-		children: [
-			{
-				...fire,
-				scopes: scopeCreate,
-				insert: './fire-create.js'
-			}
-		]
+		insert: './beam-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...fire,
+		scopes: scopeCreate,
+		insert: './fire-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
 		...beam,
 		scopes: scopeSummon,
-		insert: './beam-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-		children: [
-			{
-				...fire,
-				scopes: scopeSummon,
-				insert: './fire-summon.js'
-			}
-		]
+		insert: './beam-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...fire,
+		scopes: scopeSummon,
+		insert: './fire-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ];

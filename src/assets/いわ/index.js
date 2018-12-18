@@ -15,11 +15,18 @@ const rock = {
 	icon: './rock.png' // アセットのアイコンへのパス
 };
 
-const rocks = {
+const rocks_vertical = {
 	...base,
 	name: 'たてにならんだいわ',
 	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './rocks.png' // アセットのアイコンへのパス
+	icon: './rocks_vertical.png' // アセットのアイコンへのパス
+};
+
+const rocks_horizontal = {
+	...base,
+	name: 'よこにならんだいわ',
+	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './rocks_horizontal.png' // アセットのアイコンへのパス
 };
 
 const scopeCreate = [
@@ -42,14 +49,17 @@ module.exports = [
 	{
 		...rock,
 		scopes: scopeCreate,
-		insert: './rock-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-		children: [
-			{
-				...rocks,
-				scopes: scopeCreate,
-				insert: './rocks-create.js'
-			}
-		]
+		insert: './rock-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...rocks_vertical,
+		scopes: scopeCreate,
+		insert: './rocks_vertical-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...rocks_horizontal,
+		scopes: scopeCreate,
+		insert: './rocks_horizontal-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
