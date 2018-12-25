@@ -17,6 +17,10 @@ interface Package {
 interface Module {
 	code: string;
 }
+const version = process.env.NODE_ASSET_VERSION;
+if (!version) {
+	throw new Error('NODE_ASSET_VERSION is not given');
+}
 
 // Index で指定するため参照が同じままの配列にする
 const cat = values(require(path.join(pathes.preference, 'categories')));
@@ -72,7 +76,7 @@ const converter = (domain: string) => (config: Config): Output => {
 mkdirp.sync(pathes.dist);
 
 const json: Package = {
-	version: 'beta-1',
+	version,
 	categories: [],
 	scopes: [],
 	module: {},
