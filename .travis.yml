@@ -25,4 +25,4 @@ deploy:
 notifications:
   slack: hackforplay:3ZXJmUzsYmjM86Ty3oXOvqpC
 env:
-  - NODE_ASSET_VERSION='beta-1'
+  - NODE_ASSET_VERSION='beta-2'
