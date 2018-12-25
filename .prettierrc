@@ -1,6 +1,7 @@
 {
   "singleQuote": true,
   "semi": false,
+  "useTabs": true,
   "overrides": [
     {
       "files": "*.yml",
