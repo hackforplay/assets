@@ -2,14 +2,14 @@ language: node_js
 dist: trusty
 sudo: false
 node_js:
-- '8'
+  - '8'
 cache:
   directories:
-  - node_modules
+    - node_modules
 script:
-- npm run test
-- npm run build
-- pwd && ls
+  - npm run test
+  - npm run build
+  - pwd && ls
 deploy:
   provider: gcs
   access_key_id: GOOGI7DAF2KATQLNX6L4YLTD
