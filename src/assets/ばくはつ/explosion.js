@@ -3,12 +3,12 @@ import '../game';
 rule.this = 'ばくはつ';
 
 rule.つくられたとき(async function() {
-	this.skin = Hack.skin('ばくはつ');
-	this.mod(Hack.createDamageMod()); // ダメージオブジェクトにする
+  this.skin = Hack.skin('ばくはつ');
+  this.mod(Hack.createDamageMod(3)); // 数字のぶんダメージ
 
-	await this.wait(1); // この秒数だけ待つ
-	this.destroy(); // ばくはつ を けす
-	/*+ つくられたとき */
+  await this.wait(1); // この秒数だけ待つ
+  this.destroy(); // ばくはつ を けす
+  /*+ つくられたとき */
 });
 
 // ここから しょうかんされたとき
@@ -18,39 +18,39 @@ rule.しょうかんされたとき(async function(item) {});
 
 // ここから つねに
 rule.つねに(async function() {
-	this.frame = [
-		0,
-		0,
-		0,
-		0,
-		0,
-		1,
-		1,
-		1,
-		1,
-		1,
-		2,
-		2,
-		2,
-		2,
-		2,
-		3,
-		3,
-		3,
-		3,
-		3,
-		4,
-		4,
-		4,
-		4,
-		4,
-		5,
-		5,
-		5,
-		5,
-		5,
-		null
-	];
-	/*+ つねに */
+  this.frame = [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5,
+    null
+  ];
+  /*+ つねに */
 });
 // ここまで つねに
