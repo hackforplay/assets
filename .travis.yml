@@ -20,7 +20,8 @@ deploy:
   local-dir: dist
   cache_control: 'private, max-age=3600'
   on:
-    repo: hackforplay/assets
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(master|release.*)$ # "master", "release-beta-1" or "releaseから始まる任意のブランチ" のみデプロイ
 notifications:
   slack: hackforplay:3ZXJmUzsYmjM86Ty3oXOvqpC
 env:
