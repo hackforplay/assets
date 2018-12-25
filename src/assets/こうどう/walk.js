@@ -1,1 +1,1 @@
-await this.walk(); // あるく
+await this.walk() // あるく

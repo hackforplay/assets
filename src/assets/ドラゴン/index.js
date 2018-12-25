@@ -1,59 +1,59 @@
-const sco = require('../../preference/scopes');
-const cat = require('../../preference/categories');
+const sco = require('../../preference/scopes')
+const cat = require('../../preference/categories')
 
 const base = {
   category: cat.モンスター, // カテゴリーの参照を配列で指定する
   description: '火を吹いてこうげき', // 説明文（日本語）
   production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
   plan: 'free' // 'free' にする
-};
+}
 
 const black = {
   ...base,
   name: '黒色のドラゴン',
   module: './dragon-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './dragon_black.png' // アセットのアイコンへのパス
-};
+}
 
 const blue = {
   ...base,
   name: '青色のドラゴン',
   module: './dragon-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './dragon_blue.png' // アセットのアイコンへのパス
-};
+}
 
 const green = {
   ...base,
   name: '緑色のドラゴン',
   module: './dragon-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './dragon_green.png' // アセットのアイコンへのパス
-};
+}
 
 const red = {
   ...base,
   name: '赤色のドラゴン',
   module: './dragon-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './dragon_red.png' // アセットのアイコンへのパス
-};
+}
 
 const white = {
   ...base,
   name: '白色のドラゴン',
   module: './dragon-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './dragon_white.png' // アセットのアイコンへのパス
-};
+}
 
 const yellow = {
   ...base,
   name: '黄色のドラゴン',
   module: './dragon-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './dragon_yellow.png' // アセットのアイコンへのパス
-};
+}
 
 const scopeCreate = [
   // スコープの参照を配列で指定する. null の場合は常に表示
   sco.ゲームがはじまったとき
-];
+]
 
 const scopeSummon = [
   // スコープの参照を配列で指定する. null の場合は常に表示
@@ -62,7 +62,7 @@ const scopeSummon = [
   sco.ふまれたとき,
   sco.ぶつかったとき,
   sco.メッセージされたとき
-];
+]
 
 module.exports = [
   // 「ステージ」ファイルに入るコード
@@ -131,4 +131,4 @@ module.exports = [
       }
     ]
   }
-];
+]

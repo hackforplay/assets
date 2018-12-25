@@ -1,1 +1,1 @@
-Hack.clearLog(); // テキストウィンドウをけす
+Hack.clearLog() // テキストウィンドウをけす

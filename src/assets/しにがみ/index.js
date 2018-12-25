@@ -1,59 +1,59 @@
-const sco = require('../../preference/scopes');
-const cat = require('../../preference/categories');
+const sco = require('../../preference/scopes')
+const cat = require('../../preference/categories')
 
 const base = {
   category: cat.モンスター, // カテゴリーの参照を配列で指定する
   description: 'プレイヤーを おいかける こわいモンスター', // 説明文（日本語）
   production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
   plan: 'free' // 'free' にする
-};
+}
 
 const purple = {
   ...base,
   name: '紫色のしにがみ',
   module: './reaper-purple.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './reaper_purple.png' // アセットのアイコンへのパス
-};
+}
 
 const black = {
   ...base,
   name: '黒色のしにがみ',
   module: './reaper-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './reaper_black.png' // アセットのアイコンへのパス
-};
+}
 
 const green = {
   ...base,
   name: '緑色のしにがみ',
   module: './reaper-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './reaper_green.png' // アセットのアイコンへのパス
-};
+}
 
 const red = {
   ...base,
   name: '赤色のしにがみ',
   module: './reaper-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './reaper_red.png' // アセットのアイコンへのパス
-};
+}
 
 const white = {
   ...base,
   name: '白色のしにがみ',
   module: './reaper-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './reaper_white.png' // アセットのアイコンへのパス
-};
+}
 
 const yellow = {
   ...base,
   name: '黄色のしにがみ',
   module: './reaper-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './reaper_yellow.png' // アセットのアイコンへのパス
-};
+}
 
 const scopeCreate = [
   // スコープの参照を配列で指定する. null の場合は常に表示
   sco.ゲームがはじまったとき
-];
+]
 
 const scopeSummon = [
   // スコープの参照を配列で指定する. null の場合は常に表示
@@ -62,7 +62,7 @@ const scopeSummon = [
   sco.ふまれたとき,
   sco.ぶつかったとき,
   sco.メッセージされたとき
-];
+]
 
 module.exports = [
   // 「ステージ」ファイルに入るコード
@@ -131,4 +131,4 @@ module.exports = [
       }
     ]
   }
-];
+]

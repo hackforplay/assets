@@ -1,5 +1,5 @@
-const sco = require('../../preference/scopes');
-const cat = require('../../preference/categories');
+const sco = require('../../preference/scopes')
+const cat = require('../../preference/categories')
 
 const base = {
   name: 'ばくだん',
@@ -9,7 +9,7 @@ const base = {
   icon: './bomb.png', // アセットのアイコンへのパス
   production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
   plan: 'free' // 'free' にする
-};
+}
 
 module.exports = [
   // ゲームにおく
@@ -46,4 +46,4 @@ module.exports = [
     ],
     insert: './bomb-skill.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
   }
-];
+]

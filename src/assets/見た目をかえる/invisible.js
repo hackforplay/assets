@@ -1,1 +1,1 @@
-this.opacity = 0; // とうめいになる
+this.opacity = 0 // とうめいになる

@@ -1,19 +1,19 @@
-import '../game';
+import '../game'
 
-rule.this = 'ばくはつ';
+rule.this = 'ばくはつ'
 
 rule.つくられたとき(async function() {
-  this.skin = Hack.skin('ばくはつ');
-  this.mod(Hack.createDamageMod(3)); // 数字のぶんダメージ
+  this.skin = Hack.skin('ばくはつ')
+  this.mod(Hack.createDamageMod(3)) // 数字のぶんダメージ
 
-  await this.wait(1); // この秒数だけ待つ
-  this.destroy(); // ばくはつ を けす
+  await this.wait(1) // この秒数だけ待つ
+  this.destroy() // ばくはつ を けす
   /*+ つくられたとき */
-});
+})
 
 // ここから しょうかんされたとき
-rule.item = ('▼ あいて', Rule.Anyone);
-rule.しょうかんされたとき(async function(item) {});
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.しょうかんされたとき(async function(item) {})
 // ここまで しょうかんされたとき
 
 // ここから つねに
@@ -50,7 +50,7 @@ rule.つねに(async function() {
     5,
     5,
     null
-  ];
+  ]
   /*+ つねに */
-});
+})
 // ここまで つねに

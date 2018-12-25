@@ -1,1 +1,1 @@
-player.skin = Hack.skin('白色のしにがみ'); // スキンをかえる
+player.skin = Hack.skin('白色のしにがみ') // スキンをかえる

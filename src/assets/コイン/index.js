@@ -1,5 +1,5 @@
-const sco = require('../../preference/scopes');
-const cat = require('../../preference/categories');
+const sco = require('../../preference/scopes')
+const cat = require('../../preference/categories')
 
 const base = {
   name: 'コイン',
@@ -9,7 +9,7 @@ const base = {
   icon: './coin.png', // アセットのアイコンへのパス
   production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
   plan: 'free' // 'free' にする
-};
+}
 
 module.exports = [
   //「ステージ」ファイルに入るコード
@@ -34,4 +34,4 @@ module.exports = [
     ],
     insert: './coin-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
   }
-];
+]

@@ -1,1 +1,1 @@
-Hack.score -= 1; // スコアダウン
+Hack.score -= 1 // スコアダウン

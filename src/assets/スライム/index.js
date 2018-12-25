@@ -1,73 +1,73 @@
-const sco = require('../../preference/scopes');
-const cat = require('../../preference/categories');
+const sco = require('../../preference/scopes')
+const cat = require('../../preference/categories')
 
 const base = {
   category: cat.モンスター, // カテゴリーの参照を配列で指定する
   description: 'ムチのように 体をふりまわす かわいいスライム', // 説明文（日本語）
   production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
   plan: 'free' // 'free' にする
-};
+}
 
 const blue = {
   ...base,
   name: '青色のスライム',
   module: './slime-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './slime_blue.png' // アセットのアイコンへのパス
-};
+}
 
 const black = {
   ...base,
   name: '黒色のスライム',
   module: './slime-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './slime_black.png' // アセットのアイコンへのパス
-};
+}
 
 const green = {
   ...base,
   name: '緑色のスライム',
   module: './slime-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './slime_green.png' // アセットのアイコンへのパス
-};
+}
 
 const red = {
   ...base,
   name: '赤色のスライム',
   module: './slime-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './slime_red.png' // アセットのアイコンへのパス
-};
+}
 
 const white = {
   ...base,
   name: '白色のスライム',
   module: './slime-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './slime_white.png' // アセットのアイコンへのパス
-};
+}
 
 const yellow = {
   ...base,
   name: '黄色のスライム',
   module: './slime-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './slime_yellow.png' // アセットのアイコンへのパス
-};
+}
 
 const vertical = {
   ...base,
   name: 'たてにならんだスライム',
   module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './slimes_vertical.png' // アセットのアイコンへのパス
-};
+}
 
 const horizontal = {
   ...base,
   name: 'よこにならんだスライム',
   module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
   icon: './slimes_horizontal.png' // アセットのアイコンへのパス
-};
+}
 
 const scopeCreate = [
   // スコープの参照を配列で指定する. null の場合は常に表示
   sco.ゲームがはじまったとき
-];
+]
 
 const scopeSummon = [
   // スコープの参照を配列で指定する. null の場合は常に表示
@@ -76,7 +76,7 @@ const scopeSummon = [
   sco.ふまれたとき,
   sco.ぶつかったとき,
   sco.メッセージされたとき
-];
+]
 
 module.exports = [
   // 「ステージ」ファイルに入るコード
@@ -155,4 +155,4 @@ module.exports = [
       }
     ]
   }
-];
+]
