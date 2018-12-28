@@ -3,44 +3,47 @@ import '../game'
 rule.this = '紫色のしにがみ'
 
 rule.つくられたとき(async function() {
-  this.skin = Hack.skin('紫色のしにがみ') // 見た目をきめる
-  this.family = ('▼ ファミリー', Family.ドクリツ) // ファミリーを決める
-  this.hp = 3 // 体力を決める
-  this.atk = 1 // こうげき力を決める
-  this.ターゲット = 'プレイヤー' // プレイヤーをのことを追いかける
-  /*+ つくられたとき */
+	this.skin = Hack.skin('紫色のしにがみ') // 見た目をきめる
+	this.family = ('▼ ファミリー', Family.ドクリツ) // ファミリーをきめる
+	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
+	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
+	this.ターゲット = 'プレイヤー' // おいかけるターゲットをきめる
+
+	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-  if (this.ターゲット === '') return // ターゲットがない時はここで終わり
-  await this.chase8(this.ターゲット) // ターゲットを追いかける（ナナメあり）
-  await this.attack() // こうげきする
-  await this.wait(1) // やすむ
-  /*+ つねに */
+	if (this.ターゲット === '') return // ターゲットがない時はここで終わり
+	await this.chase8(this.ターゲット) // ターゲットを追いかける（ナナメあり）
+	await this.attack() // こうげきする
+	await this.wait(1) // やすむ
+
+	/*+ つねに */
 })
 
 rule.たおされたとき(async function() {
-  Hack.score += 1 // スコアをアップする
-  /*+ たおされたとき */
+	rule.つくる('青色のほうせき', this.mapX, this.mapY) // アイテムをおとす
+
+	/*+ たおされたとき */
 })
+
+// ここから すすめなかったとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.すすめなかったとき(async function(item) {
+	/*+ すすめなかったとき */
+})
+// ここまで すすめなかったとき
 
 // ここから こうげきされたとき
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
-  /*+ こうげきされたとき */
+	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき
 
 // ここから しょうかんされたとき
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
-  /*+ しょうかんされたとき */
+	/*+ しょうかんされたとき */
 })
 // ここまで しょうかんされたとき
-
-// ここから ぶつかったとき
-rule.item = ('▼ あいて', Rule.Anyone)
-rule.ぶつかったとき(async function(item) {
-  /*+ ぶつかったとき */
-})
-// ここまで ぶつかったとき

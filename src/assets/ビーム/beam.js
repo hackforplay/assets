@@ -3,15 +3,18 @@ import '../game'
 rule.this = 'ビーム'
 
 rule.つくられたとき(async function() {
-  this.skin = Hack.skin('ビーム') // 見た目をきめる
-  /*+ つくられたとき */
+	this.skin = Hack.skin('ビーム') // 見た目をきめる
+	this.n('あるくはやさ', ('▼ を', 'イコール'), 3)
+	this.n('かんつうする回数', ('▼ を', 'イコール'), 10)
+
+	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
-  this.mod(Hack.createDamageMod(item.atk, item)) // ダメージオブジェクトにする
-  item.shoot(this, item.forward, 10) // このスピードで打ち出される
-  await this.wait(1) // この秒数だけ待つ
-  this.destroy() // ビーム を けす
-  /*+ しょうかんされたとき */
+	this.flyToward() // とんでいく
+	await this.wait(1) // この秒数だけ待つ
+	this.destroy() // ビーム を けす
+
+	/*+ しょうかんされたとき */
 })

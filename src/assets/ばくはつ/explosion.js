@@ -3,54 +3,56 @@ import '../game'
 rule.this = 'ばくはつ'
 
 rule.つくられたとき(async function() {
-  this.skin = Hack.skin('ばくはつ')
-  this.mod(Hack.createDamageMod(3)) // 数字のぶんダメージ
+	this.skin = Hack.skin('ばくはつ') // 見た目をきめる
+	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 3)
+	await this.wait(1) // この秒数だけ待つ
+	this.destroy() // ばくはつを けす
 
-  await this.wait(1) // この秒数だけ待つ
-  this.destroy() // ばくはつ を けす
-  /*+ つくられたとき */
+	/*+ つくられたとき */
 })
 
-// ここから しょうかんされたとき
 rule.item = ('▼ あいて', Rule.Anyone)
-rule.しょうかんされたとき(async function(item) {})
-// ここまで しょうかんされたとき
+rule.しょうかんされたとき(async function(item) {
+	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), item.atk) // ばくだんの攻撃力と同じにする
+
+	/*+ しょうかんされたとき */
+})
 
 // ここから つねに
 rule.つねに(async function() {
-  this.frame = [
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    3,
-    3,
-    3,
-    3,
-    3,
-    4,
-    4,
-    4,
-    4,
-    4,
-    5,
-    5,
-    5,
-    5,
-    5,
-    null
-  ]
-  /*+ つねに */
+	this.frame = [
+		0,
+		0,
+		0,
+		0,
+		0,
+		1,
+		1,
+		1,
+		1,
+		1,
+		2,
+		2,
+		2,
+		2,
+		2,
+		3,
+		3,
+		3,
+		3,
+		3,
+		4,
+		4,
+		4,
+		4,
+		4,
+		5,
+		5,
+		5,
+		5,
+		5,
+		null
+	]
+	/*+ つねに */
 })
 // ここまで つねに

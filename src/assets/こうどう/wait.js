@@ -1,1 +1,1 @@
-await this.wait(1) // やすむ
+await this.wait(1) // まつ

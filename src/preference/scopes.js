@@ -1,46 +1,51 @@
 const categories = require('./categories')
 
 exports.ゲームがはじまったとき = {
-  name: 'ゲームがはじまったとき',
-  defaultActiveCategory: categories.モンスター
+	name: 'ゲームがはじまったとき',
+	defaultActiveCategory: categories.キャラクター
 }
 
 exports.たおされたとき = {
-  name: 'たおされたとき',
-  defaultActiveCategory: categories.システム
+	name: 'たおされたとき',
+	defaultActiveCategory: categories.システム
 }
 
 exports.しょうかんされたとき = {
-  name: 'しょうかんされたとき',
-  defaultActiveCategory: categories.スキル
+	name: 'しょうかんされたとき',
+	defaultActiveCategory: categories.つよさ
 }
 
 exports.つくられたとき = {
-  name: 'つくられたとき',
-  defaultActiveCategory: categories.スキル
+	name: 'つくられたとき',
+	defaultActiveCategory: categories.つよさ
 }
 
 exports.ぶつかったとき = {
-  name: 'ぶつかったとき',
-  defaultActiveCategory: categories.システム
+	name: 'ぶつかったとき',
+	defaultActiveCategory: categories.うごき
 }
 
 exports.こうげきされたとき = {
-  name: 'こうげきされたとき',
-  defaultActiveCategory: categories.スキル
+	name: 'こうげきされたとき',
+	defaultActiveCategory: categories.うごき
 }
 
 exports.つねに = {
-  name: 'つねに',
-  defaultActiveCategory: categories.スキル
+	name: 'つねに',
+	defaultActiveCategory: categories.うごき
 }
 
 exports.ふまれたとき = {
-  name: 'ふまれたとき',
-  defaultActiveCategory: categories.システム
+	name: 'ふまれたとき',
+	defaultActiveCategory: categories.もの
 }
 
 exports.メッセージされたとき = {
-  name: 'メッセージされたとき',
-  defaultActiveCategory: categories.システム
+	name: 'メッセージされたとき',
+	defaultActiveCategory: categories.つよさ
+}
+
+exports.すすめなかったとき = {
+	name: 'すすめなかったとき',
+	defaultActiveCategory: categories.つよさ
 }
