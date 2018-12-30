@@ -1,1 +1,1 @@
-player.スキル = 'ばくはつ'
+this.skill = 'ばくはつ'

@@ -15,7 +15,7 @@ exports.スキル = {
 
 exports.みため = {
 	name: 'みため',
-	icon: './icons/skin.png'
+	icon: './icons/invisible.png'
 }
 
 exports.うごき = {
