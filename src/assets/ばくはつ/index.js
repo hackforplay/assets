@@ -11,25 +11,31 @@ const base = {
 	plan: 'free' // 'free' にする
 }
 
+const scopeSummon = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.つくられたとき,
+	sco.しょうかんされたとき,
+	sco.メッセージされたとき,
+	sco.こうげきされたとき
+]
+
+const scopeGive = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
+	sco.ふまれたとき,
+	sco.ぶつかったとき
+]
+
 module.exports = [
+	// スキル習得
 	{
 		...base,
-		scopes: [
-			// スコープの参照を配列で指定する. null の場合は常に表示
-			sco.ゲームがはじまったとき
-		],
-		insert: './explosion-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		scopes: [
-			// スコープの参照を配列で指定する. null の場合は常に表示
-			sco.こうげきされたとき,
-			sco.たおされたとき,
-			sco.ふまれたとき,
-			sco.ぶつかったとき,
-			sco.メッセージされたとき
-		],
+		scopes: scopeSummon,
 		insert: './explosion-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	// 踏んだ、ぶつかった相手にスキル付与
+	{
+		...base,
+		scopes: scopeGive,
+		insert: './explosion-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
