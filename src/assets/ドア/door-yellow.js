@@ -3,14 +3,14 @@ import '../game'
 rule.this = '黄色のドア'
 
 rule.つくられたとき(async function() {
-	this.skin = Hack.skin('黄色のドア') // とじている
+	await this.costume('黄色のドア') // とじている
 	this.collisionFlag = true // はいれないようにする
 	/*+ つくられたとき */
 })
 
 rule.item = '黄色のかぎ'
 rule.メッセージされたとき(async function(item) {
-	this.skin = Hack.skin('ひらいた黄色のドア') // ひらく！
+	await this.costume('ひらいた黄色のドア') // ひらく！
 	this.collisionFlag = false // はいれるようにする
 	/*+ メッセージされたとき */
 })

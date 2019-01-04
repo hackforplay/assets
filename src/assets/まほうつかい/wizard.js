@@ -3,7 +3,7 @@ import '../game'
 rule.this = 'まほうつかい'
 
 rule.つくられたとき(function() {
-	this.skin = Hack.skin('まほうつかい') // 見た目をきめる
+	await this.costume('まほうつかい') // 見た目をきめる
 	this.family = ('▼ ファミリー', Family.ドクリツ) // ファミリーをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // たいりょくをきめる
 	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげきりょくをきめる

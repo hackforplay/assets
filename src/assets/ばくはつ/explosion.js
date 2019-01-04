@@ -3,7 +3,7 @@ import '../game'
 rule.this = 'ばくはつ'
 
 rule.つくられたとき(async function() {
-	this.skin = Hack.skin('ばくはつ') // 見た目をきめる
+	await this.costume('ばくはつ') // 見た目をきめる
 	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 3)
 	await this.wait(1) // この秒数だけ待つ
 	this.destroy() // ばくはつを けす

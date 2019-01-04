@@ -3,7 +3,7 @@ import '../game'
 rule.this = '水色のほうせき'
 
 rule.つくられたとき(async function() {
-	this.skin = Hack.skin('水色のほうせき') // 見た目をきめる
+	await this.costume('水色のほうせき') // 見た目をきめる
 
 	/*+ つくられたとき */
 })

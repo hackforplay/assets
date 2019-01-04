@@ -3,7 +3,7 @@ import '../game'
 rule.this = 'ビーム'
 
 rule.つくられたとき(async function() {
-	this.skin = Hack.skin('ビーム') // 見た目をきめる
+	await this.costume('ビーム') // 見た目をきめる
 	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 1)
 	this.n('スピード', ('▼ を', 'イコール'), 3)
 	this.n('かんつうする回数', ('▼ を', 'イコール'), 10)

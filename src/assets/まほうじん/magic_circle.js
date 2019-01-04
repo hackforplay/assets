@@ -3,7 +3,7 @@ import '../game'
 rule.this = 'まほうじん'
 
 rule.つくられたとき(async function() {
-	this.skin = Hack.skin('まほうじん') // 見た目をかえる
+	await this.costume('まほうじん') // 見た目をかえる
 
 	/*+ つくられたとき */
 })
@@ -11,7 +11,7 @@ rule.つくられたとき(async function() {
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
 	if (player.money < 3) return // もし、おかねがこの数字より小さいなら,ここで終わる
-	this.skin = Hack.skin('光ったまほうじん') // 見た目をかえる
+	await this.costume('光ったまほうじん') // 見た目をかえる
 	item.スキル = 'ビーム' // プレイヤーがビームを打てるようにする
 
 	/*+ ふまれたとき */
