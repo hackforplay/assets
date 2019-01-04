@@ -2,7 +2,7 @@ import '../game'
 
 rule.this = 'まほうつかい'
 
-rule.つくられたとき(function() {
+rule.つくられたとき(async function() {
 	await this.costume('まほうつかい') // 見た目をきめる
 	this.family = ('▼ ファミリー', Family.ドクリツ) // ファミリーをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // たいりょくをきめる
