@@ -4,7 +4,7 @@ const cat = require('../../preference/categories')
 const base = {
 	category: cat.みため, // カテゴリーの参照を配列で指定する
 	description: 'スキン(みため)をかえられる', // 説明文（日本語）
-	scopes: [sco.ゲームがはじまったとき],
+	scopes: [sco.つくられたとき],
 	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする

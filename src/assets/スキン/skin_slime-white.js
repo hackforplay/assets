@@ -1,1 +1,1 @@
-player.skin = Hack.skin('白色のスライム') // スキンをかえる
+await this.costume('白色のスライム') // スキンをかえる

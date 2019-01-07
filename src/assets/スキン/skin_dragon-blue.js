@@ -1,1 +1,1 @@
-player.skin = Hack.skin('青色のドラゴン') // スキンをかえる
+await this.costume('青色のドラゴン') // スキンをかえる
