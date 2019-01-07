@@ -23,6 +23,9 @@ deploy:
     all_branches: true
     condition: $TRAVIS_BRANCH =~ ^(master|release.*)$ # "master", "release-beta-1" or "releaseから始まる任意のブランチ" のみデプロイ
 notifications:
-  slack: hackforplay:3ZXJmUzsYmjM86Ty3oXOvqpC
+  slack:
+    on_success: never
+    rooms:
+      - hackforplay:3ZXJmUzsYmjM86Ty3oXOvqpC
 env:
   - NODE_ASSET_VERSION='beta-2'
