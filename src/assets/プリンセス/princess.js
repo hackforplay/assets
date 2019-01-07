@@ -2,7 +2,7 @@ import '../game'
 
 rule.this = 'プリンセス'
 
-rule.つくられたとき(function() {
+rule.つくられたとき(async function() {
 	await this.costume('プリンセス') // 見た目をきめる
 	/*+ つくられたとき */
 })
