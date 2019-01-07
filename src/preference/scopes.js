@@ -17,7 +17,7 @@ exports.しょうかんされたとき = {
 
 exports.つくられたとき = {
 	name: 'つくられたとき',
-	defaultActiveCategory: categories.つよさ
+	defaultActiveCategory: categories.スキル
 }
 
 exports.ぶつかったとき = {

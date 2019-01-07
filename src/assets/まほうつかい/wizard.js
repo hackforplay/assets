@@ -4,7 +4,7 @@ rule.this = 'まほうつかい'
 
 rule.つくられたとき(async function() {
 	await this.costume('まほうつかい') // 見た目をきめる
-	this.family = ('▼ ファミリー', Family.ドクリツ) // ファミリーをきめる
+	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // たいりょくをきめる
 	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげきりょくをきめる
 
@@ -16,7 +16,7 @@ rule.つねに(async function() {
 	await this.attack() // こうげきする
 
 	const item1 = this.しょうかんする('黒色のスライム') // スライムをしょうかん
-	item1.family = ('▼ ファミリー', Family.ドクリツ) // 「モンスター」にすると仲間同士こうげきしない
+	item1.family = ('▼ なかま', Family.ドクリツ) // 「モンスター」にすると仲間同士こうげきしない
 	item1.teleportRandom() // いちをランダムにする
 	item1.dir = ('▼ むき', Dir.ランダム) // むきをランダムにする
 
