@@ -25,21 +25,21 @@ module.exports = [
 		...base,
 		name: 'こうげきする',
 		description: '目の前を こうげき！',
-		icon: './hoge.png', // アセットのアイコンへのパス
+		icon: './attack.png', // アセットのアイコンへのパス
 		insert: './attack.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...base,
 		name: 'まつ',
 		description: '数字のぶんだけ 少し まつ',
-		icon: './hoge.png', // アセットのアイコンへのパス
+		icon: './wait.png', // アセットのアイコンへのパス
 		insert: './wait.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...base,
 		name: 'あるく',
 		description: 'いっぽ あるく',
-		icon: './hoge.png', // アセットのアイコンへのパス
+		icon: './walk.png', // アセットのアイコンへのパス
 		insert: './walk.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
@@ -74,7 +74,28 @@ module.exports = [
 		...base,
 		name: 'むきをランダムに',
 		description: 'ランダムに どこかを むく',
-		icon: './hoge.png', // アセットのアイコンへのパス
+		icon: './direction_random.png', // アセットのアイコンへのパス
 		insert: './direction_random.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: '右手をむく',
+		description: 'キャラクターからみて、右をむく',
+		icon: './right_hand.png', // アセットのアイコンへのパス
+		insert: './right_hand.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: '左手をむく',
+		description: 'キャラクターからみて、左をむく',
+		icon: './left_hand.png', // アセットのアイコンへのパス
+		insert: './left_hand.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'うしろをむく',
+		description: 'キャラクターからみて、うしろをむく',
+		icon: './behind.png', // アセットのアイコンへのパス
+		insert: './behind.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]

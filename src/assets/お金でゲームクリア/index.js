@@ -14,14 +14,14 @@ module.exports = [
 		...base,
 		name: 'おかねでゲームクリア',
 		description: 'もし、おかねが10以上なら、ゲームクリア',
-		icon: './hoge.png', // アセットのアイコンへのパス
+		icon: './money_gameclear.png', // アセットのアイコンへのパス
 		insert: './money_gameclear.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...base,
 		name: 'おかねでゲームオーバー',
-		description: 'もし、おかねが0より小さいなら、ゲームオーバー',
-		icon: './hoge.png', // アセットのアイコンへのパス
+		description: 'もし、おかねが0以下なら、ゲームオーバー',
+		icon: './money_gameover.png', // アセットのアイコンへのパス
 		insert: './money_gameover.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
