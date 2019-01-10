@@ -1,1 +1,1 @@
-this.dir = ('▼ むき', Dir.うえ) // むきを上にする
+await this.turn(('▼ むき', Dir.うえ)) // むきを上にする
