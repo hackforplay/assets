@@ -3,16 +3,24 @@ import '../game'
 rule.this = '黄色のとつブロック'
 
 rule.つくられたとき(async function() {
-	await this.costume('へこんだ黄色のとつブロック') // みためをきめる
+	await this.costume('黄色のとつブロック') // みためをきめる
 	this.collisionFlag = false // 上にのれるようにする
+	this.popup = false // ゆかじょうたい
 
 	/*+ つくられたとき */
 })
 
 rule.item = '黄色のトグルスイッチ'
 rule.メッセージされたとき(async function(item) {
-	await this.costume('黄色のとつブロック') // みためをかえる
-	this.collisionFlag = true // とおれないようにする
+	if (this.popup) {
+		await this.costume('へこんだ黄色のとつブロック') // みためをかえる
+		this.collisionFlag = false // 上にのれるようにする
+		this.popup = false // ゆかじょうたい
+	} else {
+		await this.costume('黄色のとつブロック') // みためをかえる
+		this.collisionFlag = true // とおれないようにする
+		this.popup = true // かべじょうたい
+	}
 
 	/*+ メッセージされたとき */
 })
