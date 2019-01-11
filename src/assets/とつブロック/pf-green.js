@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = '緑色のトグルスイッチ'
+rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	if (this.popup) {
 		await this.costume('へこんだ緑色のとつブロック') // みためをかえる
