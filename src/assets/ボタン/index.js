@@ -3,37 +3,51 @@ const cat = require('../../preference/categories')
 
 const base = {
 	category: cat.もの, // カテゴリーの参照を配列で指定する
-	description: 'おなじ色の どうぞうをうごかす ふしぎなボタン', // 説明文（日本語）
+	description: 'おなじ色の どうぞうを うごかす ボタン', // 説明文（日本語）
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
 }
 
 const yellow = {
 	...base,
-	name: '黄色のトグルスイッチ',
-	module: './toggle-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './toggle_yellow.png' // アセットのアイコンへのパス
+	name: '黄色のボタン',
+	module: './button-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './button_yellow_off.png' // アセットのアイコンへのパス
 }
 
 const blue = {
 	...base,
-	name: '青色のトグルスイッチ',
-	module: './toggle-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './toggle_blue.png' // アセットのアイコンへのパス
+	name: '青色のボタン',
+	module: './button-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './button_blue_off.png' // アセットのアイコンへのパス
 }
 
 const green = {
 	...base,
-	name: '緑色のトグルスイッチ',
-	module: './toggle-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './toggle_green.png' // アセットのアイコンへのパス
+	name: '緑色のボタン',
+	module: './button-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './button_green_off.png' // アセットのアイコンへのパス
 }
 
 const red = {
 	...base,
-	name: '赤色のトグルスイッチ',
-	module: './toggle-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './toggle_red.png' // アセットのアイコンへのパス
+	name: '赤色のボタン',
+	module: './button-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './button_red_off.png' // アセットのアイコンへのパス
+}
+
+const black = {
+	...base,
+	name: '黒色のボタン',
+	module: './button-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './button_black_off.png' // アセットのアイコンへのパス
+}
+
+const white = {
+	...base,
+	name: '白色のボタン',
+	module: './button-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './button_white_off.png' // アセットのアイコンへのパス
 }
 
 const scopeCreate = [
@@ -53,47 +67,67 @@ const scopeSummon = [
 module.exports = [
 	// 「ステージ」ファイルに入るコード
 	{
-		...red,
+		...yellow,
 		scopes: scopeCreate,
-		insert: './toggle-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './button-yellow-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
+			{
+				...black,
+				scopes: scopeCreate,
+				insert: './button-black-create.js'
+			},
 			{
 				...blue,
 				scopes: scopeCreate,
-				insert: './toggle-blue-create.js'
+				insert: './button-blue-create.js'
 			},
 			{
 				...green,
 				scopes: scopeCreate,
-				insert: './toggle-green-create.js'
+				insert: './button-green-create.js'
 			},
 			{
-				...yellow,
+				...red,
 				scopes: scopeCreate,
-				insert: './toggle-yellow-create.js'
+				insert: './button-red-create.js'
+			},
+			{
+				...white,
+				scopes: scopeCreate,
+				insert: './button-white-create.js'
 			}
 		]
 	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
-		...red,
+		...yellow,
 		scopes: scopeSummon,
-		insert: './toggle-red-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './button-yellow-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
+			{
+				...black,
+				scopes: scopeSummon,
+				insert: './button-black-summon.js'
+			},
 			{
 				...blue,
 				scopes: scopeSummon,
-				insert: './toggle-blue-summon.js'
+				insert: './button-blue-summon.js'
 			},
 			{
 				...green,
 				scopes: scopeSummon,
-				insert: './toggle-green-summon.js'
+				insert: './button-green-summon.js'
 			},
 			{
-				...yellow,
+				...red,
 				scopes: scopeSummon,
-				insert: './toggle-yellow-summon.js'
+				insert: './button-red-summon.js'
+			},
+			{
+				...white,
+				scopes: scopeSummon,
+				insert: './button-white-summon.js'
 			}
 		]
 	}
