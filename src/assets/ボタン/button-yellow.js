@@ -10,7 +10,10 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.ふまれたとき(async function(item) {
+	await this.costume('おされた黄色のボタン') // 見た目をかえる
 	this.message('金色のどうぞう') // どうぞうにメッセージ
+	await this.wait(1) // まつ
+	await this.costume('黄色のボタン') // 見た目をかえる
 
 	/*+ ふまれたとき */
 })
