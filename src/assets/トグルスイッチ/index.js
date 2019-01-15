@@ -36,6 +36,20 @@ const red = {
 	icon: './toggle_red.png' // アセットのアイコンへのパス
 }
 
+const black = {
+	...base,
+	name: '黒色のトグルスイッチ',
+	module: './toggle-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './toggle_black.png' // アセットのアイコンへのパス
+}
+
+const white = {
+	...base,
+	name: '白色のトグルスイッチ',
+	module: './toggle-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './toggle_white.png' // アセットのアイコンへのパス
+}
+
 const scopeCreate = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.ゲームがはじまったとき
@@ -71,6 +85,16 @@ module.exports = [
 				...yellow,
 				scopes: scopeCreate,
 				insert: './toggle-yellow-create.js'
+			},
+			{
+				...black,
+				scopes: scopeCreate,
+				insert: './toggle-black-create.js'
+			},
+			{
+				...white,
+				scopes: scopeCreate,
+				insert: './toggle-white-create.js'
 			}
 		]
 	},
@@ -94,6 +118,16 @@ module.exports = [
 				...yellow,
 				scopes: scopeSummon,
 				insert: './toggle-yellow-summon.js'
+			},
+			{
+				...black,
+				scopes: scopeSummon,
+				insert: './toggle-black-summon.js'
+			},
+			{
+				...white,
+				scopes: scopeSummon,
+				insert: './toggle-white-summon.js'
 			}
 		]
 	}

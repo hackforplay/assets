@@ -36,6 +36,20 @@ const red = {
 	icon: './pf_red_on.png' // アセットのアイコンへのパス
 }
 
+const black = {
+	...base,
+	name: '黒色のとつブロック',
+	module: './pf-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './pf_black_on.png' // アセットのアイコンへのパス
+}
+
+const white = {
+	...base,
+	name: '白色のとつブロック',
+	module: './pf-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './pf_white_on.png' // アセットのアイコンへのパス
+}
+
 const scopeCreate = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.ゲームがはじまったとき
@@ -73,6 +87,16 @@ module.exports = [
 				...yellow,
 				scopes: scopeCreate,
 				insert: './pf-yellow-create.js'
+			},
+			{
+				...black,
+				scopes: scopeCreate,
+				insert: './pf-black-create.js'
+			},
+			{
+				...white,
+				scopes: scopeCreate,
+				insert: './pf-white-create.js'
 			}
 		]
 	}
