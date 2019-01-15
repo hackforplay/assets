@@ -40,7 +40,7 @@ const scopeCreate = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.ゲームがはじまったとき
 ]
-
+/*
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.こうげきされたとき,
@@ -49,6 +49,7 @@ const scopeSummon = [
 	sco.ぶつかったとき,
 	sco.メッセージされたとき
 ]
+*/
 
 module.exports = [
 	// 「ステージ」ファイルに入るコード
@@ -73,7 +74,8 @@ module.exports = [
 		...secret,
 		scopes: scopeCreate,
 		insert: './stairs-secret-create.js'
-	},
+	}
+	/*
 	// 「◯◯を改造する」ファイルに入るコード
 	{
 		...stone,
@@ -97,4 +99,5 @@ module.exports = [
 		scopes: scopeSummon,
 		insert: './stairs-secret-summon.js'
 	}
+	*/
 ]
