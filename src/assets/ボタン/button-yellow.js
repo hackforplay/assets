@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', Rule.Anyone)
+rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
 	await this.costume('おされた黄色のボタン') // 見た目をかえる
 	this.message('金色のどうぞう') // どうぞうにメッセージ
