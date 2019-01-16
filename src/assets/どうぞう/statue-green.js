@@ -4,19 +4,15 @@ rule.this = '緑色のどうぞう'
 
 rule.つくられたとき(async function() {
 	await this.costume('緑色のどうぞう') // みためをきめる
-	this.moved = false // まだ動いてない
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
-	if (!this.moved) {
-		await this.walk() // あるく
-		this.moved = true // もう動いた
+	await this.walk() // あるく
 
-		/*+ メッセージされたとき */
-	}
+	/*+ メッセージされたとき */
 })
 
 // ここから こうげきされたとき
