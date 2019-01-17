@@ -5,21 +5,18 @@ rule.this = '青色のとつブロック'
 rule.つくられたとき(async function() {
 	await this.costume('へこんだ青色のとつブロック') // みためをきめる
 	this.collisionFlag = false // 上にのれるようにする
-	this.popup = false // ゆかじょうたい
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
-	if (this.popup) {
+	if (this.collisionFlag === true) {
 		await this.costume('へこんだ青色のとつブロック') // みためをかえる
 		this.collisionFlag = false // 上にのれるようにする
-		this.popup = false // ゆかじょうたい
 	} else {
 		await this.costume('青色のとつブロック') // みためをかえる
 		this.collisionFlag = true // とおれないようにする
-		this.popup = true // かべじょうたい
 	}
 
 	/*+ メッセージされたとき */
