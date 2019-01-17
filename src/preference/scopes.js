@@ -49,3 +49,8 @@ exports.すすめなかったとき = {
 	name: 'すすめなかったとき',
 	defaultActiveCategory: categories.つよさ
 }
+
+exports.みつけたとき = {
+	name: 'みつけたとき',
+	defaultActiveCategory: categories.うごき
+}

@@ -30,7 +30,8 @@ module.exports = [
 			sco.たおされたとき,
 			sco.ふまれたとき,
 			sco.ぶつかったとき,
-			sco.メッセージされたとき
+			sco.メッセージされたとき,
+			sco.みつけたとき
 		],
 		insert: './heart-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}

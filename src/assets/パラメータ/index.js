@@ -5,7 +5,8 @@ const base = {
 	scopes: [
 		sco.しょうかんされたとき,
 		sco.つくられたとき,
-		sco.メッセージされたとき
+		sco.メッセージされたとき,
+		sco.みつけたとき
 	],
 	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
 	category: cat.つよさ, // カテゴリーの参照を指定する

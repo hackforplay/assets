@@ -36,7 +36,8 @@ module.exports = [
 			sco.たおされたとき,
 			sco.ふまれたとき,
 			sco.ぶつかったとき,
-			sco.メッセージされたとき
+			sco.メッセージされたとき,
+			sco.みつけたとき
 		],
 		insert: './bomb-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},

@@ -16,7 +16,8 @@ const scopeSummon = [
 	sco.つくられたとき,
 	sco.しょうかんされたとき,
 	sco.メッセージされたとき,
-	sco.こうげきされたとき
+	sco.こうげきされたとき,
+	sco.みつけたとき
 ]
 
 const scopeGive = [

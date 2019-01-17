@@ -1,1 +1,1 @@
-await this.chase4('プレイヤー') // おいかけるターゲットをきめる
+await this.chase4('プレイヤー') // おいかける

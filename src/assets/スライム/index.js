@@ -75,7 +75,8 @@ const scopeSummon = [
 	sco.たおされたとき,
 	sco.ふまれたとき,
 	sco.ぶつかったとき,
-	sco.メッセージされたとき
+	sco.メッセージされたとき,
+	sco.みつけたとき
 ]
 
 module.exports = [
