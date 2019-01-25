@@ -4,7 +4,7 @@ rule.this = '青色のスライム'
 
 rule.つくられたとき(async function() {
 	await this.costume('青色のスライム') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
+	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
 	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
 
