@@ -1,1 +1,1 @@
-this.しょうかんする('黒色のうず').flyToward(item) // itemにむかってとんでいく
+this.しょうかんする('黄色のうず').flyToward(item) // itemにむかってとんでいく

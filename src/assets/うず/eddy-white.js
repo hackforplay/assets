@@ -1,9 +1,9 @@
 import '../game'
 
-rule.this = '黒色のうず'
+rule.this = '白色のうず'
 
 rule.つくられたとき(async function() {
-	await this.costume('黒色のうず') // 見た目をきめる
+	await this.costume('白色のうず') // 見た目をきめる
 	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 1)
 	this.n('スピード', ('▼ を', 'イコール'), 1)
 	this.n('かんつうする回数', ('▼ を', 'イコール'), 10)
@@ -15,7 +15,7 @@ rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	this.flyToward() // とんでいく
 	await this.wait(5) // この秒数だけ待つ
-	this.destroy() // 黒色のうず を けす
+	this.destroy() // 白色のうず を けす
 
 	/*+ しょうかんされたとき */
 })
