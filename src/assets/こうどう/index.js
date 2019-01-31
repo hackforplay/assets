@@ -98,5 +98,12 @@ module.exports = [
 		description: 'キャラクターからみて、うしろをむく',
 		icon: './behind.png', // アセットのアイコンへのパス
 		insert: './behind.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'さがす',
+		description: '目をこらして さがす ',
+		icon: './find.png', // アセットのアイコンへのパス
+		insert: './find.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
