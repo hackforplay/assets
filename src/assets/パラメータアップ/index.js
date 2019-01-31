@@ -52,11 +52,27 @@ module.exports = [
 		icon: './money_up.png', // アセットのアイコンへのパス
 		insert: './money_up.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
+	{
+		...base,
+		name: 'とおくまでみえる',
+		description: 'みつけられるきょりを のばす',
+		scopes: scope,
+		icon: './eyesight_up.png', // アセットのアイコンへのパス
+		insert: './eyesight_up.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'しやをひろげる',
+		description: 'みつけられるはんいを ひろくする',
+		scopes: scope,
+		icon: './field_of_view_up.png', // アセットのアイコンへのパス
+		insert: './field_of_view_up.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	//  item.n
 	{
 		...base,
 		name: '体力アップ',
-		description: '数字の分だけ　さらに体力アップ',
+		description: 'ふんだ/ぶつかった相手の 体力アップ',
 		scopes: scopeGive,
 		icon: './hp_up.png', // アセットのアイコンへのパス
 		insert: './hp_up_give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
@@ -64,7 +80,7 @@ module.exports = [
 	{
 		...base,
 		name: 'こうげきりょくアップ',
-		description: '数字の分だけ さらに こうげきりょくアップ',
+		description: 'ふんだ/ぶつかった相手の こうげきりょくアップ',
 		scopes: scopeGive,
 		icon: './atk_up.png', // アセットのアイコンへのパス
 		insert: './atk_up_give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
@@ -72,7 +88,7 @@ module.exports = [
 	{
 		...base,
 		name: 'スピードアップ',
-		description: '数字の分だけ さらにスピードアップ',
+		description: 'ふんだ/ぶつかった相手の スピードアップ',
 		scopes: scopeGive,
 		icon: './speed_up.png', // アセットのアイコンへのパス
 		insert: './speed_up_give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
@@ -80,9 +96,25 @@ module.exports = [
 	{
 		...base,
 		name: 'おかねをふやす',
-		description: '数字の分だけ さらにお金をふやす',
+		description: 'ふんだ/ぶつかった相手の お金をふやす',
 		scopes: scopeGive,
 		icon: './money_up.png', // アセットのアイコンへのパス
 		insert: './money_up_give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'とおくまでみえる',
+		description: 'ふんだ/ぶつかった相手の みつけられるきょりを のばす',
+		scopes: scopeGive,
+		icon: './eyesight_up.png', // アセットのアイコンへのパス
+		insert: './eyesight_up_give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'しやをひろげる',
+		description: 'ふんだ/ぶつかった相手の みつけられるはんいを ひろくする',
+		scopes: scopeGive,
+		icon: './field_of_view_up.png', // アセットのアイコンへのパス
+		insert: './field_of_view_up_give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
