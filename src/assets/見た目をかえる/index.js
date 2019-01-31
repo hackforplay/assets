@@ -12,7 +12,8 @@ const base = {
 		// sco.つねに,
 		sco.ふまれたとき,
 		sco.メッセージされたとき,
-		sco.みつけたとき
+		sco.みつけたとき,
+		sco.こうげきするとき
 	],
 	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
 	category: cat.みため, // カテゴリーの参照を指定する

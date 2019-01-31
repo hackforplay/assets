@@ -18,3 +18,7 @@ rule.たおされたとき(async function() {
 
 	/*+ たおされたとき */
 })
+
+rule.こうげきするとき(async function() {
+	/*+ こうげきするとき */
+})

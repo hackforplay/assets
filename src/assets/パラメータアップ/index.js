@@ -12,7 +12,8 @@ const scope = [
 	sco.しょうかんされたとき,
 	sco.メッセージされたとき,
 	sco.こうげきされたとき,
-	sco.みつけたとき
+	sco.みつけたとき,
+	sco.こうげきするとき
 ]
 
 const scopeGive = [sco.ふまれたとき, sco.ぶつかったとき]

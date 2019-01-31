@@ -54,3 +54,8 @@ exports.みつけたとき = {
 	name: 'みつけたとき',
 	defaultActiveCategory: categories.うごき
 }
+
+exports.こうげきするとき = {
+	name: 'こうげきするとき',
+	defaultActiveCategory: categories.システム
+}
