@@ -63,56 +63,52 @@ module.exports = [
 	{
 		...apple,
 		scopes: scopeCreate,
-		insert: './apple-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-		children: [
-			{
-				...banana,
-				scopes: scopeCreate,
-				insert: './banana-create.js'
-			},
-			{
-				...orange,
-				scopes: scopeCreate,
-				insert: './orange-create.js'
-			},
-			{
-				...peach,
-				scopes: scopeCreate,
-				insert: './peach-create.js'
-			},
-			{
-				...pear,
-				scopes: scopeCreate,
-				insert: './pear-create.js'
-			}
-		]
+		insert: './apple-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...banana,
+		scopes: scopeCreate,
+		insert: './banana-create.js'
+	},
+	{
+		...orange,
+		scopes: scopeCreate,
+		insert: './orange-create.js'
+	},
+	{
+		...peach,
+		scopes: scopeCreate,
+		insert: './peach-create.js'
+	},
+	{
+		...pear,
+		scopes: scopeCreate,
+		insert: './pear-create.js'
 	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
 		...apple,
 		scopes: scopeSummon,
-		insert: './apple-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-		children: [
-			{
-				...banana,
-				scopes: scopeSummon,
-				insert: './banana-summon.js'
-			},
-			{
-				...orange,
-				scopes: scopeSummon,
-				insert: './orange-summon.js'
-			},
-			{
-				...peach,
-				scopes: scopeSummon,
-				insert: './peach-summon.js'
-			},
-			{
-				...pear,
-				scopes: scopeSummon,
-				insert: './pear-summon.js'
-			}
-		]
+		insert: './apple-summon.js'
+	},
+	{
+		...banana,
+		scopes: scopeSummon,
+		insert: './banana-summon.js'
+	},
+	{
+		...orange,
+		scopes: scopeSummon,
+		insert: './orange-summon.js'
+	},
+	{
+		...peach,
+		scopes: scopeSummon,
+		insert: './peach-summon.js'
+	},
+	{
+		...pear,
+		scopes: scopeSummon,
+		insert: './pear-summon.js'
 	}
 ]
