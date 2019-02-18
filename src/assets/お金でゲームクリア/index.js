@@ -3,6 +3,8 @@ const cat = require('../../preference/categories')
 
 const base = {
 	scopes: [
+		sco.つくられたとき,
+		sco.つねに,
 		sco.ぶつかったとき,
 		sco.ふまれたとき,
 		sco.メッセージされたとき,

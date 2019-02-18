@@ -31,13 +31,6 @@ module.exports = [
 	},
 	{
 		...base,
-		name: 'まつ',
-		description: '数字のぶんだけ 少し まつ',
-		icon: './wait.png', // アセットのアイコンへのパス
-		insert: './wait.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
 		name: 'あるく',
 		description: 'いっぽ あるく',
 		icon: './walk.png', // アセットのアイコンへのパス
