@@ -98,5 +98,19 @@ module.exports = [
 		description: '目をこらして さがす ',
 		icon: './find.png', // アセットのアイコンへのパス
 		insert: './find.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'おいかける',
+		description: 'ターゲットに むかって すすむ',
+		icon: './chase.png', // アセットのアイコンへのパス
+		insert: './chase4.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'おいかける(ナナメあり)',
+		description: 'おいかける時、ナナメにすすむ こともある',
+		icon: './chase.png', // アセットのアイコンへのパス
+		insert: './chase8.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
