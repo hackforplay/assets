@@ -31,10 +31,24 @@ module.exports = [
 	},
 	{
 		...base,
+		name: '左にカニあるき',
+		description: 'むいている ほうこうは そのまま',
+		icon: './walkLeft.png', // アセットのアイコンへのパス
+		insert: './walkLeft.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
 		name: 'あるく',
 		description: 'いっぽ あるく',
 		icon: './walk.png', // アセットのアイコンへのパス
 		insert: './walk.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: '右にカニあるき',
+		description: 'むいている ほうこうは そのまま',
+		icon: './walkRight.png', // アセットのアイコンへのパス
+		insert: './walkRight.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...base,
