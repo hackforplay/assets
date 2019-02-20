@@ -1,4 +1,4 @@
-export default interface Config {
+export interface IConfig {
 	name: string
 	description: string
 	scopes: any[] | null // スコープの参照を配列で指定する. null の場合は常に表示
@@ -8,5 +8,5 @@ export default interface Config {
 	icon: string // アセットのアイコンへのパス
 	production: boolean // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' | 'paid'
-	children: Config[]
+	children: IConfig[]
 }

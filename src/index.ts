@@ -2,8 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import mkdirp from 'mkdirp'
 import { values, includes } from 'lodash'
-import Config from './config'
-import Output from './output'
+import { IConfig } from './config'
+import { IOutput } from './output'
 import * as pathes from './pathes'
 
 interface Package {
@@ -11,7 +11,7 @@ interface Package {
 	categories: any[]
 	scopes: any[]
 	module: { [id: string]: Module }
-	buttons: Output[]
+	buttons: IOutput[]
 }
 
 interface Module {
@@ -26,7 +26,7 @@ if (!version) {
 const cat = values(require(path.join(pathes.preference, 'categories')))
 const sco = values(require(path.join(pathes.preference, 'scopes')))
 
-const converter = (domain: string) => (config: Config): Output => {
+const converter = (domain: string) => (config: IConfig): IOutput => {
 	// インデックスを取得
 	const _scopes = config.scopes ? config.scopes.map(s => sco.indexOf(s)) : null
 
@@ -44,7 +44,7 @@ const converter = (domain: string) => (config: Config): Output => {
 		}
 	}
 
-	const item: Output = {
+	const item: IOutput = {
 		name: config.name,
 		description: config.description,
 		scopes: _scopes,
@@ -93,7 +93,7 @@ for (const domain of fs.readdirSync(pathes.assets, 'utf8')) {
 	const abs = path.join(pathes.assets, domain)
 	if (!fs.statSync(abs).isDirectory()) continue // assets is directory
 	const config = require(path.relative(__dirname, abs)) // config is /index.js
-	const configs: Config[] = Array.isArray(config) ? config : [config]
+	const configs: IConfig[] = Array.isArray(config) ? config : [config]
 	json.buttons = json.buttons.concat(configs.map(converter(domain)))
 }
 

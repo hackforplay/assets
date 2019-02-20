@@ -1,4 +1,4 @@
-export default interface Output {
+export interface IOutput {
 	name: string
 	description: string
 	scopes: number[] | null // スコープのインデックスを配列で指定する. null の場合は常に表示
@@ -7,5 +7,5 @@ export default interface Output {
 	iconUrl: string // アセットのアイコンの URL
 	production: boolean // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' | 'paid'
-	variations: Output[] | null // 色違いなどひとまとめにするアセットの情報. このアセット本体も含む配列
+	variations: IOutput[] | null // 色違いなどひとまとめにするアセットの情報. このアセット本体も含む配列
 }
