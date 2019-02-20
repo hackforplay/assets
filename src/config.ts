@@ -7,6 +7,6 @@ export default interface Config {
 	category: any // カテゴリーの参照を指定する
 	icon: string // アセットのアイコンへのパス
 	production: boolean // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
-	plan: 'free' // 'free' にする
+	plan: 'free' | 'paid'
 	children: Config[]
 }

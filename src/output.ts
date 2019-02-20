@@ -6,6 +6,6 @@ export default interface Output {
 	category: number // カテゴリーのインデックスを指定する
 	iconUrl: string // アセットのアイコンの URL
 	production: boolean // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
-	plan: 'free' // 'free' にする
+	plan: 'free' | 'paid'
 	variations: Output[] | null // 色違いなどひとまとめにするアセットの情報. このアセット本体も含む配列
 }
