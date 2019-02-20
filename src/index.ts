@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import mkdirp from 'mkdirp'
-import { values, includes } from 'lodash'
+import { values } from 'lodash'
 import { IConfig } from './config'
 import { IOutput } from './output'
 import * as pathes from './pathes'
