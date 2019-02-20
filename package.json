@@ -1,36 +1,47 @@
 {
-  "name": "@hackforplay/assets",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "format": "prettier --write '**/*.js'",
-    "test": "ava",
-    "build": "tsc && node lib/index.js",
-    "cors": "gsutil cors set cors.json gs://hackforplay-assets"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hackforplay/assets.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hackforplay/assets/issues"
-  },
-  "homepage": "https://github.com/hackforplay/assets#readme",
-  "devDependencies": {
-    "@babel/parser": "^7.2.3",
-    "@types/node": "^10.12.12",
-    "ava": "1.0.0-rc.2",
-    "prettier": "^1.15.3",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.2.1"
-  },
-  "dependencies": {
-    "@types/lodash": "^4.14.119",
-    "@types/mkdirp": "^0.5.2",
-    "lodash": "^4.17.11",
-    "mkdirp": "^0.5.1"
-  }
+	"name": "@hackforplay/assets",
+	"version": "1.0.0",
+	"description": "",
+	"main": "lib/index.js",
+	"scripts": {
+		"format": "prettier --write '**/*.{js,ts}'",
+		"lint": "prettier -l '**/*.{js,ts}'",
+		"test": "npm run lint && ava",
+		"build": "tsc && node lib/bin.js",
+		"cors": "gsutil cors set cors.json gs://hackforplay-assets"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hackforplay/assets.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hackforplay/assets/issues"
+	},
+	"homepage": "https://github.com/hackforplay/assets#readme",
+	"publishConfig": {
+		"access": "public"
+	},
+	"directories": {
+		"lib": "lib"
+	},
+	"files": [
+		"lib"
+	],
+	"devDependencies": {
+		"@babel/parser": "^7.2.3",
+		"@types/node": "^10.12.12",
+		"ava": "1.0.0-rc.2",
+		"prettier": "^1.15.3",
+		"semantic-release": "^15.13.3",
+		"ts-node": "^7.0.1",
+		"typescript": "^3.2.1"
+	},
+	"dependencies": {
+		"@types/lodash": "^4.14.119",
+		"@types/mkdirp": "^0.5.2",
+		"lodash": "^4.17.11",
+		"mkdirp": "^0.5.1"
+	}
 }
