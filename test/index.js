@@ -103,7 +103,10 @@ test('Check configs', t => {
 		const isExist = fs.existsSync(imagePath)
 		t.true(isExist, `${domain}に指定された画像パス ${imagePath} は存在しません`)
 		t.is(typeof config.production, 'boolean', m(`production`))
-		t.is(config.plan, 'free', m(`plan には 'free'`))
+		t.truthy(
+			['free', 'paid'].includes(config.plan),
+			m(`plan には 'free' か 'paid'`)
+		)
 		if (Array.isArray(config.children)) {
 			for (const child of config.children) {
 				assertAsset(child, domain, abs)
