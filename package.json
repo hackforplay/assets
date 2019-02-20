@@ -2,7 +2,7 @@
 	"name": "@hackforplay/assets",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "lib/index.js",
 	"scripts": {
 		"format": "prettier --write '**/*.{js,ts}'",
 		"lint": "prettier -l '**/*.{js,ts}'",
@@ -23,6 +23,12 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"directories": {
+		"lib": "lib"
+	},
+	"files": [
+		"lib"
+	],
 	"devDependencies": {
 		"@babel/parser": "^7.2.3",
 		"@types/node": "^10.12.12",
