@@ -7,7 +7,7 @@
 		"format": "prettier --write '**/*.{js,ts}'",
 		"lint": "prettier -l '**/*.{js,ts}'",
 		"test": "npm run lint && ava",
-		"build": "tsc && node lib/index.js",
+		"build": "tsc && node lib/bin.js",
 		"cors": "gsutil cors set cors.json gs://hackforplay-assets"
 	},
 	"repository": {
