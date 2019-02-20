@@ -4,8 +4,7 @@ const cat = require('../../preference/categories')
 const base = {
 	category: cat.キャラクター, // カテゴリーの参照を配列で指定する
 	description: 'プレイヤーを みつけると ちょとつもうしん', // 説明文（日本語）
-	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
-	plan: 'free' // 'free' にする
+	production: false // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 }
 
 const black = {
@@ -69,31 +68,37 @@ module.exports = [
 	// 「ステージ」ファイルに入るコード
 	{
 		...red,
+		plan: 'free',
 		scopes: scopeCreate,
 		insert: './penguin_knight-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...black,
+				plan: 'paid',
 				scopes: scopeCreate,
 				insert: './penguin_knight-black-create.js'
 			},
 			{
 				...blue,
+				plan: 'paid',
 				scopes: scopeCreate,
 				insert: './penguin_knight-blue-create.js'
 			},
 			{
 				...green,
+				plan: 'paid',
 				scopes: scopeCreate,
 				insert: './penguin_knight-green-create.js'
 			},
 			{
 				...white,
+				plan: 'paid',
 				scopes: scopeCreate,
 				insert: './penguin_knight-white-create.js'
 			},
 			{
 				...yellow,
+				plan: 'paid',
 				scopes: scopeCreate,
 				insert: './penguin_knight-yellow-create.js'
 			}
@@ -102,31 +107,37 @@ module.exports = [
 	// 「◯◯を改造する」ファイルに入るコード
 	{
 		...red,
+		plan: 'free',
 		scopes: scopeSummon,
 		insert: './penguin_knight-red-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...black,
+				plan: 'paid',
 				scopes: scopeSummon,
 				insert: './penguin_knight-black-summon.js'
 			},
 			{
 				...blue,
+				plan: 'paid',
 				scopes: scopeSummon,
 				insert: './penguin_knight-blue-summon.js'
 			},
 			{
 				...green,
+				plan: 'paid',
 				scopes: scopeSummon,
 				insert: './penguin_knight-green-summon.js'
 			},
 			{
 				...white,
+				plan: 'paid',
 				scopes: scopeSummon,
 				insert: './penguin_knight-white-summon.js'
 			},
 			{
 				...yellow,
+				plan: 'paid',
 				scopes: scopeSummon,
 				insert: './penguin_knight-yellow-summon.js'
 			}
