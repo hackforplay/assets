@@ -1,50 +1,46 @@
-import fs from 'fs';
-import path from 'path';
-import mkdirp from 'mkdirp';
-import { values, includes } from 'lodash';
-import Config from './config';
-import Output from './output';
-import * as pathes from './pathes';
+import fs from 'fs'
+import path from 'path'
+import mkdirp from 'mkdirp'
+import { values, includes } from 'lodash'
+import Config from './config'
+import Output from './output'
+import * as pathes from './pathes'
 
 interface Package {
-	version: string;
-	categories: any[];
-	scopes: any[];
-	module: { [id: string]: Module };
-	buttons: Output[];
+	version: string
+	categories: any[]
+	scopes: any[]
+	module: { [id: string]: Module }
+	buttons: Output[]
 }
 
 interface Module {
-	code: string;
+	code: string
 }
-const version = process.env.NODE_ASSET_VERSION;
+const version = process.env.NODE_ASSET_VERSION
 if (!version) {
-	throw new Error('NODE_ASSET_VERSION is not given');
+	throw new Error('NODE_ASSET_VERSION is not given')
 }
 
 // Index で指定するため参照が同じままの配列にする
-const cat = values(require(path.join(pathes.preference, 'categories')));
-const sco = values(require(path.join(pathes.preference, 'scopes')));
+const cat = values(require(path.join(pathes.preference, 'categories')))
+const sco = values(require(path.join(pathes.preference, 'scopes')))
 
 const converter = (domain: string) => (config: Config): Output => {
 	// インデックスを取得
-	const _scopes = config.scopes
-		? config.scopes.map(s => sco.indexOf(s))
-		: null;
+	const _scopes = config.scopes ? config.scopes.map(s => sco.indexOf(s)) : null
 
-	const category = cat.indexOf(config.category);
+	const category = cat.indexOf(config.category)
 	// ファイルの中身を取得
-	const abs = path.join(pathes.assets, domain);
+	const abs = path.join(pathes.assets, domain)
 	const readAsText = (file: string | null) =>
-		file
-			? fs.readFileSync(path.join(abs, file), { encoding: 'utf8' })
-			: null;
+		file ? fs.readFileSync(path.join(abs, file), { encoding: 'utf8' }) : null
 
 	// モジュール登録
 	if (!json.module[config.name]) {
-		const code = readAsText(config.module);
+		const code = readAsText(config.module)
 		if (code) {
-			json.module[config.name] = { code };
+			json.module[config.name] = { code }
 		}
 	}
 
@@ -58,22 +54,22 @@ const converter = (domain: string) => (config: Config): Output => {
 		production: config.production,
 		plan: config.plan,
 		variations: null
-	};
+	}
 
 	if (!config.children) {
-		return item;
+		return item
 	}
 
 	// バリエーションの分も計算して追加
-	const variations = [item].concat(config.children.map(converter(domain)));
+	const variations = [item].concat(config.children.map(converter(domain)))
 	return {
 		...item,
 		variations // variations を持つのは親オブジェクトだけ
-	};
-};
+	}
+}
 
 // ビルド開始
-mkdirp.sync(pathes.dist);
+mkdirp.sync(pathes.dist)
 
 const json: Package = {
 	version,
@@ -81,31 +77,31 @@ const json: Package = {
 	scopes: [],
 	module: {},
 	buttons: []
-};
+}
 
 // 仮に全て登録
 json.categories = cat.map(_ => ({
 	name: _.name,
 	iconUrl: readAsDataURL(path.join(pathes.preference, _.icon))
-}));
+}))
 json.scopes = sco.map(_ => ({
 	name: _.name,
 	defaultActiveCategory: cat.indexOf(_.defaultActiveCategory)
-}));
+}))
 
 for (const domain of fs.readdirSync(pathes.assets, 'utf8')) {
-	const abs = path.join(pathes.assets, domain);
-	if (!fs.statSync(abs).isDirectory()) continue; // assets is directory
-	const config = require(path.relative(__dirname, abs)); // config is /index.js
-	const configs: Config[] = Array.isArray(config) ? config : [config];
-	json.buttons = json.buttons.concat(configs.map(converter(domain)));
+	const abs = path.join(pathes.assets, domain)
+	if (!fs.statSync(abs).isDirectory()) continue // assets is directory
+	const config = require(path.relative(__dirname, abs)) // config is /index.js
+	const configs: Config[] = Array.isArray(config) ? config : [config]
+	json.buttons = json.buttons.concat(configs.map(converter(domain)))
 }
 
-const filePath = path.join(pathes.dist, json.version); // 拡張子はつけない
-fs.writeFileSync(filePath, JSON.stringify(json));
-console.log('created:', filePath);
+const filePath = path.join(pathes.dist, json.version) // 拡張子はつけない
+fs.writeFileSync(filePath, JSON.stringify(json))
+console.log('created:', filePath)
 
 function readAsDataURL(filePath: string, mimeType = 'image/png') {
-	const base64 = fs.readFileSync(filePath, 'base64');
-	return `data:${mimeType};base64,${base64}`;
+	const base64 = fs.readFileSync(filePath, 'base64')
+	return `data:${mimeType};base64,${base64}`
 }
