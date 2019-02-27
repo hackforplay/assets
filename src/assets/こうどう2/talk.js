@@ -1,0 +1,1 @@
+await this.talk('おはよう')

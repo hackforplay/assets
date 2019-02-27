@@ -35,5 +35,19 @@ module.exports = [
 		description: 'ランダムな位置に テレポート',
 		icon: './teleportRandom.png', // アセットのアイコンへのパス
 		insert: './teleportRandom.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'はなす',
+		description: 'ひとこと はなす',
+		icon: './talk.png', // アセットのアイコンへのパス
+		insert: './talk.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'といかける',
+		description: 'せんたくしを えらんで かいわする',
+		icon: './ask.png', // アセットのアイコンへのパス
+		insert: './ask.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
