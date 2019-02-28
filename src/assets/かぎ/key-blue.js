@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
 	this.message('青色のドア') // 青色のドアをひらく
-	Hack.log('青色の ドアが ひらいた！')
+	this.talk('青色の ドアが ひらいた！')
 	this.destroy() // このアイテムを消す
 	/*+ ふまれたとき */
 })
