@@ -8,11 +8,11 @@ const base = {
 	plan: 'free' // 'free' にする
 }
 
-const yellow = {
+const gold = {
 	...base,
-	name: '黄色のボタン',
-	module: './button-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './button_yellow_off.png' // アセットのアイコンへのパス
+	name: '金色のボタン',
+	module: './button-gold.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './button_gold_off.png' // アセットのアイコンへのパス
 }
 
 const blue = {
@@ -68,9 +68,9 @@ const scopeSummon = [
 module.exports = [
 	// 「ステージ」ファイルに入るコード
 	{
-		...yellow,
+		...gold,
 		scopes: scopeCreate,
-		insert: './button-yellow-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './button-gold-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...black,
@@ -101,9 +101,9 @@ module.exports = [
 	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
-		...yellow,
+		...gold,
 		scopes: scopeSummon,
-		insert: './button-yellow-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './button-gold-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...black,
