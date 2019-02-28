@@ -41,7 +41,7 @@ const silver = {
 
 const gold = {
 	...base,
-	name: '金のほうせき',
+	name: '金色のほうせき',
 	description: 'おかねを 100 ふやす ほうせき（ふやす数字は 変えられる）',
 	module: './gem-gold.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
 	icon: './gem_gold.png' // アセットのアイコンへのパス
