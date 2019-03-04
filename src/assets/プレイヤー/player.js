@@ -22,3 +22,10 @@ rule.たおされたとき(async function() {
 rule.こうげきするとき(async function() {
 	/*+ こうげきするとき */
 })
+
+// ここから メッセージされたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.メッセージされたとき(async function(item) {
+	/*+ メッセージされたとき */
+})
+// ここまで メッセージされたとき
