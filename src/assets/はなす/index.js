@@ -9,7 +9,7 @@ const base = {
 		sco.つくられたとき,
 		sco.ぶつかったとき,
 		sco.こうげきされたとき,
-		sco.つねに,
+		// sco.つねに,
 		// sco.ふまれたとき,
 		sco.メッセージされたとき,
 		sco.すすめなかったとき,
@@ -24,16 +24,16 @@ const base = {
 module.exports = [
 	{
 		...base,
-		name: 'まつ',
-		description: '数字のぶんだけ 少し まつ',
-		icon: './wait.png', // アセットのアイコンへのパス
-		insert: './wait.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		name: 'はなす',
+		description: 'ひとこと はなす',
+		icon: './talk.png', // アセットのアイコンへのパス
+		insert: './talk.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...base,
-		name: 'テレポートランダム',
-		description: 'ランダムな位置に テレポート',
-		icon: './teleportRandom.png', // アセットのアイコンへのパス
-		insert: './teleportRandom.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		name: 'といかける',
+		description: 'せんたくしを えらんで かいわする',
+		icon: './ask.png', // アセットのアイコンへのパス
+		insert: './ask.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
