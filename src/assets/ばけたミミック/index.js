@@ -12,21 +12,24 @@ const black = {
 	...base,
 	name: '黒色のばけたミミック',
 	module: './m_mimic-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './tbox_black_c.png' // アセットのアイコンへのパス
+	icon: './tbox_black_c.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const blue = {
 	...base,
 	name: '青色のばけたミミック',
 	module: './m_mimic-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './tbox_blue_c.png' // アセットのアイコンへのパス
+	icon: './tbox_blue_c.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const green = {
 	...base,
 	name: '緑色のばけたミミック',
 	module: './m_mimic-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './tbox_green_c.png' // アセットのアイコンへのパス
+	icon: './tbox_green_c.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const red = {
@@ -40,14 +43,16 @@ const white = {
 	...base,
 	name: '白色のばけたミミック',
 	module: './m_mimic-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './tbox_white_c.png' // アセットのアイコンへのパス
+	icon: './tbox_white_c.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const yellow = {
 	...base,
 	name: '黄色のばけたミミック',
 	module: './m_mimic-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './tbox_yellow_c.png' // アセットのアイコンへのパス
+	icon: './tbox_yellow_c.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const scopeCreate = [

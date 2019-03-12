@@ -19,35 +19,40 @@ const blue = {
 	...base,
 	name: '青色のニンジャ',
 	module: './ninja-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './blue_chameleon_ninja.png' // アセットのアイコンへのパス
+	icon: './blue_chameleon_ninja.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const green = {
 	...base,
 	name: '緑色のニンジャ',
 	module: './ninja-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './green_chameleon_ninja.png' // アセットのアイコンへのパス
+	icon: './green_chameleon_ninja.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const red = {
 	...base,
 	name: '赤色のニンジャ',
 	module: './ninja-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './red_chameleon_ninja.png' // アセットのアイコンへのパス
+	icon: './red_chameleon_ninja.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const white = {
 	...base,
 	name: '白色のニンジャ',
 	module: './ninja-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './white_chameleon_ninja.png' // アセットのアイコンへのパス
+	icon: './white_chameleon_ninja.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const yellow = {
 	...base,
 	name: '黄色のニンジャ',
 	module: './ninja-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './yellow_chameleon_ninja.png' // アセットのアイコンへのパス
+	icon: './yellow_chameleon_ninja.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const scopeCreate = [

@@ -12,21 +12,24 @@ const black = {
 	...base,
 	name: '黒色のミミック',
 	module: './mimic-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './black_mimic.png' // アセットのアイコンへのパス
+	icon: './black_mimic.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const blue = {
 	...base,
 	name: '青色のミミック',
 	module: './mimic-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './blue_mimic.png' // アセットのアイコンへのパス
+	icon: './blue_mimic.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const green = {
 	...base,
 	name: '緑色のミミック',
 	module: './mimic-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './green_mimic.png' // アセットのアイコンへのパス
+	icon: './green_mimic.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const red = {
@@ -40,14 +43,16 @@ const white = {
 	...base,
 	name: '白色のミミック',
 	module: './mimic-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './white_mimic.png' // アセットのアイコンへのパス
+	icon: './white_mimic.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const yellow = {
 	...base,
 	name: '黄色のミミック',
 	module: './mimic-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './yellow_mimic.png' // アセットのアイコンへのパス
+	icon: './yellow_mimic.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const scopeCreate = [

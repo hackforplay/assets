@@ -12,7 +12,8 @@ const black = {
 	...base,
 	name: '黒色のボミィ',
 	module: './bomy-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './black_bomy.png' // アセットのアイコンへのパス
+	icon: './black_bomy.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const blue = {
@@ -26,28 +27,32 @@ const green = {
 	...base,
 	name: '緑色のボミィ',
 	module: './bomy-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './green_bomy.png' // アセットのアイコンへのパス
+	icon: './green_bomy.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const red = {
 	...base,
 	name: '赤色のボミィ',
 	module: './bomy-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './red_bomy.png' // アセットのアイコンへのパス
+	icon: './red_bomy.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const white = {
 	...base,
 	name: '白色のボミィ',
 	module: './bomy-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './white_bomy.png' // アセットのアイコンへのパス
+	icon: './white_bomy.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const yellow = {
 	...base,
 	name: '黄色のボミィ',
 	module: './bomy-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './yellow_bomy.png' // アセットのアイコンへのパス
+	icon: './yellow_bomy.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const scopeCreate = [

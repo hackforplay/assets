@@ -19,35 +19,40 @@ const black = {
 	...base,
 	name: '黒色のまじょねこ',
 	module: './witch_cat-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './black_witch_cat.png' // アセットのアイコンへのパス
+	icon: './black_witch_cat.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const green = {
 	...base,
 	name: '緑色のまじょねこ',
 	module: './witch_cat-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './green_witch_cat.png' // アセットのアイコンへのパス
+	icon: './green_witch_cat.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const red = {
 	...base,
 	name: '赤色のまじょねこ',
 	module: './witch_cat-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './red_witch_cat.png' // アセットのアイコンへのパス
+	icon: './red_witch_cat.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const white = {
 	...base,
 	name: '白色のまじょねこ',
 	module: './witch_cat-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './white_witch_cat.png' // アセットのアイコンへのパス
+	icon: './white_witch_cat.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const yellow = {
 	...base,
 	name: '黄色のまじょねこ',
 	module: './witch_cat-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './yellow_witch_cat.png' // アセットのアイコンへのパス
+	icon: './yellow_witch_cat.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const scopeCreate = [

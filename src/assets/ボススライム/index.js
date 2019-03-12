@@ -19,35 +19,40 @@ const black = {
 	...base,
 	name: '黒色のボススライム',
 	module: './bossslime-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './black_bossslime.png' // アセットのアイコンへのパス
+	icon: './black_bossslime.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const green = {
 	...base,
 	name: '緑色のボススライム',
 	module: './bossslime-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './green_bossslime.png' // アセットのアイコンへのパス
+	icon: './green_bossslime.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const red = {
 	...base,
 	name: '赤色のボススライム',
 	module: './bossslime-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './red_bossslime.png' // アセットのアイコンへのパス
+	icon: './red_bossslime.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const white = {
 	...base,
 	name: '白色のボススライム',
 	module: './bossslime-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './white_bossslime.png' // アセットのアイコンへのパス
+	icon: './white_bossslime.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const yellow = {
 	...base,
 	name: '黄色のボススライム',
 	module: './bossslime-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './yellow_bossslime.png' // アセットのアイコンへのパス
+	icon: './yellow_bossslime.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const scopeCreate = [
