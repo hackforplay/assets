@@ -15,7 +15,7 @@ rule.つねに(async function() {
 	await this.turn(('▼ むき', Dir.ランダム)) // むきをランダムにする
 	await this.walk() // あるく
 	await this.attack() // こうげきする
-	await this.wait(1) // やすむ
+	await this.wait(1) // まつ
 
 	/*+ つねに */
 })
