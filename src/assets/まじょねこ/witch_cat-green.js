@@ -52,6 +52,13 @@ rule.メッセージされたとき(async function(item) {
 })
 // ここまで メッセージされたとき
 
+// ここから ぶつかったとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.ぶつかったとき(async function(item) {
+	/*+ ぶつかったとき */
+})
+// ここまで ぶつかったとき
+
 // ここから しょうかんされたとき
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
