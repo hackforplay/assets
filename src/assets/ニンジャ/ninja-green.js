@@ -34,6 +34,13 @@ rule.たおされたとき(async function() {
 	/*+ たおされたとき */
 })
 
+// ここから ぶつかったとき
+rule.item = ('▼ あいて', 'プレイヤー')
+rule.ぶつかったとき(async function(item) {
+	/*+ ぶつかったとき */
+})
+// ここまで ぶつかったとき
+
 // ここから しょうかんされたとき
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
