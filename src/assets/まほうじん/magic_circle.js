@@ -12,7 +12,7 @@ rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
 	if (player.money < 3) return // もし、おかねがこの数字より小さいなら,ここで終わる
 	await this.costume('光ったまほうじん') // 見た目をかえる
-	item.スキル = 'ビーム' // プレイヤーがビームを打てるようにする
+	item.skill = 'ビーム' // プレイヤーがビームを打てるようにする
 
 	/*+ ふまれたとき */
 })
