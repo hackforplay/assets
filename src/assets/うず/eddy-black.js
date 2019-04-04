@@ -22,7 +22,6 @@ rule.しょうかんされたとき(async function(item) {
 
 // ここから つねに
 rule.つねに(async function() {
-	this.frame = [0, 0, 2, 2, 1, 1] // アニメーション設定
 	/*+ つねに */
 })
 // ここまで つねに
