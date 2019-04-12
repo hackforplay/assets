@@ -22,13 +22,13 @@ rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
 	this.へんしんする('ばくはつ') // ばくはつ
 	await this.wait(0.7) // まつ
-	rule.つくる('緑色のほうせき', this.mapX, this.mapY) // アイテムをおとす
+	this.おとす('緑色のほうせき') // アイテムをおとす
 
 	/*+ ぶつかったとき */
 })
 
 rule.たおされたとき(async function() {
-	rule.つくる('緑色のほうせき', this.mapX, this.mapY) // アイテムをおとす
+	this.おとす('緑色のほうせき') // アイテムをおとす
 
 	/*+ たおされたとき */
 })

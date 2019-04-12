@@ -21,7 +21,7 @@ rule.こうげきされたとき(async function(item) {
 })
 
 rule.たおされたとき(async function() {
-	rule.つくる('青色のほうせき', this.mapX, this.mapY) // アイテムをおとす
+	this.おとす('青色のほうせき') // アイテムをおとす
 
 	/*+ たおされたとき */
 })
