@@ -14,3 +14,8 @@
 - `npm test` を実行する
   - もしプロパティの指定が間違っていたら、コンソールにエラーが出る
 - テストが通ることを確認して master に Push する
+
+## Change Version
+
+- [.travis.yml](./.travis.yml) に書いてある `NODE_ASSET_VERISON='beta-x'` を書き換える
+- commit して push する
