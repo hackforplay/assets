@@ -3,12 +3,10 @@ const cat = require('../../preference/categories')
 
 const base = {
 	scopes: [
-		sco.つくられたとき,
-		sco.つねに,
 		sco.ぶつかったとき,
 		sco.ふまれたとき,
 		sco.メッセージされたとき,
-		sco.こうげきするとき
+		sco.こうげきされたとき
 	],
 	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
 	category: cat.システム, // カテゴリーの参照を指定する

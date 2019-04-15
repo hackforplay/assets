@@ -49,5 +49,12 @@ module.exports = [
 		description: 'いちと マップを きめて テレポート',
 		icon: './map_change.png', // アセットのアイコンへのパス
 		insert: './map_change.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'おとす',
+		description: 'じぶんの いるばしょに ものや キャラクターを おとす',
+		icon: './drop.png', // アセットのアイコンへのパス
+		insert: './drop.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
