@@ -17,3 +17,9 @@ rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 })
+
+// ここから じかんがすすんだとき
+rule.じかんがすすんだとき(async function() {
+	/*+ じかんがすすんだとき */
+})
+// ここまで じかんがすすんだとき
