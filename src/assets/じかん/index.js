@@ -3,13 +3,13 @@ const cat = require('../../preference/categories')
 
 const base = {
 	scopes: [
-		sco.ゲームがはじまったとき,
+		// sco.ゲームがはじまったとき,
 		sco.たおされたとき,
 		sco.しょうかんされたとき,
 		sco.つくられたとき,
 		sco.ぶつかったとき,
 		sco.こうげきされたとき,
-		sco.つねに,
+		// sco.つねに,
 		sco.ふまれたとき,
 		sco.メッセージされたとき,
 		sco.みつけたとき,
@@ -24,16 +24,16 @@ const base = {
 module.exports = [
 	{
 		...base,
-		name: '文字を出す',
-		description: '書きかえれば、すきな文字をゲームに出せる',
-		icon: './log.png', // アセットのアイコンへのパス
-		insert: './log.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		name: 'じかんをとめる',
+		description: 'じかん(Hack.time)のすすみを、とめる',
+		icon: './timer_stop.png', // アセットのアイコンへのパス
+		insert: './timer_stop.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...base,
-		name: '文字をけす',
-		description: 'テキストウィンドウを みえないように できる',
-		icon: './delete_log.png', // アセットのアイコンへのパス
-		insert: './delete_log.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		name: 'じかんをうごかす',
+		description: 'とめたじかん(Hack.time)を、うごかしはじめる',
+		icon: './timer_start.png', // アセットのアイコンへのパス
+		insert: './timer_start.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]

@@ -23,6 +23,23 @@ rule.こうげきするとき(async function() {
 	/*+ こうげきするとき */
 })
 
+rule.じかんがすすんだとき(async function() {
+	/*+ じかんがすすんだとき */
+})
+
+// ここから つねに
+rule.つねに(async function(item) {
+	/*+ つねに */
+})
+// ここまで つねに
+
+// ここから こうげきされたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.こうげきされたとき(async function(item) {
+	/*+ こうげきされたとき */
+})
+// ここまで こうげきされたとき
+
 // ここから メッセージされたとき
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {

@@ -1,0 +1,1 @@
+Hack.startTimer() // とまったじかんを うごかす

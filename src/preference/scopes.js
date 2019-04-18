@@ -59,3 +59,8 @@ exports.こうげきするとき = {
 	name: 'こうげきするとき',
 	defaultActiveCategory: categories.システム
 }
+
+exports.じかんがすすんだとき = {
+	name: 'じかんがすすんだとき',
+	defaultActiveCategory: categories.システム
+}
