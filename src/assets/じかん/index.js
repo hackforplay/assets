@@ -35,5 +35,26 @@ module.exports = [
 		description: 'とめたじかん(Hack.time)を、うごかしはじめる',
 		icon: './timer_start.png', // アセットのアイコンへのパス
 		insert: './timer_start.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'じかんを0にする',
+		description: 'じかん(Hack.time)に、0を代入',
+		icon: './timer_assign0.png', // アセットのアイコンへのパス
+		insert: './timer_assign0.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'じかんをすすめる',
+		description: 'じかん(Hack.time)を、むりやりすすめる',
+		icon: './timer_advance.png', // アセットのアイコンへのパス
+		insert: './timer_advance.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'じかんをもどす',
+		description: 'じかん(Hack.time)を、むりやりもどす',
+		icon: './timer_back.png', // アセットのアイコンへのパス
+		insert: './timer_back.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
