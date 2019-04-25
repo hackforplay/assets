@@ -22,6 +22,20 @@ const fire = {
 	icon: './fire.png' // アセットのアイコンへのパス
 }
 
+const slash = {
+	...base,
+	name: 'ざんげき',
+	module: './slash.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './slash.png' // アセットのアイコンへのパス
+}
+
+const arrow = {
+	...base,
+	name: 'や',
+	module: './arrow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './arrow.png' // アセットのアイコンへのパス
+}
+
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.つくられたとき,
@@ -49,6 +63,16 @@ module.exports = [
 		scopes: scopeSummon,
 		insert: './fire-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
+	{
+		...slash,
+		scopes: scopeSummon,
+		insert: './slash-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...arrow,
+		scopes: scopeSummon,
+		insert: './arrow-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	// 「ふんだ、ぶつかった」相手にスキルを与える
 	{
 		...beam,
@@ -59,5 +83,15 @@ module.exports = [
 		...fire,
 		scopes: scopeGive,
 		insert: './fire-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...slash,
+		scopes: scopeGive,
+		insert: './slash-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...arrow,
+		scopes: scopeGive,
+		insert: './arrow-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
