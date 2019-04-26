@@ -58,12 +58,12 @@ module.exports = [
 	{
 		...samurai,
 		scopes: scopeCreate,
-		insert: './samurai.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './samurai-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...hunter,
 		scopes: scopeCreate,
-		insert: './hunter.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './hunter-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	// 「◯◯の中身」ファイルに入るコード
 	{
