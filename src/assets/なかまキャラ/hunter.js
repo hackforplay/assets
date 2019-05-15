@@ -33,10 +33,6 @@ rule.みつけたとき(async function(item) {
 // ここから ぶつかったとき
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
-	this.collisionFlag = false // すりぬけるようにする
-	await this.wait(1) // まつ
-	this.collisionFlag = true // ぶつかるようにする
-
 	/*+ ぶつかったとき */
 })
 // ここまで ぶつかったとき
