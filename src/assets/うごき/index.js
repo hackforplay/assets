@@ -6,7 +6,7 @@ const base = {
 		// sco.ゲームがはじまったとき,
 		sco.たおされたとき,
 		sco.しょうかんされたとき,
-		// sco.つくられたとき,
+		sco.つくられたとき,
 		sco.ぶつかったとき,
 		sco.こうげきされたとき,
 		sco.つねに,
@@ -22,6 +22,13 @@ const base = {
 }
 
 module.exports = [
+	{
+		...base,
+		name: 'まつ',
+		description: '数字のぶんだけ 少し まつ',
+		icon: './wait.png', // アセットのアイコンへのパス
+		insert: './wait.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	{
 		...base,
 		name: 'こうげきする',
@@ -49,69 +56,6 @@ module.exports = [
 		description: 'むいている ほうこうは そのまま',
 		icon: './walkRight.png', // アセットのアイコンへのパス
 		insert: './walkRight.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: '上をむく',
-		description: '',
-		icon: './direction_up.png', // アセットのアイコンへのパス
-		insert: './direction_up.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: '右をむく',
-		description: '',
-		icon: './direction_right.png', // アセットのアイコンへのパス
-		insert: './direction_right.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: '下をむく',
-		description: '',
-		icon: './direction_down.png', // アセットのアイコンへのパス
-		insert: './direction_down.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: '左をむく',
-		description: '',
-		icon: './direction_left.png', // アセットのアイコンへのパス
-		insert: './direction_left.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: 'むきをランダムに',
-		description: 'ランダムに どこかを むく',
-		icon: './direction_random.png', // アセットのアイコンへのパス
-		insert: './direction_random.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: '右手をむく',
-		description: 'キャラクターからみて、右をむく',
-		icon: './right_hand.png', // アセットのアイコンへのパス
-		insert: './right_hand.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: '左手をむく',
-		description: 'キャラクターからみて、左をむく',
-		icon: './left_hand.png', // アセットのアイコンへのパス
-		insert: './left_hand.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: 'うしろをむく',
-		description: 'キャラクターからみて、うしろをむく',
-		icon: './behind.png', // アセットのアイコンへのパス
-		insert: './behind.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
-		...base,
-		name: 'さがす',
-		description: '目をこらして さがす ',
-		icon: './find.png', // アセットのアイコンへのパス
-		insert: './find.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	{
 		...base,
