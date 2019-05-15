@@ -20,7 +20,7 @@ rule.つねに(async function() {
 })
 
 rule.たおされたとき(async function() {
-	rule.つくる('赤色のほうせき', this.mapX, this.mapY) // アイテムをおとす
+	this.おとす('赤色のほうせき') // アイテムをおとす
 
 	/*+ たおされたとき */
 })
