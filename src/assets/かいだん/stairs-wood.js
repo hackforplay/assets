@@ -4,12 +4,14 @@ rule.this = '木のかいだん'
 
 rule.つくられたとき(async function() {
 	await this.costume('木のかいだん') // 見た目をかえる
+
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
 	item.teleport(this) // ふんだキャラクターがテレポートする
+
 	/*+ ふまれたとき */
 })
 

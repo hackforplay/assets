@@ -4,6 +4,7 @@ rule.this = '赤色のかぎ'
 
 rule.つくられたとき(async function() {
 	await this.costume('赤色のかぎ') // 見た目をかえる
+
 	/*+ つくられたとき */
 })
 
@@ -12,6 +13,7 @@ rule.ふまれたとき(async function(item) {
 	this.message('赤色のドア') // 赤色のドアをひらく
 	this.talk('赤色の ドアが ひらいた！')
 	this.destroy() // このアイテムを消す
+
 	/*+ ふまれたとき */
 })
 

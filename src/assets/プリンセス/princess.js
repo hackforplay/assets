@@ -4,6 +4,7 @@ rule.this = 'プリンセス'
 
 rule.つくられたとき(async function() {
 	await this.costume('プリンセス') // 見た目をきめる
+
 	/*+ つくられたとき */
 })
 
@@ -11,6 +12,7 @@ rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
 	await this.talk('たすけてくれて ありがとう！') // メッセージを出す
 	Hack.gameclear() // ゲームクリア
+
 	/*+ ぶつかったとき */
 })
 

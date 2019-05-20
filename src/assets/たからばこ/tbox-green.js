@@ -5,6 +5,7 @@ rule.this = '緑色のたからばこ'
 rule.つくられたとき(async function() {
 	await this.costume('緑色のたからばこ') // 見ためをきめる
 	this.あいた = false // まだ、あいていない（変数）
+
 	/*+ つくられたとき */
 })
 
@@ -14,6 +15,7 @@ rule.こうげきされたとき(async function(item) {
 	await this.costume('あいた緑色のたからばこ') // 見ためをかえる
 	this.あいた = true // あいた（変数）
 	this.しょうかんする('緑色のほうせき') // 緑色のほうせきを出す。この行をけすと、出なくなる
+
 	/*+ こうげきされたとき */
 })
 

@@ -4,12 +4,14 @@ rule.this = '木のかんばん'
 
 rule.つくられたとき(async function() {
 	await this.costume('木のかんばん') // 見た目をかえる
+
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
 	await this.talk('このかんばん、なにも書かれてないみたい')
+
 	/*+ ぶつかったとき */
 })
 

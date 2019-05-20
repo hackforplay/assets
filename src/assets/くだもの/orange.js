@@ -4,6 +4,7 @@ rule.this = 'オレンジ'
 
 rule.つくられたとき(async function() {
 	await this.costume('オレンジ') // 見た目をきめる
+
 	/*+ つくられたとき */
 })
 
@@ -11,6 +12,7 @@ rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
 	item.n('たいりょく', ('▼ を', 'ふやす'), 1)
 	this.destroy()
+
 	/*+ ふまれたとき */
 })
 

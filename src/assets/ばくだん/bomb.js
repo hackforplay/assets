@@ -10,6 +10,7 @@ rule.つくられたとき(async function() {
 	const item1 = this.しょうかんする('ばくはつ') // ばくはつ を おこす
 	item1.locate(this.mapX, this.mapY) // バクダンと同じばしょにする
 	this.destroy() // バクダン を けす
+
 	/*+ つくられたとき */
 })
 
