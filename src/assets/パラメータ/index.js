@@ -42,5 +42,19 @@ module.exports = [
 		description: 'もっている おかねを この数字に せってい',
 		icon: './money.png', // アセットのアイコンへのパス
 		insert: './money.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'プレイヤーのなかまになる',
+		description: 'プレイヤーのなかまは、プレイヤーからこうげきされない',
+		icon: './family_player.png', // アセットのアイコンへのパス
+		insert: './family_player.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'モンスターのなかまになる',
+		description: 'モンスターのなかまどうしは、こうげきをうけない',
+		icon: './family_monster.png', // アセットのアイコンへのパス
+		insert: './family_monster.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
