@@ -16,7 +16,11 @@ const scopeItem = [
 	sco.メッセージされたとき
 ]
 
-const scopeThis = [sco.つねに, sco.メッセージされたとき]
+const scopeThis = [
+	sco.つねに,
+	sco.メッセージされたとき,
+	sco.じかんがすすんだとき
+]
 
 module.exports = [
 	{
