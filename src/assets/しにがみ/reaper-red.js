@@ -27,33 +27,19 @@ rule.たおされたとき(async function() {
 	/*+ たおされたとき */
 })
 
+// ここから こうげきされたとき
+rule.item = ('▼ あいて', 'プレイヤー')
+rule.こうげきされたとき(async function(item) {
+	/*+ こうげきされたとき */
+})
+// ここまで こうげきされたとき
+
 // ここから ぶつかったとき
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
 	/*+ ぶつかったとき */
 })
 // ここまで ぶつかったとき
-
-// ここから すすめなかったとき
-rule.item = ('▼ あいて', Rule.Anyone)
-rule.すすめなかったとき(async function(item) {
-	/*+ すすめなかったとき */
-})
-// ここまで すすめなかったとき
-
-// ここから こうげきされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
-rule.こうげきされたとき(async function(item) {
-	/*+ こうげきされたとき */
-})
-// ここまで こうげきされたとき
-
-// ここから しょうかんされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
-rule.しょうかんされたとき(async function(item) {
-	/*+ しょうかんされたとき */
-})
-// ここまで しょうかんされたとき
 
 // ここから メッセージされたとき
 rule.item = ('▼ あいて', Rule.Anyone)
@@ -67,3 +53,36 @@ rule.じかんがすすんだとき(async function() {
 	/*+ じかんがすすんだとき */
 })
 // ここまで じかんがすすんだとき
+
+// ここから すすめなかったとき
+rule.すすめなかったとき(async function() {
+	/*+ すすめなかったとき */
+})
+// ここまで すすめなかったとき
+
+// ここから みつけたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.みつけたとき(async function(item) {
+	/*+ みつけたとき */
+})
+// ここまで みつけたとき
+
+// ここから しょうかんされたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.しょうかんされたとき(async function(item) {
+	/*+ しょうかんされたとき */
+})
+// ここまで しょうかんされたとき
+
+// ここから こうげきするとき
+rule.こうげきするとき(async function() {
+	/*+ こうげきするとき */
+})
+// ここまで こうげきするとき
+
+// ここから ふまれたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.ふまれたとき(async function(item) {
+	/*+ ふまれたとき */
+})
+// ここまで ふまれたとき
