@@ -1,1 +1,1 @@
-Hack.hideLabel('time') // time をかくす
+Hack.showLabel('atk') // プレイヤーの atk を表示
