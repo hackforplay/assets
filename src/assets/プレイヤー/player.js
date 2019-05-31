@@ -68,8 +68,6 @@ rule.しょうかんされたとき(async function(item) {
 })
 // ここまで しょうかんされたとき
 
-
-
 // ここから つねに
 rule.つねに(async function() {
 	/*+ つねに */
