@@ -72,10 +72,3 @@ rule.たおされたとき(async function() {
 	/*+ たおされたとき */
 })
 // ここまで たおされたとき
-
-// ここから ふまれたとき
-rule.item = ('▼ あいて', Rule.Anyone)
-rule.ふまれたとき(async function(item) {
-	/*+ ふまれたとき */
-})
-// ここまで ふまれたとき

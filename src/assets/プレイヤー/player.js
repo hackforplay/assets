@@ -68,12 +68,7 @@ rule.しょうかんされたとき(async function(item) {
 })
 // ここまで しょうかんされたとき
 
-// ここから ふまれたとき
-rule.item = ('▼ あいて', Rule.Anyone)
-rule.ふまれたとき(async function(item) {
-	/*+ ふまれたとき */
-})
-// ここまで ふまれたとき
+
 
 // ここから つねに
 rule.つねに(async function() {
