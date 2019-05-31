@@ -44,11 +44,17 @@ const scopeCreate = [
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.こうげきされたとき,
+	sco.ぶつかったとき,
+	sco.みつけたとき,
+	sco.こうげきするとき
+]
+
+const scopeDrop = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.たおされたとき,
 	sco.ふまれたとき,
-	sco.ぶつかったとき,
 	sco.メッセージされたとき,
-	sco.みつけたとき
+	sco.すすめなかったとき
 ]
 
 module.exports = [
@@ -75,7 +81,7 @@ module.exports = [
 			}
 		]
 	},
-	// 「◯◯を改造する」ファイルに入るコード
+	// しょうかんする
 	{
 		...yellow,
 		scopes: scopeSummon,
@@ -95,6 +101,29 @@ module.exports = [
 				...red,
 				scopes: scopeSummon,
 				insert: './key-red-summon.js'
+			}
+		]
+	},
+	// おとす
+	{
+		...yellow,
+		scopes: scopeDrop,
+		insert: './key-yellow-drop.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...blue,
+				scopes: scopeDrop,
+				insert: './key-blue-drop.js'
+			},
+			{
+				...green,
+				scopes: scopeDrop,
+				insert: './key-green-drop.js'
+			},
+			{
+				...red,
+				scopes: scopeDrop,
+				insert: './key-red-drop.js'
 			}
 		]
 	}

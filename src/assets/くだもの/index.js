@@ -51,11 +51,17 @@ const scopeCreate = [
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.こうげきされたとき,
+	sco.ぶつかったとき,
+	sco.みつけたとき,
+	sco.こうげきするとき
+]
+
+const scopeDrop = [
+	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.たおされたとき,
 	sco.ふまれたとき,
-	sco.ぶつかったとき,
 	sco.メッセージされたとき,
-	sco.みつけたとき
+	sco.すすめなかったとき
 ]
 
 module.exports = [
@@ -85,7 +91,7 @@ module.exports = [
 		scopes: scopeCreate,
 		insert: './pear-create.js'
 	},
-	// 「◯◯を改造する」ファイルに入るコード
+	// しょうかんする
 	{
 		...apple,
 		scopes: scopeSummon,
@@ -110,5 +116,31 @@ module.exports = [
 		...pear,
 		scopes: scopeSummon,
 		insert: './pear-summon.js'
+	},
+	// おとす
+	{
+		...apple,
+		scopes: scopeDrop,
+		insert: './apple-drop.js'
+	},
+	{
+		...banana,
+		scopes: scopeDrop,
+		insert: './banana-drop.js'
+	},
+	{
+		...orange,
+		scopes: scopeDrop,
+		insert: './orange-drop.js'
+	},
+	{
+		...peach,
+		scopes: scopeDrop,
+		insert: './peach-drop.js'
+	},
+	{
+		...pear,
+		scopes: scopeDrop,
+		insert: './pear-drop.js'
 	}
 ]

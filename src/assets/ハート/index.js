@@ -21,18 +21,26 @@ module.exports = [
 		],
 		insert: './heart-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
-	//
+	// しょうかんする
 	{
 		...base,
 		scopes: [
-			// スコープの参照を配列で指定する. null の場合は常に表示
 			sco.こうげきされたとき,
-			sco.たおされたとき,
-			sco.ふまれたとき,
 			sco.ぶつかったとき,
-			sco.メッセージされたとき,
-			sco.みつけたとき
+			sco.みつけたとき,
+			sco.こうげきするとき
 		],
 		insert: './heart-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	// おとす
+	{
+		...base,
+		scopes: [
+			sco.たおされたとき,
+			sco.ふまれたとき,
+			sco.メッセージされたとき,
+			sco.すすめなかったとき
+		],
+		insert: './heart-drop.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
