@@ -17,7 +17,7 @@ rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 })
 
-rule.item = ('▼ あいて', Rule.Anyone) // ふむ キャラクター
+rule.item = ('▼ あいて', 'プレイヤー') // ふむ キャラクター
 rule.ふまれたとき(async function(item) {
 	item.teleport(this) // もう一つのドアにテレポート
 
