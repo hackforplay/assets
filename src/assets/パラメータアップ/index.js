@@ -13,10 +13,12 @@ const scope = [
 	sco.メッセージされたとき,
 	sco.こうげきされたとき,
 	sco.みつけたとき,
-	sco.こうげきするとき
+	sco.こうげきするとき,
+	sco.じかんがすすんだとき,
+	sco.すすめなかったとき
 ]
 
-const scopeGive = [sco.ふまれたとき, sco.ぶつかったとき]
+const scopeGive = [sco.ふまれたとき, sco.ぶつかったとき, sco.たおされたとき]
 
 module.exports = [
 	//  this.n
