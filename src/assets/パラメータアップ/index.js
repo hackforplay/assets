@@ -18,7 +18,7 @@ const scope = [
 	sco.すすめなかったとき
 ]
 
-const scopeGive = [sco.ふまれたとき, sco.ぶつかったとき, sco.たおされたとき]
+const scopeGive = [sco.ふまれたとき, sco.ぶつかったとき]
 
 module.exports = [
 	//  this.n
