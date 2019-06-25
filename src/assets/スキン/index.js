@@ -19,6 +19,13 @@ const base = {
 }
 
 module.exports = [
+	// ゆうしゃ男
+	{
+		...base,
+		name: 'スキン ゆうしゃ男',
+		icon: './hero.png', // アセットのアイコンへのパス
+		insert: './skin_hero.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	// ゆうしゃ女
 	{
 		...base,
