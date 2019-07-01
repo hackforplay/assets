@@ -3,7 +3,7 @@ import '../game'
 rule.this = '緑色のまじょねこ'
 
 rule.つくられたとき(async function() {
-	this.skin = Hack.skin('緑色のまじょねこ') // 見た目をきめる
+	await this.costume('緑色のまじょねこ') // 見た目をきめる
 	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
 	this.n('こうげきりょく', ('▼ を', 'イコール'), 0) // こうげき力をきめる
