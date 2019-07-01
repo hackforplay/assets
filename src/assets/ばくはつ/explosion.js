@@ -5,6 +5,7 @@ rule.this = 'ばくはつ'
 rule.つくられたとき(async function() {
 	await this.costume('ばくはつ') // 見た目をきめる
 	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 3)
+	this.n('スピード', ('▼ を', 'イコール'), 0)
 	this.showHpLabel = false // HPひょうじを見えないようにする
 	this.n('たいりょく', ('▼ を', 'イコール'), 0) // きえる
 
