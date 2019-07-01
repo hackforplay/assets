@@ -47,6 +47,20 @@ module.exports = [
 		icon: './wizard.png', // アセットのアイコンへのパス
 		insert: './skin_wizard.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
+	// サムライ
+	{
+		...base,
+		name: 'スキン サムライ',
+		icon: './samurai.png', // アセットのアイコンへのパス
+		insert: './skin_samurai.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	// ハンター
+	{
+		...base,
+		name: 'スキン ハンター',
+		icon: './hunter.png', // アセットのアイコンへのパス
+		insert: './skin_hunter.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	// スライム
 	{
 		...base,
