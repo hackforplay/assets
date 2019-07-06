@@ -35,7 +35,8 @@ const red = {
 	...base,
 	name: '赤色のフクロウメイジ',
 	module: './owlmage-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './owlmage_red.png' // アセットのアイコンへのパス
+	icon: './owlmage_red.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const white = {
