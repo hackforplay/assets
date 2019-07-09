@@ -64,3 +64,8 @@ exports.じかんがすすんだとき = {
 	name: 'じかんがすすんだとき',
 	defaultActiveCategory: categories.システム
 }
+
+exports.タップされたとき = {
+	name: 'タップされたとき',
+	defaultActiveCategory: categories.うごき
+}
