@@ -50,7 +50,8 @@ module.exports = [
 			sco.つくられたとき,
 			sco.しょうかんされたとき,
 			sco.メッセージされたとき,
-			sco.こうげきされたとき
+			sco.こうげきされたとき,
+			sco.タップされたとき
 		],
 		insert: './bomb-skill.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},

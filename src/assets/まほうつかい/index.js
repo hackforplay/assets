@@ -31,7 +31,8 @@ module.exports = [
 			sco.ふまれたとき,
 			sco.ぶつかったとき,
 			sco.メッセージされたとき,
-			sco.みつけたとき
+			sco.みつけたとき,
+			sco.タップされたとき
 		],
 		insert: './wizard-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}

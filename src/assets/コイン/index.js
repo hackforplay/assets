@@ -28,7 +28,8 @@ module.exports = [
 			sco.こうげきされたとき,
 			sco.ぶつかったとき,
 			sco.みつけたとき,
-			sco.こうげきするとき
+			sco.こうげきするとき,
+			sco.タップされたとき
 		],
 		insert: './coin-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},

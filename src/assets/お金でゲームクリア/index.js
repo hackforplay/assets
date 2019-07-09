@@ -19,7 +19,8 @@ const scopeItem = [
 const scopeThis = [
 	sco.つねに,
 	sco.メッセージされたとき,
-	sco.じかんがすすんだとき
+	sco.じかんがすすんだとき,
+	sco.タップされたとき
 ]
 
 module.exports = [

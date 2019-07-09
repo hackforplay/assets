@@ -3,7 +3,7 @@ const cat = require('../../preference/categories')
 
 const base = {
 	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
-	scopes: [sco.じかんがすすんだとき],
+	scopes: [sco.じかんがすすんだとき, sco.タップされたとき],
 	category: cat.システム, // カテゴリーの参照を指定する
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
