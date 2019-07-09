@@ -28,7 +28,8 @@ module.exports = [
 			sco.こうげきされたとき,
 			sco.ぶつかったとき,
 			sco.みつけたとき,
-			sco.こうげきするとき
+			sco.こうげきするとき,
+			sco.タップされたとき
 		],
 		insert: './star-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},

@@ -64,7 +64,8 @@ const scopeSkill = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.つくられたとき,
 	sco.つねに,
-	sco.すすめなかったとき
+	sco.すすめなかったとき,
+	sco.タップされたとき
 ]
 
 const scopeGive = [
