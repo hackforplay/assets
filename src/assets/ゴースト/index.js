@@ -12,8 +12,7 @@ const purple = {
 	...base,
 	name: '紫色のゴースト',
 	module: './ghost-purple.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './ghost_purple.png', // アセットのアイコンへのパス
-	plan: 'paid'
+	icon: './ghost_purple.png' // アセットのアイコンへのパス
 }
 
 const blue = {
@@ -28,7 +27,8 @@ const green = {
 	...base,
 	name: '緑色のゴースト',
 	module: './ghost-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './ghost_green.png' // アセットのアイコンへのパス
+	icon: './ghost_green.png', // アセットのアイコンへのパス
+	plan: 'paid'
 }
 
 const red = {
