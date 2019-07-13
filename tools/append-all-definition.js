@@ -17,10 +17,18 @@ for (const dir of fs.readdirSync(path.resolve(__dirname, assetsRoot), 'utf8')) {
 	if (!fs.existsSync(path.resolve(__dirname, indexjsPath))) continue
 
 	let indexjs = require(indexjsPath)
-	indexjs = Array.isArray(indexjs) ? indexjs : [indexjs]
-	for (const asset of indexjs) {
+	indexjs && traverse(indexjs, dir)
+}
+
+function traverse(assets, dir = '') {
+	assets = Array.isArray(assets) ? assets : [assets]
+	for (const asset of assets) {
+		if (typeof asset !== 'object') continue
 		if (typeof asset.module === 'string') {
 			appendIfNeeded(path.resolve(__dirname, assetsRoot, dir, asset.module))
+		}
+		if (Array.isArray(asset.children)) {
+			traverse(asset.children, dir)
 		}
 	}
 }
@@ -28,7 +36,10 @@ for (const dir of fs.readdirSync(path.resolve(__dirname, assetsRoot), 'utf8')) {
 function appendIfNeeded(filePath = '') {
 	if (appended.has(filePath)) return
 
-	fs.appendFileSync(filePath, text)
+	const current = fs.readFileSync(filePath, 'utf8')
+	if (!current.includes(text)) {
+		fs.appendFileSync(filePath, text)
+	}
 
 	appended.add(filePath)
 }
