@@ -1,0 +1,79 @@
+import '../game'
+
+rule.this = '青色のしたい'
+
+rule.つくられたとき(async function() {
+	await this.costume('青色のしたい') // 見た目をきめる
+	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
+	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
+	this.damageTime = 30 // いっしゅん、ムテキになる
+
+	await this.wait(10) // まつ
+	this.へんしんする('青色のゾンビ') // へんしんする
+	/*+ つくられたとき */
+})
+
+rule.たおされたとき(async function() {
+	this.おとす('青色のほうせき')
+
+	/*+ たおされたとき */
+})
+
+// ここから つねに
+rule.つねに(async function() {
+	/*+ つねに */
+})
+// ここまで つねに
+
+// ここから こうげきされたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.こうげきされたとき(async function(item) {
+	/*+ こうげきされたとき */
+})
+// ここまで こうげきされたとき
+
+// ここから ぶつかったとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.ぶつかったとき(async function(item) {
+	/*+ ぶつかったとき */
+})
+// ここまで ぶつかったとき
+
+// ここから メッセージされたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.メッセージされたとき(async function(item) {
+	/*+ メッセージされたとき */
+})
+// ここまで メッセージされたとき
+
+// ここから じかんがすすんだとき
+rule.じかんがすすんだとき(async function() {
+	/*+ じかんがすすんだとき */
+})
+// ここまで じかんがすすんだとき
+
+// ここから すすめなかったとき
+rule.すすめなかったとき(async function() {
+	/*+ すすめなかったとき */
+})
+// ここまで すすめなかったとき
+
+// ここから みつけたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.みつけたとき(async function(item) {
+	/*+ みつけたとき */
+})
+// ここまで みつけたとき
+
+// ここから しょうかんされたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.しょうかんされたとき(async function(item) {
+	/*+ しょうかんされたとき */
+})
+// ここまで しょうかんされたとき
+
+// ここから こうげきするとき
+rule.こうげきするとき(async function() {
+	/*+ こうげきするとき */
+})
+// ここまで こうげきするとき
