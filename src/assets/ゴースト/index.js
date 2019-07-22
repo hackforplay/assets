@@ -3,7 +3,7 @@ const cat = require('../../preference/categories')
 
 const base = {
 	category: cat.キャラクター, // カテゴリーの参照を配列で指定する
-	description: '話しかけると スキルブックをくれる', // 説明文（日本語）
+	description: 'だんだん、とうめいになっていく、こわいモンスター', // 説明文（日本語）
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
 }
