@@ -71,62 +71,67 @@ module.exports = [
 	{
 		...wood,
 		scopes: scopeCreate,
-		insert: './sign-wood-create.js'
+		insert: './sign-wood-create.js',
+		children: [
+			{
+				...black,
+				scopes: scopeCreate,
+				insert: './sign-black-create.js'
+			},
+			{
+				...blue,
+				scopes: scopeCreate,
+				insert: './sign-blue-create.js'
+			},
+			{
+				...green,
+				scopes: scopeCreate,
+				insert: './sign-green-create.js'
+			},
+			{
+				...red,
+				scopes: scopeCreate,
+				insert: './sign-red-create.js'
+			},
+			{
+				...white,
+				scopes: scopeCreate,
+				insert: './sign-white-create.js'
+			}
+		]
 	},
-	{
-		...black,
-		scopes: scopeCreate,
-		insert: './sign-black-create.js'
-	},
-	{
-		...blue,
-		scopes: scopeCreate,
-		insert: './sign-blue-create.js'
-	},
-	{
-		...green,
-		scopes: scopeCreate,
-		insert: './sign-green-create.js'
-	},
-	{
-		...red,
-		scopes: scopeCreate,
-		insert: './sign-red-create.js'
-	},
-	{
-		...white,
-		scopes: scopeCreate,
-		insert: './sign-white-create.js'
-	},
+
 	// 「◯◯を改造する」ファイルに入るコード
 	{
 		...wood,
 		scopes: scopeSummon,
-		insert: './sign-wood-summon.js'
-	},
-	{
-		...black,
-		scopes: scopeSummon,
-		insert: './sign-black-summon.js'
-	},
-	{
-		...blue,
-		scopes: scopeSummon,
-		insert: './sign-blue-summon.js'
-	},
-	{
-		...green,
-		scopes: scopeSummon,
-		insert: './sign-green-summon.js'
-	},
-	{
-		...red,
-		scopes: scopeSummon,
-		insert: './sign-red-summon.js'
-	},
-	{
-		...white,
-		scopes: scopeSummon,
-		insert: './sign-white-summon.js'
+		insert: './sign-wood-summon.js',
+		children: [
+			{
+				...black,
+				scopes: scopeSummon,
+				insert: './sign-black-summon.js'
+			},
+			{
+				...blue,
+				scopes: scopeSummon,
+				insert: './sign-blue-summon.js'
+			},
+			{
+				...green,
+				scopes: scopeSummon,
+				insert: './sign-green-summon.js'
+			},
+			{
+				...red,
+				scopes: scopeSummon,
+				insert: './sign-red-summon.js'
+			},
+			{
+				...white,
+				scopes: scopeSummon,
+				insert: './sign-white-summon.js'
+			}
+		]
 	}
 ]
