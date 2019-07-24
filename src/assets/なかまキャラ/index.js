@@ -7,14 +7,6 @@ const base = {
 	plan: 'free' // 'free' にする
 }
 
-const merchant = {
-	...base,
-	name: 'しょうにん',
-	description: 'おかねをつかって、アイテムを買ってみよう',
-	module: './merchant.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './merchant.png' // アセットのアイコンへのパス
-}
-
 const samurai = {
 	...base,
 	name: 'サムライ',
@@ -52,11 +44,6 @@ const scopeSummon = [
 module.exports = [
 	// 「ステージ」ファイルに入るコード
 	{
-		...merchant,
-		scopes: scopeCreate,
-		insert: './merchant-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
-	{
 		...samurai,
 		scopes: scopeCreate,
 		insert: './samurai-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
@@ -67,11 +54,6 @@ module.exports = [
 		insert: './hunter-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	// 「◯◯の中身」ファイルに入るコード
-	{
-		...merchant,
-		scopes: scopeSummon,
-		insert: './merchant-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	},
 	{
 		...samurai,
 		scopes: scopeSummon,

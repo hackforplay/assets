@@ -4,15 +4,18 @@ rule.this = 'しょうにん'
 
 rule.つくられたとき(async function() {
 	await this.costume('しょうにん') // 見た目をきめる
+	this.n('こうげきりょく', ('▼ を', 'イコール'), 0) // こうげき力をきめる
 
 	/*+ つくられたとき */
 })
 
 rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	const ねだん = 10 // ねだんをきめる
+	const しょうひん = 'りんご'
+	const ねだん = 5
+
 	const こたえ = await this.talk(
-		`りんごは ${ねだん} えんだよ`,
+		`${しょうひん} は ${ねだん} えんだよ`,
 		'かう！',
 		'やめとく'
 	)
@@ -25,7 +28,7 @@ rule.ぶつかったとき(async function(item) {
 	if (item.money >= ねだん) {
 		await this.talk('まいどあり！')
 		await this.attack()
-		await this.しょうかんする('りんご')
+		await this.しょうかんする(しょうひん)
 		item.n('おかね', ('▼ を', 'へらす'), ねだん)
 	} else {
 		await this.talk('おっと、お金が足りないよ')
