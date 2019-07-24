@@ -43,6 +43,20 @@ const banana = {
 	icon: './fruit_banana.png' // アセットのアイコンへのパス
 }
 
+const watermelon = {
+	...base,
+	name: 'スイカ',
+	module: './watermelon.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './watermelon.png' // アセットのアイコンへのパス
+}
+
+const watermelon_slice = {
+	...base,
+	name: 'きられたスイカ',
+	module: './watermelon_slice.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './watermelon_slice.png' // アセットのアイコンへのパス
+}
+
 const scopeCreate = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.ゲームがはじまったとき
@@ -92,6 +106,18 @@ module.exports = [
 		scopes: scopeCreate,
 		insert: './pear-create.js'
 	},
+	{
+		...watermelon,
+		scopes: scopeCreate,
+		insert: './watermelon-create.js',
+		children: [
+			{
+				...watermelon_slice,
+				scopes: scopeCreate,
+				insert: './watermelon_slice-create.js'
+			}
+		]
+	},
 	// しょうかんする
 	{
 		...apple,
@@ -118,6 +144,18 @@ module.exports = [
 		scopes: scopeSummon,
 		insert: './pear-summon.js'
 	},
+	{
+		...watermelon,
+		scopes: scopeSummon,
+		insert: './watermelon-summon.js',
+		children: [
+			{
+				...watermelon_slice,
+				scopes: scopeSummon,
+				insert: './watermelon_slice-summon.js'
+			}
+		]
+	},
 	// おとす
 	{
 		...apple,
@@ -143,5 +181,17 @@ module.exports = [
 		...pear,
 		scopes: scopeDrop,
 		insert: './pear-drop.js'
+	},
+	{
+		...watermelon,
+		scopes: scopeDrop,
+		insert: './watermelon-drop.js',
+		children: [
+			{
+				...watermelon_slice,
+				scopes: scopeDrop,
+				insert: './watermelon_slice-drop.js'
+			}
+		]
 	}
 ]
