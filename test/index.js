@@ -56,6 +56,12 @@ test('Check configs', t => {
 		const m = name => `${domain}の ${name} を指定してください`
 		t.is(typeof config.name, 'string', m(`name`))
 		t.is(typeof config.description, 'string', m(`description`))
+		if (typeof config.thumbnail === 'string') {
+			t.truthy(
+				config.thumbnail.startsWith('https://'),
+				m(`thumbnail には https:// で始まる文字列`)
+			)
+		}
 		if (config.scopes !== null) {
 			t.true(Array.isArray(config.scopes), m(`scopes`))
 			for (const scope of config.scopes) {

@@ -43,6 +43,9 @@ const converter = (domain: string) => (config: IConfig): IOutput => {
 		plan: config.plan,
 		variations: null
 	}
+	if (config.thumbnail) {
+		item.thumbnail = config.thumbnail // optional
+	}
 
 	if (!config.children) {
 		return item
