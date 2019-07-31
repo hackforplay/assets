@@ -77,6 +77,7 @@ module.exports = [
 		...red,
 		scopes: scopeCreate,
 		insert: './m_mimic-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/d7db557147cbff90f49b3d9d17a4f692.gif', // サムネイル画像
 		children: [
 			{
 				...black,

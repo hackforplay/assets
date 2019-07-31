@@ -77,6 +77,7 @@ module.exports = [
 		...blue,
 		scopes: scopeCreate,
 		insert: './witch_cat-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/0a2ad658e70f2cdfc81bbe3df8f2664c.gif', // サムネイル画像
 		children: [
 			{
 				...black,

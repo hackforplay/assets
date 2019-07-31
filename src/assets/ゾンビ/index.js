@@ -77,7 +77,7 @@ module.exports = [
 		...green,
 		scopes: scopeCreate,
 		insert: './zombie-green-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
-		thumbnail: 'https://i.gyazo.com/80e3884be40922255e9bfd566251bd77.gif', // サムネイル画像
+		thumbnail: 'https://i.gyazo.com/a95adfed0c7dae9313ff16f1fe8ac0c2.gif', // サムネイル画像
 		children: [
 			{
 				...black,

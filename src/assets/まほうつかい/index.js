@@ -19,7 +19,8 @@ module.exports = [
 			// スコープの参照を配列で指定する. null の場合は常に表示
 			sco.ゲームがはじまったとき
 		],
-		insert: './wizard-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './wizard-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/d60778cba6e635593e42adcd8cf136fe.gif' // サムネイル画像
 	},
 	//
 	{

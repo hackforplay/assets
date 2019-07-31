@@ -72,6 +72,7 @@ module.exports = [
 		...green,
 		scopes: scopeCreate,
 		insert: './lizardman-green-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/6a3d68aaa9c681436ff62ff9c9ed784a.gif', // サムネイル画像
 		children: [
 			{
 				...black,

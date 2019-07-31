@@ -77,6 +77,7 @@ module.exports = [
 		...black,
 		scopes: scopeCreate,
 		insert: './ninja-black-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/2562ffba47780cd72d1afa14af2c8161.gif', // サムネイル画像
 		children: [
 			{
 				...blue,

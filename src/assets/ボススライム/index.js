@@ -77,6 +77,7 @@ module.exports = [
 		...blue,
 		scopes: scopeCreate,
 		insert: './bossslime-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/fd64687c26c66576b6a3643530ef5441.gif', // サムネイル画像
 		children: [
 			{
 				...black,

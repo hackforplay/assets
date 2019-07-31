@@ -77,6 +77,7 @@ module.exports = [
 		...white,
 		scopes: scopeCreate,
 		insert: './skeleton-white-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/ab745b6efbcb10d34fc3754ca80ccd70.gif', // サムネイル画像
 		children: [
 			{
 				...black,

@@ -72,6 +72,7 @@ module.exports = [
 		...purple,
 		scopes: scopeCreate,
 		insert: './reaper-purple-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/9eb0dcf45c1993d5e2d04c73e5214792.gif', // サムネイル画像
 		children: [
 			{
 				...black,

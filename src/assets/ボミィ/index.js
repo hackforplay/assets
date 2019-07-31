@@ -77,6 +77,7 @@ module.exports = [
 		...blue,
 		scopes: scopeCreate,
 		insert: './bomy-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/96d0479ceee078b5e21768c3b2c68540.gif', // サムネイル画像
 		children: [
 			{
 				...black,

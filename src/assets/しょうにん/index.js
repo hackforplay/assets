@@ -77,6 +77,7 @@ module.exports = [
 		...merchant,
 		scopes: scopeCreate,
 		insert: './merchant-normal-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/97980fd989d125a85e42aeb7011bc8ac.gif', // サムネイル画像
 		children: [
 			{
 				...fire,

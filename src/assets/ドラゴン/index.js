@@ -72,6 +72,7 @@ module.exports = [
 		...red,
 		scopes: scopeCreate,
 		insert: './dragon-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/5812265ee91ccb2fd771b5ac2e48ee6d.gif', // サムネイル画像
 		children: [
 			{
 				...black,

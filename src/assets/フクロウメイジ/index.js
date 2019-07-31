@@ -77,6 +77,7 @@ module.exports = [
 		...green,
 		scopes: scopeCreate,
 		insert: './owlmage-green-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/1ca1c69f4bcc829ea347862aec7a7076.gif', // サムネイル画像
 		children: [
 			{
 				...black,

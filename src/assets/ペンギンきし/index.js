@@ -72,6 +72,7 @@ module.exports = [
 		plan: 'free',
 		scopes: scopeCreate,
 		insert: './penguin_knight-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/cce60c57a48a7aed83bacd73b8ca9cba.gif', // サムネイル画像
 		children: [
 			{
 				...black,

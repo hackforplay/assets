@@ -86,6 +86,7 @@ module.exports = [
 		...blue,
 		scopes: scopeCreate,
 		insert: './slime-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/476dade56d5b2c344a83de22d66a7d17.gif', // サムネイル画像
 		children: [
 			{
 				...black,

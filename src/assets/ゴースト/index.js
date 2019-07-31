@@ -77,6 +77,7 @@ module.exports = [
 		...purple,
 		scopes: scopeCreate,
 		insert: './ghost-purple-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/652f35cd160588bf174cdcc2252e7709.gif', // サムネイル画像
 		children: [
 			{
 				...blue,
