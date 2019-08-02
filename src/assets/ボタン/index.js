@@ -72,6 +72,7 @@ module.exports = [
 		...gold,
 		scopes: scopeCreate,
 		insert: './button-gold-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/e0cdb850fe315b20f436d201e94245fa.gif', // サムネイル画像
 		children: [
 			{
 				...black,

@@ -19,7 +19,8 @@ module.exports = [
 			// スコープの参照を配列で指定する. null の場合は常に表示
 			sco.ゲームがはじまったとき
 		],
-		insert: './coin-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './coin-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/2d151991006d2df70cdba15cc83ce168.gif' // サムネイル画像
 	},
 	// しょうかんする
 	{

@@ -72,6 +72,7 @@ module.exports = [
 		...wood,
 		scopes: scopeCreate,
 		insert: './sign-wood-create.js',
+		thumbnail: 'https://i.gyazo.com/b88fd5f7cb2a9162d826bc3bad81717a.gif', // サムネイル画像
 		children: [
 			{
 				...black,

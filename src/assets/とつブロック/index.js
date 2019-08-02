@@ -72,6 +72,7 @@ module.exports = [
 		...red,
 		scopes: scopeCreate,
 		insert: './pf-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/b840030465db07b2ab4dc8b7e4ba0583.gif', // サムネイル画像
 		children: [
 			{
 				...blue,

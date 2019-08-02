@@ -78,6 +78,7 @@ module.exports = [
 		...white,
 		scopes: scopeCreate,
 		insert: './teleporter-white-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/e608db50eb7abd09162c69ac4ec02bad.gif', // サムネイル画像
 		children: [
 			{
 				...black,

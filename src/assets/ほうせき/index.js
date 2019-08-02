@@ -77,6 +77,7 @@ module.exports = [
 		...green,
 		scopes: scopeCreate,
 		insert: './gem-green-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/32c95112b111edbac65d253c839a0e52.gif', // サムネイル画像
 		children: [
 			{
 				...blue,

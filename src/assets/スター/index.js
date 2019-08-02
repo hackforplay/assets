@@ -19,7 +19,8 @@ module.exports = [
 			// スコープの参照を配列で指定する. null の場合は常に表示
 			sco.ゲームがはじまったとき
 		],
-		insert: './star-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './star-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/0d5093a4099d8e091900d2f0e93b7723.gif' // サムネイル画像
 	},
 	// しょうかんする
 	{

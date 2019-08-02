@@ -50,7 +50,8 @@ module.exports = [
 	{
 		...rock,
 		scopes: scopeCreate,
-		insert: './rock-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './rock-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/4513b77028be40394fecc772ae71cac5.gif' // サムネイル画像
 	},
 	{
 		...rocks_vertical,

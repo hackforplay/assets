@@ -58,6 +58,7 @@ module.exports = [
 		...yellow,
 		scopes: scopeCreate,
 		insert: './door-yellow-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/f71e1b125a1aabed95cb3c263c1f01a1.gif', // サムネイル画像
 		children: [
 			{
 				...blue,

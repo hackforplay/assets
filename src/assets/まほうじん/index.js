@@ -19,7 +19,8 @@ module.exports = [
 			// スコープの参照を配列で指定する. null の場合は常に表示
 			sco.ゲームがはじまったとき
 		],
-		insert: './magic_circle-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './magic_circle-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/d9dde216fb4fb812fb68ed511464b221.gif' // サムネイル画像
 	},
 	//「◯◯を改造する」ファイルに入るコード
 	{

@@ -35,6 +35,7 @@ module.exports = [
 		...down,
 		scopes: scopeCreate,
 		insert: './down-stairs-create.js',
+		thumbnail: 'https://i.gyazo.com/4c045b6ab37a333cd8cf6b172a6c562b.gif', // サムネイル画像
 		children: []
 	}
 	/*

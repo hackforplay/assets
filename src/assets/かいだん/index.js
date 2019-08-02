@@ -57,6 +57,7 @@ module.exports = [
 		...stone,
 		scopes: scopeCreate,
 		insert: './stairs-stone-create.js',
+		thumbnail: 'https://i.gyazo.com/32a0fa45ddcd87ba11f07476ca6bfdbd.gif', // サムネイル画像
 		children: [
 			{
 				...wood,
@@ -73,7 +74,8 @@ module.exports = [
 	{
 		...secret,
 		scopes: scopeCreate,
-		insert: './stairs-secret-create.js'
+		insert: './stairs-secret-create.js',
+		thumbnail: 'https://i.gyazo.com/7f7fda0b85ee4278a65dc5fa11045e47.gif' // サムネイル画像
 	}
 	/*
 	// 「◯◯を改造する」ファイルに入るコード

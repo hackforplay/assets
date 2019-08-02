@@ -59,6 +59,7 @@ module.exports = [
 		...blue,
 		scopes: scopeCreate,
 		insert: './warp-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/d30d387ac8bc588b2776cdf9697880f4.gif', // サムネイル画像
 		children: [
 			{
 				...green,

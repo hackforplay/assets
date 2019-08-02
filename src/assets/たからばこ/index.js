@@ -72,6 +72,7 @@ module.exports = [
 		...red,
 		scopes: scopeCreate,
 		insert: './tbox-red-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/5610866fde2308d55ea790db5a34f608.gif', // サムネイル画像
 		children: [
 			{
 				...black,

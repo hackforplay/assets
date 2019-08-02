@@ -84,32 +84,38 @@ module.exports = [
 	{
 		...apple,
 		scopes: scopeCreate,
-		insert: './apple-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './apple-create.js',
+		thumbnail: 'https://i.gyazo.com/97c37865f8f63d142d259f800319d1b4.gif' // サムネイル画像
 	},
 	{
 		...banana,
 		scopes: scopeCreate,
-		insert: './banana-create.js'
+		insert: './banana-create.js',
+		thumbnail: 'https://i.gyazo.com/0e00fd8cf3ad52f57575d4eaae5f5661.gif' // サムネイル画像
 	},
 	{
 		...orange,
 		scopes: scopeCreate,
-		insert: './orange-create.js'
+		insert: './orange-create.js',
+		thumbnail: 'https://i.gyazo.com/c83abd5e3c05ad7c6336bd08e5ac9ec3.gif' // サムネイル画像
 	},
 	{
 		...peach,
 		scopes: scopeCreate,
-		insert: './peach-create.js'
+		insert: './peach-create.js',
+		thumbnail: 'https://i.gyazo.com/eecddd706d2a0ca0673387696e0b8e4c.gif' // サムネイル画像
 	},
 	{
 		...pear,
 		scopes: scopeCreate,
-		insert: './pear-create.js'
+		insert: './pear-create.js',
+		thumbnail: 'https://i.gyazo.com/286b40d2e6dd0d93dff173f611251d44.gif' // サムネイル画像
 	},
 	{
 		...watermelon,
 		scopes: scopeCreate,
 		insert: './watermelon-create.js',
+		thumbnail: 'https://i.gyazo.com/2c8c5b6182d11feb55f11fbf0fb55f88.gif', // サムネイル画像
 		children: [
 			{
 				...watermelon_slice,

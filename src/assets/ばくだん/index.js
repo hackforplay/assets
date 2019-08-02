@@ -25,7 +25,8 @@ module.exports = [
 			// スコープの参照を配列で指定する. null の場合は常に表示
 			sco.ゲームがはじまったとき
 		],
-		insert: './bomb-create.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './bomb-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/c2ba65564ba86418a7810bf846c70b70.gif' // サムネイル画像
 	},
 	// 改造
 	{

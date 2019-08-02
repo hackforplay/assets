@@ -58,6 +58,7 @@ module.exports = [
 		...cross,
 		scopes: scopeCreate,
 		insert: './grave-cross-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/fa65096f4555bd0263fbdf12f0665592.gif', // サムネイル画像
 		children: [
 			{
 				...block,

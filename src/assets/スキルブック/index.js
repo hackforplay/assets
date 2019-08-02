@@ -78,6 +78,7 @@ module.exports = [
 		...blue,
 		scopes: scopeCreate,
 		insert: './skillbook-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/f777a68142b1e9604087ffef5d3290ad.gif', // サムネイル画像
 		children: [
 			{
 				...black,
