@@ -60,5 +60,19 @@ module.exports = [
 		description: 'モンスターのなかまどうしは、こうげきをうけない',
 		icon: './family_monster.png', // アセットのアイコンへのパス
 		insert: './family_monster.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'みつけられるきょり',
+		description: '',
+		icon: './eyesight.png', // アセットのアイコンへのパス
+		insert: './eyesight.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'みつけられるはんい',
+		description: '',
+		icon: './field_of_view.png', // アセットのアイコンへのパス
+		insert: './field_of_view.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
