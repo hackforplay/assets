@@ -1,1 +1,1 @@
-await this.chase8('プレイヤー') // おいかける
+await this.chase8('緑色のゾンビ') // おいかける
