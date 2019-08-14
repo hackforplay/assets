@@ -24,11 +24,12 @@ const base = {
 }
 
 module.exports = [
+	/*
 	{
 		...base,
 		name: 'へんしんする',
 		description: 'べつの アセットへ へんしんする',
 		icon: './transform.png', // アセットのアイコンへのパス
 		insert: './transform.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	}
+	}*/
 ]
