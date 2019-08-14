@@ -24,6 +24,7 @@ const scopeThis = [
 ]
 
 module.exports = [
+	/*
 	{
 		...base,
 		name: 'おかねでゲームクリア',
@@ -55,5 +56,5 @@ module.exports = [
 		scopes: scopeThis,
 		icon: './money_gameover.png', // アセットのアイコンへのパス
 		insert: './money_gameover_this.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	}
+	}*/
 ]
