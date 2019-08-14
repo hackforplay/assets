@@ -47,6 +47,11 @@ const converter = (domain: string) => (config: IConfig): IOutput => {
 		item.thumbnail = config.thumbnail // optional
 	}
 
+	// GPリーグ2019ではキャラクターの召喚が禁止されている
+	if (item.category === 0 || item.category === 1) {
+		item.insertCode = null
+	}
+
 	if (!config.children) {
 		return item
 	}
