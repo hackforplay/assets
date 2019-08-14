@@ -22,6 +22,7 @@ const base = {
 }
 
 module.exports = [
+	/*
 	{
 		...base,
 		name: 'ゲームクリア',
@@ -35,5 +36,5 @@ module.exports = [
 		description: '',
 		icon: './gameover.png', // アセットのアイコンへのパス
 		insert: './gameover.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	}
+	}*/
 ]
