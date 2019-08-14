@@ -10,6 +10,7 @@ const base = {
 }
 
 module.exports = [
+	/*
 	{
 		...base,
 		name: 'じかんでゲームクリア',
@@ -23,5 +24,5 @@ module.exports = [
 		description: 'もし、じかんが20になったら、ゲームオーバー',
 		icon: './timer_gameover.png', // アセットのアイコンへのパス
 		insert: './timer_gameover.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
-	}
+	}*/
 ]
