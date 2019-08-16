@@ -1,6 +1,6 @@
 import '../game'
 
-rule.this = '白色のスライム'
+rule.this = '白色のタマゴ'
 
 rule.つくられたとき(async function() {
 	await this.costume('白色のタマゴ') // 見た目をきめる
