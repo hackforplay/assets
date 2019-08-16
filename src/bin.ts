@@ -47,11 +47,6 @@ const converter = (domain: string) => (config: IConfig): IOutput => {
 		item.thumbnail = config.thumbnail // optional
 	}
 
-	// GPリーグ2019ではキャラクターの召喚が禁止されている
-	if (item.category === 0 || item.category === 1) {
-		item.insertCode = null
-	}
-
 	if (!config.children) {
 		return item
 	}
@@ -89,7 +84,11 @@ for (const domain of fs.readdirSync(pathes.assets, 'utf8')) {
 	const abs = path.join(pathes.assets, domain)
 	if (!fs.statSync(abs).isDirectory()) continue // assets is directory
 	const config = require(path.relative(__dirname, abs)) // config is /index.js
-	const configs: IConfig[] = Array.isArray(config) ? config : [config]
+	let configs: IConfig[] = Array.isArray(config) ? config : [config]
+	// GPリーグ2019ではキャラクターの召喚が禁止されている
+	configs = configs.filter(
+		config => !['キャラクター', 'もの'].includes(config.category.name)
+	)
 	json.buttons = json.buttons.concat(configs.map(converter(domain)))
 }
 
