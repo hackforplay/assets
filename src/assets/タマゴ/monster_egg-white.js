@@ -7,13 +7,21 @@ rule.つくられたとき(async function() {
 	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
 	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
-	const こうほ = ['白色のドラゴン', '白色のリザードマン', '赤色のペンギンきし']
-	const モンスター = こうほ[Math.floor(Math.random() * こうほ.length)]
-
-	await this.wait(random(20)) // まつ
-	await this.へんしんする(モンスター) // へんしんする
 
 	/*+ つくられたとき */
+
+	await this.wait(random(20)) // まつ
+
+	let ばんごう = random(3)
+	if (ばんごう === 0) {
+		await this.へんしんする('白色のドラゴン') // へんしんする
+	}
+	if (ばんごう === 1) {
+		await this.へんしんする('白色のリザードマン') // へんしんする
+	}
+	if (ばんごう === 2) {
+		await this.へんしんする('赤色のペンギンきし') // へんしんする
+	}
 })
 
 rule.つねに(async function() {
