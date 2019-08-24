@@ -1,16 +1,9 @@
-import { parse } from '@babel/parser'
 import test from 'ava'
 import fs from 'fs'
 import { includes, values } from 'lodash'
 import path from 'path'
 import { IConfig } from '../src'
-
-const categories = require('../src/preference/categories')
-const scopes = require('../src/preference/scopes')
-
-const pathes = {
-	assets: path.resolve(__dirname, '../src/assets')
-}
+import { categories, pathes, scopes } from './config'
 
 test('Check categories', t => {
 	for (const key of Object.keys(categories)) {
@@ -119,24 +112,6 @@ test('Check configs', t => {
 			for (const child of config.children) {
 				assertAsset(child, domain, abs)
 			}
-		}
-	}
-})
-
-test('Parse ECMAScript', t => {
-	for (const domain of fs.readdirSync(pathes.assets)) {
-		const dirPath = path.join(pathes.assets, domain)
-		if (!fs.statSync(dirPath).isDirectory()) continue
-		for (const fileName of fs.readdirSync(dirPath)) {
-			if (path.extname(fileName) !== '.js') continue
-			const sourceFilename = path.join(dirPath, fileName)
-			const text = fs.readFileSync(sourceFilename, { encoding: 'utf8' })
-			t.notThrows(() => {
-				parse(text, {
-					sourceType: 'module',
-					allowAwaitOutsideFunction: true // アセットは関数の中に入ることもあるので
-				})
-			}, `構文エラーがあります: ${sourceFilename}`)
 		}
 	}
 })
