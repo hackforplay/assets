@@ -12,6 +12,12 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
+// ここから つねに
+rule.つねに(async function() {
+	/*+ つねに */
+})
+// ここまで つねに
+
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.こうげきされたとき(async function(item) {
 	await this.chase4(item) // おいかける
