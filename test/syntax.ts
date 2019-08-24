@@ -50,7 +50,8 @@ test('Parse ECMAScript', t => {
 					second.expression.left.type === 'MemberExpression',
 				`rule.this = '' がありません: ${sourceFilename}`
 			)
-			const events = new Set(requiredEvents)
+			const requireds = new Set(requiredEvents)
+			const founds = new Set()
 			for (const statement of rest) {
 				if (statement.type !== 'ExpressionStatement') continue
 				if (statement.expression.type !== 'CallExpression') continue
@@ -58,12 +59,17 @@ test('Parse ECMAScript', t => {
 				const { object, property } = statement.expression.callee
 				if (object.type !== 'Identifier') continue
 				if (object.name !== 'rule') continue
-				events.delete(property.name)
+				requireds.delete(property.name)
+				t.falsy(
+					founds.has(property.name),
+					`${sourceFilename}\nrule.${property.name} が２つ以上含まれています`
+				)
+				founds.add(property.name)
 			}
-			if (events.size > 0) {
+			if (requireds.size > 0) {
 				t.fail(
 					`${sourceFilename}\n次のイベントがありません: ${Array.from(
-						events.values()
+						requireds.values()
 					).join()}`
 				)
 			}
