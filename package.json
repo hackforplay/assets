@@ -29,10 +29,19 @@
 	"files": [
 		"lib"
 	],
+	"ava": {
+		"compileEnhancements": false,
+		"extensions": [
+			"ts"
+		],
+		"require": [
+			"ts-node/register"
+		]
+	},
 	"devDependencies": {
 		"@babel/parser": "^7.2.3",
 		"@types/node": "^10.12.12",
-		"ava": "1.0.0-rc.2",
+		"ava": "^2.3.0",
 		"prettier": "^1.15.3",
 		"semantic-release": "^15.13.3",
 		"ts-node": "^7.0.1",
