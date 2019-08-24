@@ -1,19 +1,14 @@
 import test from 'ava'
 import fs from 'fs'
+import { includes, values } from 'lodash'
 import path from 'path'
-import { values, includes } from 'lodash'
-import { parse } from '@babel/parser'
-import categories from '../src/preference/categories'
-import scopes from '../src/preference/scopes'
-
-const pathes = {
-	assets: path.resolve(__dirname, '../src/assets')
-}
+import { IConfig } from '../src'
+import { categories, pathes, scopes } from './config'
 
 test('Check categories', t => {
 	for (const key of Object.keys(categories)) {
 		const config = categories[key]
-		const m = name => `${key}の ${name} を指定してください`
+		const m = (name: string) => `${key}の ${name} を指定してください`
 		t.is(typeof config.name, 'string', m(`name`))
 		t.is(typeof config.icon, 'string', m(`icon`))
 	}
@@ -24,7 +19,7 @@ test('Check scopes', t => {
 
 	for (const key of Object.keys(scopes)) {
 		const config = scopes[key]
-		const m = name => `${key}の ${name} を指定してください`
+		const m = (name: string) => `${key}の ${name} を指定してください`
 		t.is(typeof config.name, 'string', m(`name`))
 		t.truthy(
 			includes(_categories, config.defaultActiveCategory),
@@ -52,8 +47,8 @@ test('Check configs', t => {
 	}
 
 	// assert recursive
-	function assertAsset(config, domain, abs) {
-		const m = name => `${domain}の ${name} を指定してください`
+	function assertAsset(config: IConfig, domain: string, abs: string) {
+		const m = (name: string) => `${domain}の ${name} を指定してください`
 		t.is(typeof config.name, 'string', m(`name`))
 		t.is(typeof config.description, 'string', m(`description`))
 		if (typeof config.thumbnail === 'string') {
@@ -117,24 +112,6 @@ test('Check configs', t => {
 			for (const child of config.children) {
 				assertAsset(child, domain, abs)
 			}
-		}
-	}
-})
-
-test('Parse ECMAScript', t => {
-	for (const domain of fs.readdirSync(pathes.assets)) {
-		const dirPath = path.join(pathes.assets, domain)
-		if (!fs.statSync(dirPath).isDirectory()) continue
-		for (const fileName of fs.readdirSync(dirPath)) {
-			if (path.extname(fileName) !== '.js') continue
-			const sourceFilename = path.join(dirPath, fileName)
-			const text = fs.readFileSync(sourceFilename, { encoding: 'utf8' })
-			t.notThrows(() => {
-				parse(text, {
-					sourceType: 'module',
-					allowAwaitOutsideFunction: true // アセットは関数の中に入ることもあるので
-				})
-			}, `構文エラーがあります: ${sourceFilename}`)
 		}
 	}
 })

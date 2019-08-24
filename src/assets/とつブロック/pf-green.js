@@ -28,6 +28,13 @@ rule.つねに(async function() {
 })
 // ここまで つねに
 
+// ここから こうげきされたとき
+rule.item = ('▼ あいて', Rule.Anyone)
+rule.こうげきされたとき(async function(item) {
+	/*+ こうげきされたとき */
+})
+// ここまで こうげきされたとき
+
 // ここから ぶつかったとき
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.ぶつかったとき(async function(item) {
