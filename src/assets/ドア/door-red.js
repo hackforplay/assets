@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '赤色のドア'
-
 rule.つくられたとき(async function() {
 	await this.costume('赤色のドア') // とじている
 	this.collisionFlag = true // はいれないようにする

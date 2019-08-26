@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '緑色のどうぞう'
-
 rule.つくられたとき(async function() {
 	await this.costume('緑色のどうぞう') // みためをきめる
 

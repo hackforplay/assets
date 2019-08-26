@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '赤色のワープ'
-
 rule.つくられたとき(async function() {
 	await this.costume('赤色のワープ') // 見た目をかえる
 

@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '赤色のボタン'
-
 rule.つくられたとき(async function() {
 	await this.costume('赤色のボタン') // 見た目をきめる
 

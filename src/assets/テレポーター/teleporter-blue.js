@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '青色のテレポーター'
-
 rule.つくられたとき(async function() {
 	await this.costume('青色のテレポーター') // 見た目をかえる
 

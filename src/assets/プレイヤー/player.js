@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = 'プレイヤー'
-
 rule.つくられたとき(async function() {
 	Player.set(this)
 	await this.costume('ゆうしゃ男') // 見た目をきめる

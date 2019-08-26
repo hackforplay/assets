@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '黒色のたからばこ'
-
 rule.つくられたとき(async function() {
 	await this.costume('黒色のたからばこ') // 見ためをきめる
 	this.あいた = false // まだ、あいていない（変数）

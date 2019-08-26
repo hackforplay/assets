@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '青色のとつブロック'
-
 rule.つくられたとき(async function() {
 	await this.costume('へこんだ青色のとつブロック') // みためをきめる
 	this.collisionFlag = false // 上にのれるようにする

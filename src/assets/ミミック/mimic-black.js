@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '黒色のミミック'
-
 rule.つくられたとき(async function() {
 	await this.costume('黒色のミミック') // 見た目をきめる
 	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる

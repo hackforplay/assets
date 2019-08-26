@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = 'コイン'
-
 rule.つくられたとき(async function() {
 	await this.costume('コイン') // 見た目をきめる
 

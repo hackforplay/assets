@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '黒色のトグルスイッチ'
-
 rule.つくられたとき(async function() {
 	await this.costume('黒色のトグルスイッチ') // 見た目をかえる
 

@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '赤色のスキルブック'
-
 rule.つくられたとき(async function() {
 	await this.costume('赤色のスキルブック') // 見た目をかえる
 

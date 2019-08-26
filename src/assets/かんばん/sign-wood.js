@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '木のかんばん'
-
 rule.つくられたとき(async function() {
 	await this.costume('木のかんばん') // 見た目をかえる
 

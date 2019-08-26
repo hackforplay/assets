@@ -1,7 +1,5 @@
 import '../game'
 
-rule.this = '黄色のうず'
-
 rule.つくられたとき(async function() {
 	await this.costume('黄色のうず') // 見た目をきめる
 	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 1)
