@@ -40,16 +40,10 @@ test('Parse ECMAScript', t => {
 				continue
 			}
 			// 先頭で '../game' を import している => モジュール定義
-			const [top, second, ...rest] = file.program.body
+			const [top, ...rest] = file.program.body
 			const isModuleDefinition =
 				top.type === 'ImportDeclaration' && top.source.value === '../game'
 			if (!isModuleDefinition) continue
-			t.truthy(
-				second.type === 'ExpressionStatement' &&
-					second.expression.type === 'AssignmentExpression' &&
-					second.expression.left.type === 'MemberExpression',
-				`rule.this = '' がありません: ${sourceFilename}`
-			)
 			const requireds = new Set(requiredEvents)
 			const founds = new Set()
 			for (const statement of rest) {
