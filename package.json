@@ -9,7 +9,7 @@
 		"test": "npm run lint && ava",
 		"watch": "ava --watch",
 		"build": "tsc && node lib/bin.js",
-		"cors": "gsutil cors set cors.json gs://hackforplay-assets"
+		"cors": "gsutil cors set cors.json gs://assets.hackforplay.xyz"
 	},
 	"repository": {
 		"type": "git",
