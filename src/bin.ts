@@ -1,3 +1,4 @@
+import { createHash } from 'crypto'
 import fs from 'fs'
 import { values } from 'lodash'
 import mkdirp from 'mkdirp'
@@ -6,6 +7,7 @@ import { IConfig, IOutput, IPackage } from '.'
 import * as pathes from './pathes'
 
 const version = process.env.NODE_ASSET_VERSION || 'test'
+const bucketName = process.env.NODE_BUCKET_NAME || 'assets.hackforplay.xyz'
 
 // Index で指定するため参照が同じままの配列にする
 const cat = values(require(path.join(pathes.preference, 'categories')))
@@ -35,7 +37,7 @@ const converter = (domain: string) => (config: IConfig): IOutput => {
 		scopes: _scopes,
 		category,
 		insertCode: readAsText(config.insert),
-		iconUrl: readAsDataURL(path.join(abs, config.icon)),
+		iconUrl: toURL(path.join(abs, config.icon)),
 		production: config.production,
 		plan: config.plan,
 		variations: null
@@ -57,7 +59,7 @@ const converter = (domain: string) => (config: IConfig): IOutput => {
 }
 
 // ビルド開始
-mkdirp.sync(pathes.dist)
+mkdirp.sync(pathes.distImg)
 
 const json: IPackage = {
 	version,
@@ -70,7 +72,7 @@ const json: IPackage = {
 // 仮に全て登録
 json.categories = cat.map(_ => ({
 	name: _.name,
-	iconUrl: readAsDataURL(path.join(pathes.preference, _.icon))
+	iconUrl: toURL(path.join(pathes.preference, _.icon))
 }))
 json.scopes = sco.map(_ => ({
 	name: _.name,
@@ -89,7 +91,12 @@ const filePath = path.join(pathes.dist, json.version) // 拡張子はつけな�
 fs.writeFileSync(filePath, JSON.stringify(json))
 console.log('created:', filePath)
 
-function readAsDataURL(filePath: string, mimeType = 'image/png') {
-	const base64 = fs.readFileSync(filePath, 'base64')
-	return `data:${mimeType};base64,${base64}`
+function toURL(filePath: string) {
+	const buffer = fs.readFileSync(filePath)
+	const hash = createHash('md5')
+		.update(buffer)
+		.digest('hex')
+	const ext = path.extname(filePath)
+	fs.copyFileSync(filePath, path.join(pathes.distImg, hash + ext))
+	return `https://${bucketName}/${pathes.img}/${hash + ext}`
 }
