@@ -5,10 +5,7 @@ import path from 'path'
 import { IConfig, IOutput, IPackage } from '.'
 import * as pathes from './pathes'
 
-const version = process.env.NODE_ASSET_VERSION
-if (!version) {
-	throw new Error('NODE_ASSET_VERSION is not given')
-}
+const version = process.env.NODE_ASSET_VERSION || 'test'
 
 // Index で指定するため参照が同じままの配列にする
 const cat = values(require(path.join(pathes.preference, 'categories')))
