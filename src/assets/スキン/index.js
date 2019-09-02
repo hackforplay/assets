@@ -657,6 +657,50 @@ module.exports = [
 				plan: 'paid'
 			}
 		]
+	},
+	// ゴースト
+	{
+		...base,
+		name: 'スキン 紫色のゴースト',
+		icon: '../ゴースト/ghost_purple.png', // アセットのアイコンへのパス
+		insert: './skin_ghost-purple.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...base,
+				name: 'スキン 青色のゴースト',
+				icon: '../ゴースト/ghost_blue.png',
+				insert: './skin_ghost-blue.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 緑色のゴースト',
+				icon: '../ゴースト/ghost_green.png',
+				insert: './skin_ghost-green.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 赤色のゴースト',
+				icon: '../ゴースト/ghost_red.png',
+				insert: './skin_ghost-red.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 白色のゴースト',
+				icon: '../ゴースト/ghost_white.png',
+				insert: './skin_ghost-white.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 黄色のゴースト',
+				icon: '../ゴースト/ghost_yellow.png',
+				insert: './skin_ghost-yellow.js',
+				plan: 'paid'
+			}
+		]
 	}
 	//
 ]
