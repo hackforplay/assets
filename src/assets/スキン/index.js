@@ -701,6 +701,50 @@ module.exports = [
 				plan: 'paid'
 			}
 		]
+	},
+	// デンキクラゲ
+	{
+		...base,
+		name: 'スキン 青色のデンキクラゲ',
+		icon: "../デンキクラゲ/man_o'war_blue.png",
+		insert: "./skin_man_o'war-blue.js",
+		children: [
+			{
+				...base,
+				name: 'スキン 黒色のデンキクラゲ',
+				icon: "../デンキクラゲ/man_o'war_black.png",
+				insert: "./skin_man_o'war-black.js",
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 緑色のデンキクラゲ',
+				icon: "../デンキクラゲ/man_o'war_green.png",
+				insert: "./skin_man_o'war-green.js",
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 赤色のデンキクラゲ',
+				icon: "../デンキクラゲ/man_o'war_red.png",
+				insert: "./skin_man_o'war-red.js",
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 白色のデンキクラゲ',
+				icon: "../デンキクラゲ/man_o'war_white.png",
+				insert: "./skin_man_o'war-white.js",
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 黄色のデンキクラゲ',
+				icon: "../デンキクラゲ/man_o'war_yellow.png",
+				insert: "./skin_man_o'war-yellow.js",
+				plan: 'paid'
+			}
+		]
 	}
 	//
 ]
