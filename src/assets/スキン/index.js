@@ -525,5 +525,49 @@ module.exports = [
 				plan: 'paid'
 			}
 		]
+	},
+	// ゾンビ
+	{
+		...base,
+		name: 'スキン 緑色のゾンビ',
+		icon: '../ゾンビ/zombie_green.png',
+		insert: './skin_zombie-green.js',
+		children: [
+			{
+				...base,
+				name: 'スキン 黒色のゾンビ',
+				icon: '../ゾンビ/zombie_black.png',
+				insert: './skin_zombie-black.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 青色のゾンビ',
+				icon: '../ゾンビ/zombie_blue.png',
+				insert: './skin_zombie-blue.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 赤色のゾンビ',
+				icon: '../ゾンビ/zombie_red.png',
+				insert: './skin_zombie-red.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 白色のゾンビ',
+				icon: '../ゾンビ/zombie_white.png',
+				insert: './skin_zombie-white.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 黄色のゾンビ',
+				icon: '../ゾンビ/zombie_yellow.png',
+				insert: './skin_zombie-yellow.js',
+				plan: 'paid'
+			}
+		]
 	}
 ]
