@@ -530,42 +530,86 @@ module.exports = [
 	{
 		...base,
 		name: 'スキン 緑色のゾンビ',
-		icon: '../ゾンビ/zombie_green.png',
+		icon: '../ゾンビ/zombie_green.png',
 		insert: './skin_zombie-green.js',
 		children: [
 			{
 				...base,
 				name: 'スキン 黒色のゾンビ',
-				icon: '../ゾンビ/zombie_black.png',
+				icon: '../ゾンビ/zombie_black.png',
 				insert: './skin_zombie-black.js',
 				plan: 'paid'
 			},
 			{
 				...base,
 				name: 'スキン 青色のゾンビ',
-				icon: '../ゾンビ/zombie_blue.png',
+				icon: '../ゾンビ/zombie_blue.png',
 				insert: './skin_zombie-blue.js',
 				plan: 'paid'
 			},
 			{
 				...base,
 				name: 'スキン 赤色のゾンビ',
-				icon: '../ゾンビ/zombie_red.png',
+				icon: '../ゾンビ/zombie_red.png',
 				insert: './skin_zombie-red.js',
 				plan: 'paid'
 			},
 			{
 				...base,
 				name: 'スキン 白色のゾンビ',
-				icon: '../ゾンビ/zombie_white.png',
+				icon: '../ゾンビ/zombie_white.png',
 				insert: './skin_zombie-white.js',
 				plan: 'paid'
 			},
 			{
 				...base,
 				name: 'スキン 黄色のゾンビ',
-				icon: '../ゾンビ/zombie_yellow.png',
+				icon: '../ゾンビ/zombie_yellow.png',
 				insert: './skin_zombie-yellow.js',
+				plan: 'paid'
+			}
+		]
+	},
+	// スケルトン
+	{
+		...base,
+		name: 'スキン 白色のスケルトン',
+		icon: '../スケルトン/skeleton_white.png',
+		insert: './skin_skeleton-white.js',
+		children: [
+			{
+				...base,
+				name: 'スキン 黒色のスケルトン',
+				icon: '../スケルトン/skeleton_black.png',
+				insert: './skin_skeleton-black.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 青色のスケルトン',
+				icon: '../スケルトン/skeleton_blue.png',
+				insert: './skin_skeleton-blue.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 緑色のスケルトン',
+				icon: '../スケルトン/skeleton_green.png',
+				insert: './skin_skeleton-green.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 赤色のスケルトン',
+				icon: '../スケルトン/skeleton_red.png',
+				insert: './skin_skeleton-red.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 黄色のスケルトン',
+				icon: '../スケルトン/skeleton_yellow.png',
+				insert: './skin_skeleton-yellow.js',
 				plan: 'paid'
 			}
 		]
