@@ -526,6 +526,50 @@ module.exports = [
 			}
 		]
 	},
+	// フクロウメイジ
+	{
+		...base,
+		name: 'スキン 緑色のフクロウメイジ',
+		icon: '../フクロウメイジ/owlmage_green.png',
+		insert: './skin_owlmage-green.js',
+		children: [
+			{
+				...base,
+				name: 'スキン 黒色のフクロウメイジ',
+				icon: '../フクロウメイジ/owlmage_black.png',
+				insert: './skin_owlmage-black.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 青色のフクロウメイジ',
+				icon: '../フクロウメイジ/owlmage_blue.png',
+				insert: './skin_owlmage-blue.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 赤色のフクロウメイジ',
+				icon: '../フクロウメイジ/owlmage_red.png',
+				insert: './skin_owlmage-red.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 白色のフクロウメイジ',
+				icon: '../フクロウメイジ/owlmage_white.png',
+				insert: './skin_owlmage-white.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 黄色のフクロウメイジ',
+				icon: '../フクロウメイジ/owlmage_yellow.png',
+				insert: './skin_owlmage-yellow.js',
+				plan: 'paid'
+			}
+		]
+	},
 	// ゾンビ
 	{
 		...base,
@@ -614,4 +658,5 @@ module.exports = [
 			}
 		]
 	}
+	//
 ]
