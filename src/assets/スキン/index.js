@@ -745,6 +745,94 @@ module.exports = [
 				plan: 'paid'
 			}
 		]
+	},
+	// タマゴ
+	{
+		...base,
+		name: 'スキン 緑色のタマゴ',
+		icon: '../タマゴ/monster_egg_green.png',
+		insert: './skin_monster_egg-green.js',
+		children: [
+			{
+				...base,
+				name: 'スキン 黒色のタマゴ',
+				icon: '../タマゴ/monster_egg_black.png',
+				insert: './skin_monster_egg-black.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 青色のタマゴ',
+				icon: '../タマゴ/monster_egg_blue.png',
+				insert: './skin_monster_egg-blue.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 赤色のタマゴ',
+				icon: '../タマゴ/monster_egg_red.png',
+				insert: './skin_monster_egg-red.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 白色のタマゴ',
+				icon: '../タマゴ/monster_egg_white.png',
+				insert: './skin_monster_egg-white.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 黄色のタマゴ',
+				icon: '../タマゴ/monster_egg_yellow.png',
+				insert: './skin_monster_egg-yellow.js',
+				plan: 'paid'
+			}
+		]
+	},
+	// ドラキュラ
+	{
+		...base,
+		name: 'スキン 黒色のドラキュラ',
+		icon: '../ドラキュラ/vampire_black.png',
+		insert: './skin_vampire-black.js',
+		children: [
+			{
+				...base,
+				name: 'スキン 青色のドラキュラ',
+				icon: '../ドラキュラ/vampire_blue.png',
+				insert: './skin_vampire-blue.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 緑色のドラキュラ',
+				icon: '../ドラキュラ/vampire_green.png',
+				insert: './skin_vampire-green.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 赤色のドラキュラ',
+				icon: '../ドラキュラ/vampire_red.png',
+				insert: './skin_vampire-red.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 白色のドラキュラ',
+				icon: '../ドラキュラ/vampire_white.png',
+				insert: './skin_vampire-white.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン 黄色のドラキュラ',
+				icon: '../ドラキュラ/vampire_yellow.png',
+				insert: './skin_vampire-yellow.js',
+				plan: 'paid'
+			}
+		]
 	}
 	//
 ]
