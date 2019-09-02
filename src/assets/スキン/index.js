@@ -62,6 +62,50 @@ module.exports = [
 		icon: './hunter.png', // アセットのアイコンへのパス
 		insert: './skin_hunter.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
+	// しょうにん
+	{
+		...base,
+		name: 'スキン しょうにん',
+		icon: '../しょうにん/merchant.png', // アセットのアイコンへのパス
+		insert: './skin_merchant-normal.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...base,
+				name: 'スキン ほのおのしょうにん',
+				icon: '../しょうにん/merchant_fire.png',
+				insert: './skin_merchant-fire.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン みずのしょうにん',
+				icon: '../しょうにん/merchant_water.png',
+				insert: './skin_merchant-water.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン かぜのしょうにん',
+				icon: '../しょうにん/merchant_wind.png',
+				insert: './skin_merchant-wind.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン ひかりのしょうにん',
+				icon: '../しょうにん/merchant_light.png',
+				insert: './skin_merchant-light.js',
+				plan: 'paid'
+			},
+			{
+				...base,
+				name: 'スキン やみのしょうにん',
+				icon: '../しょうにん/merchant_dark.png',
+				insert: './skin_merchant-dark.js',
+				plan: 'paid'
+			}
+		]
+	},
 	// スライム
 	{
 		...base,
