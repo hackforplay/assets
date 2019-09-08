@@ -13,7 +13,7 @@ deploy:
     access_key_id: GOOGI7DAF2KATQLNX6L4YLTD
     secret_access_key:
       secure: L2txzEIZxiyeBXCZ/Vy+Q0nAtwfSJxkkJRAlmgm9ykAiCt5aeGHJBRfV5iNtvkqik1hihj1t7cU288mZBpH+hufOfx6ze7TYuIa/1i/IQ226uI2pZL8ORL73hGSgpRPSs4RSCspqTShAsuvLQpdRFV99tYb20NCzFqJgCgkaAXraFokNnsFheTr1BX/hb29qhOK86pL8GfxGtSfllr+2kpUEQqYa4COuLfluB0/U/XUetk7m0pXzB8YzvPcA9WZBjnaR9rdvU6B6bJRaJWVDbbokT9FLOvSApxuuFVmCvGxv+JrqIWGdzYSd3Tw4JbbTNolzNfeqZVvtuyAhVkNS8MT1IgAQAuWLG6NWE8jj7wl0arBSmh06wRfa2MP/Gs/sJL0OCOkHc7uXRmZ4u60m+dGNNRPBYevj4g2quy0nlhy3fEX5+DgrCquijG6Ksdy8rAZJ1G26Tc5cWZno8sl4LgPkaAit7j6llK3W626vdA2jbJpTSjhqXdv1euzt36KzxgiGeV/KfEovKSAGMiaLoFNNAxXaY3OjxcNkq1nOV2C8Drz+4CCEdDxDPabHBFbGIwlGvB55qxC/JDDTs4gRa1R5YEQQU7sCnPq/lb3I62c8fxqLyoXC7smlvukEwoLKbWxYlLTVZCYtw1Xoy7szYajwcpzO3H40Ma1g+3ZV4FM=
-    bucket: hackforplay-assets
+    bucket: "$NODE_BUCKET_NAME"
     skip_cleanup: true
     local-dir: dist
     cache_control: private, max-age=3600
