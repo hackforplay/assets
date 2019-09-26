@@ -12,7 +12,6 @@ rule.つくられたとき(async function() {
 
 rule.たおされたとき(async function() {
 	Hack.gameover() // ゲームオーバー
-	this.destroy() // プレイヤーを消す
 
 	/*+ たおされたとき */
 })
