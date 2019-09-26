@@ -14,7 +14,7 @@ rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
 	await this.chase4(item) // おいかける
 	await this.talk('ホホ〜ゥ！\nおまえに このスキルブックをやろう')
-	this.しょうかんする('緑色のスキルブック')
+	this.しょうかんする('緑色のスキルブック', 1, 0)
 
 	/*+ ぶつかったとき */
 })

@@ -14,14 +14,14 @@ rule.つねに(async function() {
 	await this.turn(('▼ むき', Dir.ランダム)) // ランダムにどこかを向く
 	await this.wait(2) // この秒数だけまつ
 	await this.attack() // こうげきする
-	this.しょうかんする('黒色のスライム')
+	this.しょうかんする('黒色のスライム', 1, 0)
 	await this.wait(1) // この秒数だけまつ
 
 	/*+ つねに */
 })
 
 rule.たおされたとき(async function() {
-	this.しょうかんする('青色のほうせき')
+	this.しょうかんする('青色のほうせき', 0, 0)
 
 	/*+ たおされたとき */
 })

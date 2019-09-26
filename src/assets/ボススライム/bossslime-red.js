@@ -21,7 +21,7 @@ rule.つねに(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	this.しょうかんする('赤色のスライム')
+	this.しょうかんする('赤色のスライム', 1, 0)
 
 	/*+ みつけたとき */
 })
