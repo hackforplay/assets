@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.たおされたとき(async function() {
-	this.おとす('青色のほうせき')
+	this.しょうかんする('青色のほうせき', 0, 0)
 
 	/*+ たおされたとき */
 })
