@@ -9,11 +9,10 @@ rule.つくられたとき(async function() {
 
 rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	const しょうひん = '黒色のスキルブック'
 	const ねだん = 10
 
 	const こたえ = await this.talk(
-		`${しょうひん} は ${ねだん} えんだよ`,
+		`黒色のスキルブック は ${ねだん} えんだよ`,
 		'かう！',
 		'やめとく'
 	)
@@ -26,7 +25,7 @@ rule.ぶつかったとき(async function(item) {
 	if (item.money >= ねだん) {
 		await this.talk('まいどあり！')
 		await this.attack()
-		await this.しょうかんする(しょうひん)
+		await this.しょうかんする('黒色のスキルブック')
 		item.n('おかね', ('▼ を', 'へらす'), ねだん)
 	} else {
 		await this.talk('おっと、お金が足りないよ')
