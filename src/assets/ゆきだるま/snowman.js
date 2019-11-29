@@ -9,7 +9,7 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = 'プレイヤー' // ぶつかるキャラクター
+rule.item = ('▼ あいて', 'プレイヤー') // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
 	await this.talk('つくってくれて ありがとう！\nこれ あげるよ！')
 

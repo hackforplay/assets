@@ -6,19 +6,18 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
+rule.item = ('▼ あいて', Rule.Anyone)
 rule.ぶつかったとき(async function(item) {
-	this.forward = item.forward // あいてと同じ方向を向く
-	await this.walk() // あるく
+	if (item.name === 'プレイヤー') {
+		this.forward = item.forward // あいてと同じ方向を向く
+		await this.walk() // あるく
+	}
 
-	/*+ ぶつかったとき */
-})
-
-rule.item = ('▼ あいて', 'ゆきだま')
-rule.ぶつかったとき(async function(item) {
-	this.destroy() // じぶんを けす
-	item.destroy() // あいてを けす
-	this.しょうかんする('ゆきだるま', 1, 0)
+	if (item.name === 'ゆきだま') {
+		this.destroy() // じぶんを けす
+		item.destroy() // あいてを けす
+		this.しょうかんする('ゆきだるま', 1, 0)
+	}
 
 	/*+ ぶつかったとき */
 })
