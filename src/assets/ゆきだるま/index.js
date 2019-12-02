@@ -5,7 +5,7 @@ const base = {
 	name: 'ゆきだるま',
 	module: './snowman.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
 	category: cat.もの, // カテゴリーの参照を指定する
-	description: 'はなしかけると 赤色のかぎをくれる',
+	description: 'はなしかけると かぎをくれる',
 	icon: './snowman.png', // アセットのアイコンへのパス
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false
 	plan: 'free' // 'free' にする
