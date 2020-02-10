@@ -22,19 +22,17 @@ rule.つくられたとき(async function() {
 	}
 })
 
-rule.つねに(async function() {
-	await this.wait(1) // まつ
-	await this.turn(('▼ むき', Dir.ランダム)) // ランダムにどこかを向く
-	await this.walk() // あるく
-
-	/*+ つねに */
-})
-
 rule.たおされたとき(async function() {
 	this.しょうかんする('緑色のほうせき', 0, 0) // アイテムをおとす
 
 	/*+ たおされたとき */
 })
+
+// ここから つねに
+rule.つねに(async function() {
+	/*+ つねに */
+})
+// ここまで つねに
 
 // ここから こうげきされたとき
 rule.item = ('▼ あいて', 'プレイヤー')
