@@ -13,7 +13,6 @@ rule.ぶつかったとき(async function(item) {
 	/*+ ぶつかったとき */
 })
 
-// ここから つねに
 rule.つねに(async function() {
 	await this.wait(3) // まつ
 	await this.turn(('▼ むき', Dir.うしろ)) // ふりかえる
@@ -21,7 +20,6 @@ rule.つねに(async function() {
 
 	/*+ つねに */
 })
-// ここまで つねに
 
 // ここから こうげきされたとき
 rule.item = ('▼ あいて', Rule.Anyone)
