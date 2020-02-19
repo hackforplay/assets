@@ -7,7 +7,7 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = '青色のかぎ'
+rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	await this.costume('ひらいた青色のドア') // ひらく！
 	this.collisionFlag = false // はいれるようにする
