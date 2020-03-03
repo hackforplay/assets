@@ -15,14 +15,14 @@ rule.つねに(async function() {
 	await this.みつける()
 	await this.まつ(1)
 	await this.あるく()
-	this.turn(むき.ランダム) // ランダムにどこかを向く
+	this.むきをかえる(むき.ランダム)
 
 	/*+ つねに */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.chase4(item) // おいかける
+	await this.おいかける(item)
 	await this.こうげきする()
 	await this.みつける()
 

@@ -13,7 +13,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.chase4('プレイヤー') // おいかける
+	await this.おいかける('プレイヤー')
 	await this.みつける()
 
 	/*+ つねに */
@@ -22,7 +22,7 @@ rule.つねに(async function() {
 rule.item = ('▼ あいて', Rule.Enemy)
 rule.みつけたとき(async function(item) {
 	await this.まつ(1)
-	await this.chase4(item) // おいかける
+	await this.おいかける(item)
 	await this.こうげきする()
 	await this.みつける()
 

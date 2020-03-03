@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.chase4('プレイヤー') // おいかける
+	await this.おいかける('プレイヤー')
 	await this.まつ(1)
 
 	/*+ つねに */

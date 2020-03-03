@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 
 rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	await this.chase4(item) // おいかける
+	await this.おいかける(item)
 	await this.はなす('ホホ〜ゥ！\nおまえに このスキルブックをやろう')
 	this.しょうかんする('白色のスキルブック', 1, 0)
 
@@ -21,7 +21,7 @@ rule.ぶつかったとき(async function(item) {
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
-	await this.chase4(item) // おいかける
+	await this.おいかける(item)
 	this.しょうかんする('白色のうず').とんでいく(item) // itemにむかってとんでいく
 	await this.こうげきする()
 

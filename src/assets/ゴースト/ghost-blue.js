@@ -14,7 +14,7 @@ rule.つくられたとき(async function() {
 rule.つねに(async function() {
 	await this.まつ(2) // この数字のぶん まつ
 	this.n('みえやすさ', ('▼ を', 'へらす'), 0.3) // うすくなる
-	await this.chase4('プレイヤー') // おいかける
+	await this.おいかける('プレイヤー')
 	await this.みつける()
 
 	/*+ つねに */

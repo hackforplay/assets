@@ -1,1 +1,1 @@
-await this.turn(むき.ひだり) // むきを左にする
+await this.むきをかえる(むき.ひだり)

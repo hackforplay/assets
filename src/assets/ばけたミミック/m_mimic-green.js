@@ -18,7 +18,7 @@ rule.つねに(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.こうげきされたとき(async function(item) {
-	await this.chase4(item) // おいかける
+	await this.おいかける(item)
 	this.へんしんする('緑色のミミック') // ミミックに へんしんする
 
 	/*+ こうげきされたとき */

@@ -13,7 +13,7 @@ rule.つくられたとき(async function() {
 
 rule.つねに(async function() {
 	this.teleportRandom() // ランダムな場所にテレポート
-	await this.turn(むき.ランダム)
+	await this.むきをかえる(むき.ランダム)
 	await this.みつける()
 	await this.まつ(4) // 数字のぶん、まつ
 	await this.みつける()
