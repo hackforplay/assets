@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.costume('赤色のしたい') // 見た目をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
+	this.なかま = なかま.モンスター // なかまをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
 	this.damageTime = 30 // いっしゅん、ムテキになる
 

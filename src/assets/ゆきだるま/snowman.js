@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.costume('ゆきだるま') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
+	this.なかま = なかま.ドクリツ // なかまをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 10) // 体力をきめる
 	this.showHpLabel = false // HPひょうじを見えないようにする
 

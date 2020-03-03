@@ -3,7 +3,7 @@ import '../game'
 rule.つくられたとき(async function() {
 	await this.costume('しかくいはか') // 見ためをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 5) // 体力をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
+	this.なかま = なかま.モンスター // なかまをきめる
 
 	/*+ つくられたとき */
 })
