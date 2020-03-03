@@ -4,9 +4,11 @@ rule.つくられたとき(async function() {
 	await this.みためをかえる('黒色のしたい')
 	this.なかま = なかま.モンスター
 	this.たいりょく = 3
-	this.damageTime = 30 // いっしゅん、ムテキになる
+	this.むてきか = true // いっしゅん、ムテキになる
+	await this.まつ(1)
+	this.むてきか = false
 
-	await this.まつ(10)
+	await this.まつ(9)
 	this.へんしんする('黒色のゾンビ') // へんしんする
 	/*+ つくられたとき */
 })

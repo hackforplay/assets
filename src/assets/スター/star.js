@@ -8,8 +8,10 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	item.damageTime = 100 // ムテキにする
 	this.きえる()
+	item.むてきか = true
+	await item.まつ(3)
+	item.むてきか = false
 
 	/*+ ふまれたとき */
 })
