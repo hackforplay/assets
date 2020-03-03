@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.costume('石のかいだん') // 見た目をかえる
-	this.opacity = 0 // とうめいになる
+	this.みえやすさ = 0 // とうめいになる
 
 	/*+ つくられたとき */
 })
