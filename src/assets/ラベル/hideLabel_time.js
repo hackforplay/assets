@@ -1,1 +1,1 @@
-Hack.hideLabel('time') // time をかくす
+ハック.hideLabel('time') // time をかくす
