@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	this.isInvincible = true // ムテキになる
+	this.むてきか = true // ムテキになる
 	await this.chase4('プレイヤー') // おいかける
 	await this.find() // さがす
 
@@ -22,8 +22,8 @@ rule.つねに(async function() {
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
 	await this.wait(0.5) // この数字のぶん まつ
-	this.isInvincible = false // ムテキかいじょ
-	await this.attack() // こうげきする
+	this.むてきか = false // ムテキかいじょ
+	await this.こうげきする()
 	await this.wait(1) // この数字のぶん まつ
 
 	/*+ みつけたとき */

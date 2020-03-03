@@ -14,7 +14,7 @@ rule.つくられたとき(async function() {
 rule.つねに(async function() {
 	await this.wait(3) // まつ
 	await this.find() // さがす
-	await this.attack() // こうげきする
+	await this.こうげきする()
 
 	/*+ つねに */
 })

@@ -24,7 +24,7 @@ rule.ぶつかったとき(async function(item) {
 
 	if (item.おかね >= ねだん) {
 		await this.talk('まいどあり！')
-		await this.attack()
+		await this.こうげきする()
 		await this.しょうかんする('黒色のスキルブック')
 		item.n('おかね', ('▼ を', 'へらす'), ねだん)
 	} else {

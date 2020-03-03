@@ -20,7 +20,7 @@ rule.つねに(async function() {
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
-	await this.attack() // こうげきする
+	await this.こうげきする()
 	await this.wait(1) // まつ
 
 	/*+ こうげきされたとき */

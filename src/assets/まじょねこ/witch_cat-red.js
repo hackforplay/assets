@@ -25,7 +25,7 @@ rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
 	await this.wait(1) // まつ
 	this.しょうかんする('赤色のうず').flyToward(item) // itemにむかってとんでいく
-	await this.attack() // こうげきする
+	await this.こうげきする()
 	await this.wait(3) // まつ
 
 	/*+ みつけたとき */

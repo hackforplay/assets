@@ -23,7 +23,7 @@ rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	await this.chase4(item) // おいかける
 	this.しょうかんする('白色のうず').flyToward(item) // itemにむかってとんでいく
-	await this.attack() // こうげきする
+	await this.こうげきする()
 
 	/*+ こうげきされたとき */
 })

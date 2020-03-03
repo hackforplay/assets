@@ -16,7 +16,7 @@ rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	this.n('みえやすさ', ('▼ を', 'イコール'), 1) // すがたをあらわす
 	await this.wait(1) // まつ
-	await this.attack() // こうげきする
+	await this.こうげきする()
 	this.n('みえやすさ', ('▼ を', 'イコール'), 0) // とうめいになる
 
 	/*+ こうげきされたとき */

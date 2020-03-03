@@ -23,7 +23,7 @@ rule.つねに(async function() {
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
 	this.n('みえやすさ', ('▼ を', 'イコール'), 1) // すがたをあらわす
-	await this.attack() // こうげきする
+	await this.こうげきする()
 
 	/*+ みつけたとき */
 })
