@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('みずのしょうにん')
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 0) // こうげき力をきめる
+	this.こうげきりょく = 0
 
 	/*+ つくられたとき */
 })
@@ -26,7 +26,7 @@ rule.ぶつかったとき(async function(item) {
 		await this.はなす('まいどあり！')
 		await this.こうげきする()
 		await this.しょうかんする('青色のスキルブック')
-		item.n('おかね', ('▼ を', 'へらす'), ねだん)
+		item.おかね -= ねだん
 	} else {
 		await this.はなす('おっと、お金が足りないよ')
 	}

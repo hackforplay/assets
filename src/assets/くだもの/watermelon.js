@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('スイカ')
-	this.n('たいりょく', ('▼ を', 'イコール'), 1) // 体力をきめる
+	this.たいりょく = 1
 	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 
 	/*+ つくられたとき */

@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	item.n('おかね', ('▼ を', 'ふやす'), 300)
+	item.おかね += 300
 	this.きえる()
 
 	/*+ ふまれたとき */

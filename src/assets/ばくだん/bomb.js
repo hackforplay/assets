@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('ばくだん')
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1)
+	this.こうげきりょく = 1
 	await this.まつ(3) // この秒数だけまつ
 
 	this.へんしんする('ばくはつ') // ばくはつ を おこす
