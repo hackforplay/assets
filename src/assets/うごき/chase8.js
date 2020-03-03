@@ -1,1 +1,1 @@
-await this.chase8('プレイヤー')
+await this.おいかける('プレイヤー', true)
