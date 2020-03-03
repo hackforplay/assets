@@ -14,8 +14,8 @@ rule.ぶつかったとき(async function(item) {
 	}
 
 	if (item.name === 'ゆきだま') {
-		this.destroy() // じぶんを けす
-		item.destroy() // あいてを けす
+		this.きえる() // じぶんを けす
+		item.きえる() // あいてを けす
 		this.しょうかんする('ゆきだるま', 1, 0)
 	}
 
@@ -23,7 +23,7 @@ rule.ぶつかったとき(async function(item) {
 })
 
 rule.すすめなかったとき(async function() {
-	this.destroy() // じぶんを けす
+	this.きえる() // じぶんを けす
 	this.しょうかんする('ゆきだま', -1, 0)
 
 	/*+ すすめなかったとき */

@@ -13,7 +13,7 @@ rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	this.とんでいく()
 	await this.まつ(2) // この秒数だけ待つ
-	this.destroy() // や を けす
+	this.きえる() // や を けす
 
 	/*+ しょうかんされたとき */
 })
