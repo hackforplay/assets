@@ -8,9 +8,9 @@ rule.つくられたとき(async function() {
 
 	/*+ つくられたとき */
 
-	await this.wait(random(20)) // まつ
+	await this.wait(らんすう(20)) // まつ
 
-	let ばんごう = random(3)
+	let ばんごう = らんすう(3)
 	if (ばんごう === 0) {
 		await this.へんしんする('黄色のドラゴン') // へんしんする
 	}
