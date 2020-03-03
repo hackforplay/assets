@@ -3,7 +3,7 @@ import '../game'
 rule.つくられたとき(async function() {
 	await this.みためをかえる('ばくはつ')
 	this.ふれたときのダメージ = 3
-	this.スピード = 0
+	this.あるくはやさ = 0
 	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 	this.たいりょく = 0 // きえる
 

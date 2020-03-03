@@ -3,7 +3,7 @@ import '../game'
 rule.つくられたとき(async function() {
 	await this.みためをかえる('黄色のうず')
 	this.ふれたときのダメージ = 1
-	this.スピード = 1
+	this.あるくはやさ = 1
 	this.かんつうするかいすう = 10
 
 	/*+ つくられたとき */
