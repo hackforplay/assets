@@ -11,7 +11,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.たおされたとき(async function() {
-	Hack.gameover() // ゲームオーバー
+	Hack.ゲームオーバー()
 
 	/*+ たおされたとき */
 })
