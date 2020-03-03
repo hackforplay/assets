@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	item.skill = 'ビーム' // （ふんだ、ぶつかった）相手のスキルをかえる
+	item.スキル = 'ビーム' // （ふんだ、ぶつかった）相手のスキルをかえる
 	await this.talk('あたらしいスキルをおぼえた!')
 	this.destroy() // このアイテムを消す
 

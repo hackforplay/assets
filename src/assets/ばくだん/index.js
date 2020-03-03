@@ -11,7 +11,7 @@ const base = {
 	plan: 'free' // 'free' にする
 }
 
-const skill = {
+const スキル = {
 	name: 'スキル ばくだん',
 	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
 	category: cat.スキル // カテゴリーの参照を指定する
@@ -45,7 +45,7 @@ module.exports = [
 	// スキル
 	{
 		...base,
-		...skill,
+		...スキル,
 		scopes: [
 			// スコープの参照を配列で指定する. null の場合は常に表示
 			sco.つくられたとき,
@@ -54,12 +54,12 @@ module.exports = [
 			sco.こうげきされたとき,
 			sco.タップされたとき
 		],
-		insert: './bomb-skill.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './bomb-スキル.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
 	// 「ふまれた、ぶつかったとき」用スキル
 	{
 		...base,
-		...skill,
+		...スキル,
 		scopes: [
 			// スコープの参照を配列で指定する. null の場合は常に表示
 			sco.ふまれたとき,
