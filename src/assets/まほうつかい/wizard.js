@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	this.teleportRandom() // ランダムな場所にテレポート
+	this.テレポートランダム()
 	await this.むきをかえる(むき.ランダム)
 	await this.まつ(2) // この秒数だけまつ
 	await this.こうげきする()
