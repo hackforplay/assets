@@ -14,7 +14,7 @@ rule.つくられたとき(async function() {
 rule.つねに(async function() {
 	this.むてきか = true // ムテキになる
 	await this.chase4('プレイヤー') // おいかける
-	await this.find() // さがす
+	await this.みつける()
 
 	/*+ つねに */
 })
