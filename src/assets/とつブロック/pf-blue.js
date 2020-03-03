@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('へこんだ青色のとつブロック') // みためをきめる
+	await this.みためをかえる('へこんだ青色のとつブロック') // みためをきめる
 	this.ぶつかるか = false // 上にのれるようにする
 
 	/*+ つくられたとき */
@@ -10,10 +10,10 @@ rule.つくられたとき(async function() {
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	if (this.ぶつかるか === true) {
-		await this.costume('へこんだ青色のとつブロック') // みためをかえる
+		await this.みためをかえる('へこんだ青色のとつブロック') // みためをかえる
 		this.ぶつかるか = false // 上にのれるようにする
 	} else {
-		await this.costume('青色のとつブロック') // みためをかえる
+		await this.みためをかえる('青色のとつブロック') // みためをかえる
 		this.ぶつかるか = true // とおれないようにする
 	}
 

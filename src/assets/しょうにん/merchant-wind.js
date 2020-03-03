@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('かぜのしょうにん') // 見た目をきめる
+	await this.みためをかえる('かぜのしょうにん')
 	this.n('こうげきりょく', ('▼ を', 'イコール'), 0) // こうげき力をきめる
 
 	/*+ つくられたとき */

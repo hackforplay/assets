@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('トゲのないゆか') // 見た目をかえる
+	await this.みためをかえる('トゲのないゆか') // 見た目をかえる
 	this.なかま = なかま.モンスター
 	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 0)
 

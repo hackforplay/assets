@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('ざんげき') // 見た目をきめる
+	await this.みためをかえる('ざんげき')
 	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 1)
 	this.n('スピード', ('▼ を', 'イコール'), 2)
 	this.n('かんつうする回数', ('▼ を', 'イコール'), 10)

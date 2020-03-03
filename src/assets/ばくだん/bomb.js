@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('ばくだん') // 見た目をきめる
+	await this.みためをかえる('ばくだん')
 	this.n('こうげきりょく', ('▼ を', 'イコール'), 1)
 	await this.まつ(3) // この秒数だけまつ
 

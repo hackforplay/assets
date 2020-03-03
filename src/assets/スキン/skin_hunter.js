@@ -1,1 +1,1 @@
-await this.costume('ハンター') // スキンをかえる
+await this.みためをかえる('ハンター') // スキンをかえる

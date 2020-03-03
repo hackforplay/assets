@@ -1,17 +1,17 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('金色のボタン') // 見た目をきめる
+	await this.みためをかえる('金色のボタン')
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	await this.costume('おされた金色のボタン') // 見た目をかえる
+	await this.みためをかえる('おされた金色のボタン') // 見た目をかえる
 	this.message('金色のどうぞう') // どうぞうにメッセージ
 	await this.まつ(1)
-	await this.costume('金色のボタン') // 見た目をかえる
+	await this.みためをかえる('金色のボタン') // 見た目をかえる
 
 	/*+ ふまれたとき */
 })

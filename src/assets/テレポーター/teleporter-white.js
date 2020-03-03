@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('白色のテレポーター') // 見た目をかえる
+	await this.みためをかえる('白色のテレポーター') // 見た目をかえる
 
 	/*+ つくられたとき */
 })

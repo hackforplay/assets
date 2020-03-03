@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('白色のしたい') // 見た目をきめる
+	await this.みためをかえる('白色のしたい')
 	this.なかま = なかま.モンスター // なかまをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
 	this.damageTime = 30 // いっしゅん、ムテキになる
