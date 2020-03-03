@@ -1,3 +1,3 @@
-if (item.money <= 0) {
+if (item.おかね <= 0) {
 	Hack.gameover() // お金を持っていなけばゲームオーバー
 }

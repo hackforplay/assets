@@ -1,3 +1,3 @@
-if (this.money >= 10) {
+if (this.おかね >= 10) {
 	Hack.gameclear() // お金を持っていればゲームクリア
 }

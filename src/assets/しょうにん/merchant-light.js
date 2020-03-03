@@ -22,7 +22,7 @@ rule.ぶつかったとき(async function(item) {
 		return
 	}
 
-	if (item.money >= ねだん) {
+	if (item.おかね >= ねだん) {
 		await this.talk('まいどあり！')
 		await this.attack()
 		await this.しょうかんする('黄色のスキルブック')
