@@ -2,19 +2,19 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.costume('へこんだ白色のとつブロック') // みためをきめる
-	this.collisionFlag = false // 上にのれるようにする
+	this.ぶつかるか = false // 上にのれるようにする
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
-	if (this.collisionFlag === true) {
+	if (this.ぶつかるか === true) {
 		await this.costume('へこんだ白色のとつブロック') // みためをかえる
-		this.collisionFlag = false // 上にのれるようにする
+		this.ぶつかるか = false // 上にのれるようにする
 	} else {
 		await this.costume('白色のとつブロック') // みためをかえる
-		this.collisionFlag = true // とおれないようにする
+		this.ぶつかるか = true // とおれないようにする
 	}
 
 	/*+ メッセージされたとき */
