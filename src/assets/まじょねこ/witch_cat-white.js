@@ -15,7 +15,7 @@ rule.つねに(async function() {
 	this.teleportRandom() // ランダムな場所にテレポート
 	await this.turn(むき.ランダム)
 	await this.find() // さがす
-	await this.wait(4) // 数字のぶん、まつ
+	await this.まつ(4) // 数字のぶん、まつ
 	await this.find() // さがす
 
 	/*+ つねに */
@@ -23,10 +23,10 @@ rule.つねに(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.wait(1) // まつ
+	await this.まつ(1)
 	this.しょうかんする('白色のうず').flyToward(item) // itemにむかってとんでいく
 	await this.こうげきする()
-	await this.wait(3) // まつ
+	await this.まつ(3)
 
 	/*+ みつけたとき */
 })

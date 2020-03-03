@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
-	await this.wait(0.1) // まつ
+	await this.まつ(0.1)
 	this.へんしんする('トゲのないゆか') // へんしんする
 
 	/*+ メッセージされたとき */

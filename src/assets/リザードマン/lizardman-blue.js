@@ -13,7 +13,7 @@ rule.つねに(async function() {
 	await this.turn(むき.ランダム) // むきをランダムにする
 	await this.あるく()
 	await this.こうげきする()
-	await this.wait(1) // まつ
+	await this.まつ(1)
 
 	/*+ つねに */
 })

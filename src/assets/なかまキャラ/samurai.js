@@ -21,7 +21,7 @@ rule.つねに(async function() {
 
 rule.item = ('▼ あいて', Rule.Enemy)
 rule.みつけたとき(async function(item) {
-	await this.wait(1) // まつ
+	await this.まつ(1)
 	await this.chase4(item) // おいかける
 	await this.こうげきする()
 	await this.find() // さがす

@@ -11,7 +11,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.wait(1) // まつ
+	await this.まつ(1)
 	await this.turn(むき.ランダム) // ランダムにどこかを向く
 	await this.あるく()
 
@@ -21,7 +21,7 @@ rule.つねに(async function() {
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	await this.こうげきする()
-	await this.wait(1) // まつ
+	await this.まつ(1)
 
 	/*+ こうげきされたとき */
 })

@@ -21,10 +21,10 @@ rule.つねに(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.wait(0.5) // この数字のぶん まつ
+	await this.まつ(0.5) // この数字のぶん まつ
 	this.むてきか = false // ムテキかいじょ
 	await this.こうげきする()
-	await this.wait(1) // この数字のぶん まつ
+	await this.まつ(1) // この数字のぶん まつ
 
 	/*+ みつけたとき */
 })

@@ -11,7 +11,7 @@ rule.つくられたとき(async function() {
 
 rule.つねに(async function() {
 	await this.chase4('プレイヤー') // おいかける
-	await this.wait(1) // まつ
+	await this.まつ(1)
 
 	/*+ つねに */
 })
@@ -19,7 +19,7 @@ rule.つねに(async function() {
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
 	this.へんしんする('ばくはつ') // ばくはつ
-	await this.wait(0.7) // まつ
+	await this.まつ(0.7)
 	this.しょうかんする('緑色のほうせき', 0, 0) // アイテムをおとす
 
 	/*+ ぶつかったとき */

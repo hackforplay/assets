@@ -6,7 +6,7 @@ rule.つくられたとき(async function() {
 	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
 	this.damageTime = 30 // いっしゅん、ムテキになる
 
-	await this.wait(10) // まつ
+	await this.まつ(10)
 	this.へんしんする('緑色のゾンビ') // へんしんする
 	/*+ つくられたとき */
 })

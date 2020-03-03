@@ -15,7 +15,7 @@ rule.つねに(async function() {
 	await this.turn(むき.ランダム) // むきをランダムにする
 	await this.あるく()
 	await this.find() // さがす
-	await this.wait(2) // まつ
+	await this.まつ(2)
 
 	/*+ つねに */
 })

@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.wait(3) // まつ
+	await this.まつ(3)
 	await this.find() // さがす
 	await this.こうげきする()
 

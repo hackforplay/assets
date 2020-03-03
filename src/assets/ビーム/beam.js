@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	this.flyToward() // とんでいく
-	await this.wait(1) // この秒数だけ待つ
+	await this.まつ(1) // この秒数だけ待つ
 	this.destroy() // ビーム を けす
 
 	/*+ しょうかんされたとき */

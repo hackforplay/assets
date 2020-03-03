@@ -9,7 +9,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.wait(10) // この秒数 まつ
+	await this.まつ(10) // この秒数 まつ
 	if (this.たいりょく <= 0) return
 	await this.しょうかんする('緑色のゾンビ', 1, 0)
 

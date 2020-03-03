@@ -14,7 +14,7 @@ rule.ぶつかったとき(async function(item) {
 	await this.talk('つくってくれて ありがとう！\nこれ あげるよ！')
 
 	await this.n('たいりょく', ('▼ を', 'イコール'), 0) // しぬ
-	await this.wait(2) // まつ
+	await this.まつ(2)
 
 	await this.しょうかんする('緑色のかぎ', 0, 0)
 	await this.しょうかんする('ハート', 1, 0)

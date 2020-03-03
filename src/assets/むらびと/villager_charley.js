@@ -14,7 +14,7 @@ rule.ぶつかったとき(async function(item) {
 })
 
 rule.つねに(async function() {
-	await this.wait(3) // まつ
+	await this.まつ(3)
 	await this.turn(むき.うしろ) // ふりかえる
 	await this.あるく()
 

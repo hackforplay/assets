@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 
 	/*+ つくられたとき */
 
-	await this.wait(らんすう(20)) // まつ
+	await this.まつ(らんすう(20))
 
 	let ばんごう = らんすう(3)
 	if (ばんごう === 0) {

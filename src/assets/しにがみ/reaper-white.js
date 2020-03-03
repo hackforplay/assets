@@ -14,7 +14,7 @@ rule.つねに(async function() {
 	if (this.ターゲット === '') return // ターゲットがない時はここで終わり
 	await this.chase8(this.ターゲット) // ターゲットを追いかける（ナナメあり）
 	await this.こうげきする()
-	await this.wait(1) // まつ
+	await this.まつ(1)
 
 	/*+ つねに */
 })
