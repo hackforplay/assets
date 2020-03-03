@@ -14,7 +14,7 @@ rule.つくられたとき(async function() {
 rule.つねに(async function() {
 	await this.find() // さがす
 	await this.wait(1) // まつ
-	await this.walk() // あるく
+	await this.あるく()
 	this.turn(むき.ランダム) // ランダムにどこかを向く
 
 	/*+ つねに */

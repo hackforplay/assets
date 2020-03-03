@@ -10,7 +10,7 @@ rule.item = ('▼ あいて', Rule.Anyone)
 rule.ぶつかったとき(async function(item) {
 	if (item.name === 'プレイヤー') {
 		this.forward = item.forward // あいてと同じ方向を向く
-		await this.walk() // あるく
+		await this.あるく()
 	}
 
 	if (item.name === 'ゆきだま') {

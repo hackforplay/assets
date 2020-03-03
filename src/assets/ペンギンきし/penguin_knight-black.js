@@ -13,7 +13,7 @@ rule.つくられたとき(async function() {
 
 rule.つねに(async function() {
 	await this.turn(むき.ランダム) // むきをランダムにする
-	await this.walk() // あるく
+	await this.あるく()
 	await this.find() // さがす
 	await this.wait(2) // まつ
 
@@ -22,7 +22,7 @@ rule.つねに(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.walk() // あるく
+	await this.あるく()
 	await this.こうげきする()
 	await this.find() // さがす
 

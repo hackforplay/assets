@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
-	await this.walk() // あるく
+	await this.あるく()
 
 	/*+ メッセージされたとき */
 })
