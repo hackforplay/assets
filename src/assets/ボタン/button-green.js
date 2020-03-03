@@ -9,7 +9,7 @@ rule.つくられたとき(async function() {
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
 	await this.みためをかえる('おされた緑色のボタン') // 見た目をかえる
-	this.message('緑色のどうぞう') // どうぞうにメッセージ
+	this.メッセージする('緑色のどうぞう')
 	await this.まつ(1)
 	await this.みためをかえる('緑色のボタン') // 見た目をかえる
 
