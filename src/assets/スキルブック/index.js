@@ -11,43 +11,43 @@ const base = {
 const blue = {
 	...base,
 	name: '青色のスキルブック',
-	module: './スキルbook-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './スキルbook_blue.png' // アセットのアイコンへのパス
+	module: './skillbook-blue.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './skillbook_blue.png' // アセットのアイコンへのパス
 }
 
 const black = {
 	...base,
 	name: '黒色のスキルブック',
-	module: './スキルbook-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './スキルbook_black.png' // アセットのアイコンへのパス
+	module: './skillbook-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './skillbook_black.png' // アセットのアイコンへのパス
 }
 
 const green = {
 	...base,
 	name: '緑色のスキルブック',
-	module: './スキルbook-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './スキルbook_green.png' // アセットのアイコンへのパス
+	module: './skillbook-green.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './skillbook_green.png' // アセットのアイコンへのパス
 }
 
 const red = {
 	...base,
 	name: '赤色のスキルブック',
-	module: './スキルbook-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './スキルbook_red.png' // アセットのアイコンへのパス
+	module: './skillbook-red.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './skillbook_red.png' // アセットのアイコンへのパス
 }
 
 const white = {
 	...base,
 	name: '白色のスキルブック',
-	module: './スキルbook-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './スキルbook_white.png' // アセットのアイコンへのパス
+	module: './skillbook-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './skillbook_white.png' // アセットのアイコンへのパス
 }
 
 const yellow = {
 	...base,
 	name: '黄色のスキルブック',
-	module: './スキルbook-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
-	icon: './スキルbook_yellow.png' // アセットのアイコンへのパス
+	module: './skillbook-yellow.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './skillbook_yellow.png' // アセットのアイコンへのパス
 }
 
 const scopeCreate = [
@@ -77,33 +77,33 @@ module.exports = [
 	{
 		...blue,
 		scopes: scopeCreate,
-		insert: './スキルbook-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './skillbook-blue-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		thumbnail: 'https://i.gyazo.com/f777a68142b1e9604087ffef5d3290ad.gif', // サムネイル画像
 		children: [
 			{
 				...black,
 				scopes: scopeCreate,
-				insert: './スキルbook-black-create.js'
+				insert: './skillbook-black-create.js'
 			},
 			{
 				...green,
 				scopes: scopeCreate,
-				insert: './スキルbook-green-create.js'
+				insert: './skillbook-green-create.js'
 			},
 			{
 				...red,
 				scopes: scopeCreate,
-				insert: './スキルbook-red-create.js'
+				insert: './skillbook-red-create.js'
 			},
 			{
 				...white,
 				scopes: scopeCreate,
-				insert: './スキルbook-white-create.js'
+				insert: './skillbook-white-create.js'
 			},
 			{
 				...yellow,
 				scopes: scopeCreate,
-				insert: './スキルbook-yellow-create.js'
+				insert: './skillbook-yellow-create.js'
 			}
 		]
 	},
@@ -111,32 +111,32 @@ module.exports = [
 	{
 		...blue,
 		scopes: scopeSummon,
-		insert: './スキルbook-blue-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './skillbook-blue-summon.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...black,
 				scopes: scopeSummon,
-				insert: './スキルbook-black-summon.js'
+				insert: './skillbook-black-summon.js'
 			},
 			{
 				...green,
 				scopes: scopeSummon,
-				insert: './スキルbook-green-summon.js'
+				insert: './skillbook-green-summon.js'
 			},
 			{
 				...red,
 				scopes: scopeSummon,
-				insert: './スキルbook-red-summon.js'
+				insert: './skillbook-red-summon.js'
 			},
 			{
 				...white,
 				scopes: scopeSummon,
-				insert: './スキルbook-white-summon.js'
+				insert: './skillbook-white-summon.js'
 			},
 			{
 				...yellow,
 				scopes: scopeSummon,
-				insert: './スキルbook-yellow-summon.js'
+				insert: './skillbook-yellow-summon.js'
 			}
 		]
 	},
@@ -144,32 +144,32 @@ module.exports = [
 	{
 		...blue,
 		scopes: scopeDrop,
-		insert: './スキルbook-blue-drop.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './skillbook-blue-drop.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...black,
 				scopes: scopeDrop,
-				insert: './スキルbook-black-drop.js'
+				insert: './skillbook-black-drop.js'
 			},
 			{
 				...green,
 				scopes: scopeDrop,
-				insert: './スキルbook-green-drop.js'
+				insert: './skillbook-green-drop.js'
 			},
 			{
 				...red,
 				scopes: scopeDrop,
-				insert: './スキルbook-red-drop.js'
+				insert: './skillbook-red-drop.js'
 			},
 			{
 				...white,
 				scopes: scopeDrop,
-				insert: './スキルbook-white-drop.js'
+				insert: './skillbook-white-drop.js'
 			},
 			{
 				...yellow,
 				scopes: scopeDrop,
-				insert: './スキルbook-yellow-drop.js'
+				insert: './skillbook-yellow-drop.js'
 			}
 		]
 	}

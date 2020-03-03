@@ -79,32 +79,32 @@ module.exports = [
 	{
 		...red,
 		scopes: scopeSkill,
-		insert: './eddy-red-スキル.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './eddy-red-skill.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...black,
 				scopes: scopeSkill,
-				insert: './eddy-black-スキル.js'
+				insert: './eddy-black-skill.js'
 			},
 			{
 				...blue,
 				scopes: scopeSkill,
-				insert: './eddy-blue-スキル.js'
+				insert: './eddy-blue-skill.js'
 			},
 			{
 				...green,
 				scopes: scopeSkill,
-				insert: './eddy-green-スキル.js'
+				insert: './eddy-green-skill.js'
 			},
 			{
 				...white,
 				scopes: scopeSkill,
-				insert: './eddy-white-スキル.js'
+				insert: './eddy-white-skill.js'
 			},
 			{
 				...yellow,
 				scopes: scopeSkill,
-				insert: './eddy-yellow-スキル.js'
+				insert: './eddy-yellow-skill.js'
 			}
 		]
 	},
