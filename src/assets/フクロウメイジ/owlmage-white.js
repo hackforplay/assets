@@ -22,7 +22,7 @@ rule.ぶつかったとき(async function(item) {
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	await this.chase4(item) // おいかける
-	this.しょうかんする('白色のうず').flyToward(item) // itemにむかってとんでいく
+	this.しょうかんする('白色のうず').とんでいく(item) // itemにむかってとんでいく
 	await this.こうげきする()
 
 	/*+ こうげきされたとき */
