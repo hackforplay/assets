@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
-	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), item.atk) // ばくだんの攻撃力と同じにする
+	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), item.こうげきりょく) // ばくだんの攻撃力と同じにする
 
 	/*+ しょうかんされたとき */
 })
