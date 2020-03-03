@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	await item.locate(8, 0) // この位置にテレポ-ト
+	await item.いく(8, 0) // この位置にテレポ-ト
 
 	/*+ ふまれたとき */
 })

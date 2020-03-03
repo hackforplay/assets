@@ -11,7 +11,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
-	await this.locate(item.ひだりから, item.うえから) // itemのばしょにしょうかんされる
+	await this.いく(item.ひだりから, item.うえから) // itemのばしょにしょうかんされる
 
 	/*+ しょうかんされたとき */
 })
