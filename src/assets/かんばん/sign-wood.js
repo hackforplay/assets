@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
-	await this.talk('このかんばん、なにも書かれてないみたい')
+	await this.はなす('このかんばん、なにも書かれてないみたい')
 
 	/*+ ぶつかったとき */
 })

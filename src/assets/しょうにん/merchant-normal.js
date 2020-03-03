@@ -11,24 +11,24 @@ rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
 	const ねだん = 5
 
-	const こたえ = await this.talk(
+	const こたえ = await this.はなす(
 		`りんご は ${ねだん} えんだよ`,
 		'かう！',
 		'やめとく'
 	)
 
 	if (こたえ === 'やめとく') {
-		await this.talk('またね！')
+		await this.はなす('またね！')
 		return
 	}
 
 	if (item.おかね >= ねだん) {
-		await this.talk('まいどあり！')
+		await this.はなす('まいどあり！')
 		await this.こうげきする()
 		await this.しょうかんする('りんご')
 		item.n('おかね', ('▼ を', 'へらす'), ねだん)
 	} else {
-		await this.talk('おっと、お金が足りないよ')
+		await this.はなす('おっと、お金が足りないよ')
 	}
 
 	/*+ ぶつかったとき */

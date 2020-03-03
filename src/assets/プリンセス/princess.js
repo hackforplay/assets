@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 
 rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	await this.talk('たすけてくれて ありがとう！') // メッセージを出す
+	await this.はなす('たすけてくれて ありがとう！') // メッセージを出す
 	Hack.gameclear() // ゲームクリア
 
 	/*+ ぶつかったとき */

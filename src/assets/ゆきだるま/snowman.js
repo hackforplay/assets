@@ -11,7 +11,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', 'プレイヤー') // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	await this.talk('つくってくれて ありがとう！\nこれ あげるよ！')
+	await this.はなす('つくってくれて ありがとう！\nこれ あげるよ！')
 
 	await this.n('たいりょく', ('▼ を', 'イコール'), 0) // しぬ
 	await this.まつ(2)
