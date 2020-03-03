@@ -1,1 +1,1 @@
-await this.turn(('▼ むき', Dir.みぎて)) // キャラから見て右をむく
+await this.turn(むき.みぎて) // キャラから見て右をむく

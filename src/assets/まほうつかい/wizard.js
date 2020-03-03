@@ -11,7 +11,7 @@ rule.つくられたとき(async function() {
 
 rule.つねに(async function() {
 	this.teleportRandom() // ランダムな場所にテレポート
-	await this.turn(('▼ むき', Dir.ランダム)) // ランダムにどこかを向く
+	await this.turn(むき.ランダム) // ランダムにどこかを向く
 	await this.wait(2) // この秒数だけまつ
 	await this.attack() // こうげきする
 	this.しょうかんする('黒色のスライム', 1, 0)

@@ -1,1 +1,1 @@
-await this.turn(('▼ むき', Dir.うしろ)) // ふりかえる
+await this.turn(むき.うしろ) // ふりかえる

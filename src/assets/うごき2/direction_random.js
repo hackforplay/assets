@@ -1,1 +1,1 @@
-await this.turn(('▼ むき', Dir.ランダム)) // ランダムにどこかを向く
+await this.turn(むき.ランダム) // ランダムにどこかを向く

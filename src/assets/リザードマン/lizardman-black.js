@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.turn(('▼ むき', Dir.ランダム)) // むきをランダムにする
+	await this.turn(むき.ランダム) // むきをランダムにする
 	await this.walk() // あるく
 	await this.attack() // こうげきする
 	await this.wait(1) // まつ
@@ -19,7 +19,7 @@ rule.つねに(async function() {
 })
 
 rule.すすめなかったとき(async function() {
-	await this.turn(('▼ むき', Dir.ランダム)) // むきをランダムにする
+	await this.turn(むき.ランダム) // むきをランダムにする
 	await this.walk() // あるく
 
 	/*+ すすめなかったとき */

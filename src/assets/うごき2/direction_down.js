@@ -1,1 +1,1 @@
-await this.turn(('▼ むき', Dir.した)) // むきを下にする
+await this.turn(むき.した) // むきを下にする

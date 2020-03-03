@@ -15,7 +15,7 @@ rule.ぶつかったとき(async function(item) {
 
 rule.つねに(async function() {
 	await this.wait(3) // まつ
-	await this.turn(('▼ むき', Dir.うしろ)) // ふりかえる
+	await this.turn(むき.うしろ) // ふりかえる
 	await this.walk() // あるく
 
 	/*+ つねに */

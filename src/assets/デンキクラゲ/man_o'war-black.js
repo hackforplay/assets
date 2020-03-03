@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 
 rule.つねに(async function() {
 	await this.wait(1) // まつ
-	await this.turn(('▼ むき', Dir.ランダム)) // ランダムにどこかを向く
+	await this.turn(むき.ランダム) // ランダムにどこかを向く
 	await this.walk() // あるく
 
 	/*+ つねに */
