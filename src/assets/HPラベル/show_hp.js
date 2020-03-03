@@ -1,1 +1,1 @@
-this.showHpLabel = true // HPひょうじ見えるようにする
+this.たいりょくがみえるか = true // HPひょうじ見えるようにする

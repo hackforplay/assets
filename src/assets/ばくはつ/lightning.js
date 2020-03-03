@@ -3,7 +3,7 @@ import '../game'
 rule.つくられたとき(async function() {
 	await this.costume('でんげき') // 見た目をきめる
 	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 1)
-	this.showHpLabel = false // HPひょうじを見えないようにする
+	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 	this.n('たいりょく', ('▼ を', 'イコール'), 0) // きえる
 
 	/*+ つくられたとき */

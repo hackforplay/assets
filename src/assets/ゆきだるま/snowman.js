@@ -4,7 +4,7 @@ rule.つくられたとき(async function() {
 	await this.costume('ゆきだるま') // 見た目をきめる
 	this.なかま = なかま.ドクリツ // なかまをきめる
 	this.n('たいりょく', ('▼ を', 'イコール'), 10) // 体力をきめる
-	this.showHpLabel = false // HPひょうじを見えないようにする
+	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 
 	/*+ つくられたとき */
 })
