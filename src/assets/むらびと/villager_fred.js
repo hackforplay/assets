@@ -8,6 +8,7 @@ rule.つくられたとき(async function() {
 
 rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
+	await this.ふりむく(item)
 	await this.はなす('こんにちは')
 
 	/*+ ぶつかったとき */
