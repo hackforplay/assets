@@ -1,23 +1,23 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('青色のニンジャ') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 0) // こうげき力をきめる
-	this.n('みえやすさ', ('▼ を', 'イコール'), 0) // とうめいになる
-	this.skill = 'ばくだん' // スキルをかえる
-	this.showHpLabel = false // HPひょうじを見えないようにする
+	await this.みためをかえる('青色のニンジャ')
+	this.なかま = なかま.ドクリツ
+	this.たいりょく = 3
+	this.こうげきりょく = 0
+	this.みえやすさ = 0 // とうめいになる
+	this.スキル = 'ばくだん'
+	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
-	this.n('みえやすさ', ('▼ を', 'イコール'), 1) // すがたをあらわす
-	await this.wait(1) // まつ
-	await this.attack() // こうげきする
-	this.n('みえやすさ', ('▼ を', 'イコール'), 0) // とうめいになる
+	this.みえやすさ = 1 // すがたをあらわす
+	await this.まつ(1)
+	await this.こうげきする()
+	this.みえやすさ = 0 // とうめいになる
 
 	/*+ こうげきされたとき */
 })

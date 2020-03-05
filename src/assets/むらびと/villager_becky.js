@@ -1,22 +1,23 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('ベッキー') // 見た目をきめる
+	await this.みためをかえる('ベッキー')
 
 	/*+ つくられたとき */
 })
 
 rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	await this.talk('こんにちは')
+	await this.ふりむく(item)
+	await this.はなす('こんにちは')
 
 	/*+ ぶつかったとき */
 })
 
 rule.つねに(async function() {
-	await this.wait(3) // まつ
-	await this.turn(('▼ むき', Dir.うしろ)) // ふりかえる
-	await this.walk() // あるく
+	await this.まつ(3)
+	await this.むきをかえる(むき.うしろ) // ふりかえる
+	await this.あるく()
 
 	/*+ つねに */
 })

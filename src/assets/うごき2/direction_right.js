@@ -1,1 +1,1 @@
-await this.turn(('▼ むき', Dir.みぎ)) // むきを右にする
+await this.むきをかえる(むき.みぎ)

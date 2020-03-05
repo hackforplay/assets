@@ -1,20 +1,20 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('ゆきだるま') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 10) // 体力をきめる
-	this.showHpLabel = false // HPひょうじを見えないようにする
+	await this.みためをかえる('ゆきだるま')
+	this.なかま = なかま.ドクリツ
+	this.たいりょく = 10
+	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー') // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	await this.talk('つくってくれて ありがとう！\nこれ あげるよ！')
+	await this.はなす('つくってくれて ありがとう！\nこれ あげるよ！')
 
-	await this.n('たいりょく', ('▼ を', 'イコール'), 0) // しぬ
-	await this.wait(2) // まつ
+	this.たいりょく = 0 // しぬ
+	await this.まつ(2)
 
 	await this.しょうかんする('緑色のかぎ', 0, 0)
 	await this.しょうかんする('ハート', 1, 0)

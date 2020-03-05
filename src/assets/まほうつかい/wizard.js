@@ -1,21 +1,21 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('まほうつかい') // 見た目をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // たいりょくをきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげきりょくをきめる
+	await this.みためをかえる('まほうつかい')
+	this.なかま = なかま.モンスター
+	this.たいりょく = 3
+	this.こうげきりょく = 1
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	this.teleportRandom() // ランダムな場所にテレポート
-	await this.turn(('▼ むき', Dir.ランダム)) // ランダムにどこかを向く
-	await this.wait(2) // この秒数だけまつ
-	await this.attack() // こうげきする
+	this.テレポートランダム()
+	await this.むきをかえる(むき.ランダム)
+	await this.まつ(2) // この秒数だけまつ
+	await this.こうげきする()
 	this.しょうかんする('黒色のスライム', 1, 0)
-	await this.wait(1) // この秒数だけまつ
+	await this.まつ(1) // この秒数だけまつ
 
 	/*+ つねに */
 })

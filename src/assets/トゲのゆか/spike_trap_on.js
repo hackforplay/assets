@@ -1,16 +1,16 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('トゲのゆか') // 見た目をかえる
-	this.family = ('▼ なかま', Family.モンスター)
-	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 1)
+	await this.みためをかえる('トゲのゆか') // 見た目をかえる
+	this.なかま = なかま.モンスター
+	this.ふれたときのダメージ = 1
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
-	await this.wait(0.1) // まつ
+	await this.まつ(0.1)
 	this.へんしんする('トゲのないゆか') // へんしんする
 
 	/*+ メッセージされたとき */

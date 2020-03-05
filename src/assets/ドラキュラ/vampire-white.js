@@ -1,30 +1,30 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('白色のドラキュラ') // 見た目をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 10) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
-	this.n('みつけられるきょり', ('▼ を', 'イコール'), 1) // みえるきょり
-	this.n('みつけられるはんい', ('▼ を', 'イコール'), 0) // しかいの広さ
+	await this.みためをかえる('白色のドラキュラ')
+	this.なかま = なかま.モンスター
+	this.たいりょく = 10
+	this.こうげきりょく = 1
+	this.みえるきょり = 1
+	this.みえるはんい = 0
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	this.isInvincible = true // ムテキになる
-	await this.chase4('プレイヤー') // おいかける
-	await this.find() // さがす
+	this.むてきか = true // ムテキになる
+	await this.おいかける('プレイヤー')
+	await this.みつける()
 
 	/*+ つねに */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.wait(0.5) // この数字のぶん まつ
-	this.isInvincible = false // ムテキかいじょ
-	await this.attack() // こうげきする
-	await this.wait(1) // この数字のぶん まつ
+	await this.まつ(0.5) // この数字のぶん まつ
+	this.むてきか = false // ムテキかいじょ
+	await this.こうげきする()
+	await this.まつ(1) // この数字のぶん まつ
 
 	/*+ みつけたとき */
 })

@@ -1,14 +1,14 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('金色のどうぞう') // みためをきめる
+	await this.みためをかえる('金色のどうぞう') // みためをきめる
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
-	await this.walk() // あるく
+	await this.あるく()
 
 	/*+ メッセージされたとき */
 })

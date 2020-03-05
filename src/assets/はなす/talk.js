@@ -1,1 +1,1 @@
-await this.talk('おはよう')
+await this.はなす('おはよう')

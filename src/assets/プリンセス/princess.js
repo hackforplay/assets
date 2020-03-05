@@ -1,15 +1,15 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('プリンセス') // 見た目をきめる
+	await this.みためをかえる('プリンセス')
 
 	/*+ つくられたとき */
 })
 
 rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	await this.talk('たすけてくれて ありがとう！') // メッセージを出す
-	Hack.gameclear() // ゲームクリア
+	await this.はなす('たすけてくれて ありがとう！') // メッセージを出す
+	ハック.ゲームクリア()
 
 	/*+ ぶつかったとき */
 })

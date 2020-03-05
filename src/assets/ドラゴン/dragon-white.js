@@ -1,18 +1,18 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('白色のドラゴン') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 10) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 3) // こうげき力をきめる
-	this.skill = 'ほのお' // スキルをきめる
+	await this.みためをかえる('白色のドラゴン')
+	this.なかま = なかま.ドクリツ
+	this.たいりょく = 10
+	this.こうげきりょく = 3
+	this.スキル = 'ほのお'
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.wait(1) // まつ
-	await this.attack() // こうげき
+	await this.まつ(1)
+	await this.こうげきする()
 
 	/*+ つねに */
 })

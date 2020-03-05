@@ -1,9 +1,9 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('スイカ') // 見た目をきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 1) // 体力をきめる
-	this.showHpLabel = false // HPひょうじを見えないようにする
+	await this.みためをかえる('スイカ')
+	this.たいりょく = 1
+	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 
 	/*+ つくられたとき */
 })

@@ -1,7 +1,7 @@
-const こたえ = await this.talk('ヒントを聞いていく？', 'はい', 'いいえ')
+const こたえ = await this.はなす('ヒントを聞いていく？', 'はい', 'いいえ')
 if (こたえ === 'はい') {
-	await this.talk('ヒントは○○だよ')
+	await this.はなす('ヒントは○○だよ')
 }
 if (こたえ === 'いいえ') {
-	await this.talk('じゃあね')
+	await this.はなす('じゃあね')
 }

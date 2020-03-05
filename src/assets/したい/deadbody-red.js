@@ -1,12 +1,14 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('赤色のしたい') // 見た目をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.damageTime = 30 // いっしゅん、ムテキになる
+	await this.みためをかえる('赤色のしたい')
+	this.なかま = なかま.モンスター
+	this.たいりょく = 3
+	this.むてきか = true // いっしゅん、ムテキになる
+	await this.まつ(1)
+	this.むてきか = false
 
-	await this.wait(10) // まつ
+	await this.まつ(9)
 	this.へんしんする('赤色のゾンビ') // へんしんする
 	/*+ つくられたとき */
 })

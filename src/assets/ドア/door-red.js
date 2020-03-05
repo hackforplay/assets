@@ -1,16 +1,16 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('赤色のドア') // とじている
-	this.collisionFlag = true // はいれないようにする
+	await this.みためをかえる('赤色のドア') // とじている
+	this.ぶつかるか = true // はいれないようにする
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
-	await this.costume('ひらいた赤色のドア') // ひらく！
-	this.collisionFlag = false // はいれるようにする
+	await this.みためをかえる('ひらいた赤色のドア') // ひらく！
+	this.ぶつかるか = false // はいれるようにする
 
 	/*+ メッセージされたとき */
 })

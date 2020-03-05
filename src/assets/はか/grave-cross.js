@@ -1,16 +1,16 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('じゅうじのはか') // 見ためをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 5) // 体力をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
+	await this.みためをかえる('じゅうじのはか') // 見ためをきめる
+	this.たいりょく = 5
+	this.なかま = なかま.モンスター
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.wait(10) // この秒数 まつ
-	if (this.hp <= 0) return
+	await this.まつ(10) // この秒数 まつ
+	if (this.たいりょく <= 0) return
 	await this.しょうかんする('緑色のゾンビ', 1, 0)
 
 	/*+ つねに */

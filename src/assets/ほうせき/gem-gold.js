@@ -1,15 +1,15 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('金色のほうせき') // 見た目をきめる
+	await this.みためをかえる('金色のほうせき')
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	item.n('おかね', ('▼ を', 'ふやす'), 100)
-	this.destroy() // このアイテムを消す
+	item.おかね += 100
+	this.きえる()
 
 	/*+ ふまれたとき */
 })

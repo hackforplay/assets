@@ -1,19 +1,19 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('ほのお') // 見た目をきめる
-	this.n('ふれたときのダメージ', ('▼ を', 'イコール'), 2)
-	this.n('スピード', ('▼ を', 'イコール'), 1.5)
-	this.n('かんつうする回数', ('▼ を', 'イコール'), 0)
+	await this.みためをかえる('ほのお')
+	this.ふれたときのダメージ = 2
+	this.あるくはやさ = 1.5
+	this.かんつうするかいすう = 0
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
-	this.flyToward() // とんでいく
-	await this.wait(2) // この秒数だけ待つ
-	this.destroy() // ほのお を けす
+	this.とんでいく()
+	await this.まつ(2) // この秒数だけ待つ
+	this.きえる() // ほのお を けす
 
 	/*+ しょうかんされたとき */
 })

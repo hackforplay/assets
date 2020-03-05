@@ -1,16 +1,16 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('赤色のかぎ') // 見た目をかえる
+	await this.みためをかえる('赤色のかぎ') // 見た目をかえる
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	this.message('赤色のドア') // 赤色のドアをひらく
-	this.talk('赤色の ドアが ひらいた！')
-	this.destroy() // このアイテムを消す
+	this.メッセージする('赤色のドア') // 赤色のドアをひらく
+	this.はなす('赤色の ドアが ひらいた！')
+	this.きえる()
 
 	/*+ ふまれたとき */
 })

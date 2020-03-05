@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('ゆきだま') // みためをきめる
+	await this.みためをかえる('ゆきだま') // みためをきめる
 
 	/*+ つくられたとき */
 })
@@ -10,12 +10,12 @@ rule.item = ('▼ あいて', Rule.Anyone)
 rule.ぶつかったとき(async function(item) {
 	if (item.name === 'プレイヤー') {
 		this.forward = item.forward // あいてと同じ方向を向く
-		await this.walk() // あるく
+		await this.あるく()
 	}
 
 	if (item.name === 'ゆきだま') {
-		this.destroy() // じぶんを けす
-		item.destroy() // あいてを けす
+		this.きえる() // じぶんを けす
+		item.きえる() // あいてを けす
 		this.しょうかんする('ゆきだるま', 1, 0)
 	}
 
@@ -23,7 +23,7 @@ rule.ぶつかったとき(async function(item) {
 })
 
 rule.すすめなかったとき(async function() {
-	this.destroy() // じぶんを けす
+	this.きえる() // じぶんを けす
 	this.しょうかんする('ゆきだま', -1, 0)
 
 	/*+ すすめなかったとき */

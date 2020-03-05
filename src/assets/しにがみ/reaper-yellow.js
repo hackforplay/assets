@@ -1,20 +1,18 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('黄色のしにがみ') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
-	this.ターゲット = 'プレイヤー' // おいかけるターゲットをきめる
+	await this.みためをかえる('黄色のしにがみ')
+	this.なかま = なかま.ドクリツ
+	this.たいりょく = 3
+	this.こうげきりょく = 1
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	if (this.ターゲット === '') return // ターゲットがない時はここで終わり
-	await this.chase8(this.ターゲット) // ターゲットを追いかける（ナナメあり）
-	await this.attack() // こうげきする
-	await this.wait(1) // まつ
+	await this.おいかける('プレイヤー')
+	await this.こうげきする()
+	await this.まつ(1)
 
 	/*+ つねに */
 })

@@ -1,20 +1,20 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('白色のボススライム') // 見た目をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 10) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
-	this.n('みつけられるきょり', ('▼ を', 'イコール'), 3) // みえるきょり
-	this.n('みつけられるはんい', ('▼ を', 'イコール'), 0) // しかいの広さ
+	await this.みためをかえる('白色のボススライム')
+	this.なかま = なかま.モンスター
+	this.たいりょく = 10
+	this.こうげきりょく = 1
+	this.みえるきょり = 3
+	this.みえるはんい = 0
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.wait(3) // まつ
-	await this.find() // さがす
-	await this.attack() // こうげきする
+	await this.まつ(3)
+	await this.みつける()
+	await this.こうげきする()
 
 	/*+ つねに */
 })

@@ -1,17 +1,17 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('黄色のスライム') // 見た目をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
+	await this.みためをかえる('黄色のスライム')
+	this.なかま = なかま.モンスター
+	this.たいりょく = 3
+	this.こうげきりょく = 1
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.attack() // こうげきする
-	await this.wait(1) // まつ
+	await this.こうげきする()
+	await this.まつ(1)
 
 	/*+ つねに */
 })

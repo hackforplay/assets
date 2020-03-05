@@ -1,7 +1,7 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('黒色のたからばこ') // 見ためをきめる
+	await this.みためをかえる('黒色のたからばこ') // 見ためをきめる
 	this.あいた = false // まだ、あいていない（変数）
 
 	/*+ つくられたとき */
@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.こうげきされたとき(async function(item) {
 	if (this.あいた === true) return // もし、あいていたら、ここで終わる（変数）
-	await this.costume('あいた黒色のたからばこ') // 見ためをかえる
+	await this.みためをかえる('あいた黒色のたからばこ') // 見ためをかえる
 	this.あいた = true // あいた（変数）
 	this.しょうかんする('水色のほうせき', 1, 0) // 緑色のほうせきを出す。この行をけすと、出なくなる
 

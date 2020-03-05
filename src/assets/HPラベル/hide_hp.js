@@ -1,1 +1,1 @@
-this.showHpLabel = false // HPひょうじを見えないようにする
+this.たいりょくがみえるか = false // HPひょうじを見えないようにする

@@ -1,1 +1,1 @@
-this.teleportRandom() // ランダムな場所にテレポート
+this.テレポートランダム()

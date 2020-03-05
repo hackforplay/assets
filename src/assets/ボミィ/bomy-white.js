@@ -1,17 +1,17 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('白色のボミィ') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
+	await this.みためをかえる('白色のボミィ')
+	this.なかま = なかま.ドクリツ
+	this.たいりょく = 3
+	this.こうげきりょく = 1
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.chase4('プレイヤー') // おいかける
-	await this.wait(1) // まつ
+	await this.おいかける('プレイヤー')
+	await this.まつ(1)
 
 	/*+ つねに */
 })
@@ -19,7 +19,7 @@ rule.つねに(async function() {
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
 	this.へんしんする('ばくはつ') // ばくはつ
-	await this.wait(0.7) // まつ
+	await this.まつ(0.7)
 	this.しょうかんする('緑色のほうせき', 0, 0) // アイテムをおとす
 
 	/*+ ぶつかったとき */

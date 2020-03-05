@@ -1,14 +1,14 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('赤色のかんばん') // 見た目をかえる
+	await this.みためをかえる('赤色のかんばん') // 見た目をかえる
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
-	await this.talk('このかんばん、なにも書かれてないみたい')
+	await this.はなす('このかんばん、なにも書かれてないみたい')
 
 	/*+ ぶつかったとき */
 })

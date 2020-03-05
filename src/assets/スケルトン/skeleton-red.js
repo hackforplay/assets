@@ -1,30 +1,30 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('赤色のスケルトン') // 見た目をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
-	this.n('みつけられるきょり', ('▼ を', 'イコール'), 10) // みえるきょり
-	this.n('みつけられるはんい', ('▼ を', 'イコール'), 0) // しかいの広さ
-	this.skill = 'や' // スキルをかえる
+	await this.みためをかえる('赤色のスケルトン')
+	this.なかま = なかま.モンスター
+	this.たいりょく = 3
+	this.こうげきりょく = 1
+	this.みえるきょり = 10
+	this.みえるはんい = 0
+	this.スキル = 'や'
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.chase4('プレイヤー') // おいかける
-	await this.find() // さがす
-	await this.wait(2) // まつ
+	await this.おいかける('プレイヤー')
+	await this.みつける()
+	await this.まつ(2)
 
 	/*+ つねに */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.wait(2) // まつ
-	await this.attack() // こうげき
-	await this.find() // さがす
+	await this.まつ(2)
+	await this.こうげきする()
+	await this.みつける()
 
 	/*+ みつけたとき */
 })

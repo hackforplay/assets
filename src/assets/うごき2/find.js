@@ -1,1 +1,1 @@
-await this.find() // さがす
+await this.みつける()

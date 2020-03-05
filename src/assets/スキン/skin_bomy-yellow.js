@@ -1,1 +1,1 @@
-await this.costume('黄色のボミィ') // スキンをかえる
+await this.みためをかえる('黄色のボミィ')

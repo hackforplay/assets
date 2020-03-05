@@ -1,14 +1,14 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('白色のテレポーター') // 見た目をかえる
+	await this.みためをかえる('白色のテレポーター') // 見た目をかえる
 
 	/*+ つくられたとき */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	await item.locate(8, 0) // この位置にテレポ-ト
+	await item.いく(8, 0) // この位置にテレポ-ト
 
 	/*+ ふまれたとき */
 })

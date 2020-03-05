@@ -1,1 +1,1 @@
-await this.attack() // こうげきする
+await this.こうげきする()

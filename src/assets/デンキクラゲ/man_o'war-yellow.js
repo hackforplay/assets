@@ -1,27 +1,27 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('黄色のデンキクラゲ') // 見た目をきめる
-	this.family = ('▼ なかま', Family.モンスター) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
-	this.skill = 'でんげき' // スキルをきめる
+	await this.みためをかえる('黄色のデンキクラゲ')
+	this.なかま = なかま.モンスター
+	this.たいりょく = 3
+	this.こうげきりょく = 1
+	this.スキル = 'でんげき'
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.wait(1) // まつ
-	await this.turn(('▼ むき', Dir.ランダム)) // ランダムにどこかを向く
-	await this.walk() // あるく
+	await this.まつ(1)
+	await this.むきをかえる(むき.ランダム)
+	await this.あるく()
 
 	/*+ つねに */
 })
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
-	await this.attack() // こうげきする
-	await this.wait(1) // まつ
+	await this.こうげきする()
+	await this.まつ(1)
 
 	/*+ こうげきされたとき */
 })

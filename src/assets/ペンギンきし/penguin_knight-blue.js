@@ -1,30 +1,30 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('青色のペンギンきし') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
-	this.n('みつけられるきょり', ('▼ を', 'イコール'), 10) // みえるきょり
-	this.n('みつけられるはんい', ('▼ を', 'イコール'), 0) // しかいの広さ
+	await this.みためをかえる('青色のペンギンきし')
+	this.なかま = なかま.ドクリツ
+	this.たいりょく = 3
+	this.こうげきりょく = 1
+	this.みえるきょり = 10
+	this.みえるはんい = 0
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.turn(('▼ むき', Dir.ランダム)) // むきをランダムにする
-	await this.walk() // あるく
-	await this.find() // さがす
-	await this.wait(2) // まつ
+	await this.むきをかえる(むき.ランダム)
+	await this.あるく()
+	await this.みつける()
+	await this.まつ(2)
 
 	/*+ つねに */
 })
 
 rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.walk() // あるく
-	await this.attack() // こうげき
-	await this.find() // さがす
+	await this.あるく()
+	await this.こうげきする()
+	await this.みつける()
 
 	/*+ みつけたとき */
 })

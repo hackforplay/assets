@@ -1,1 +1,1 @@
-await this.walkLeft() // 左にカニ歩き
+await this.ひだりにあるく() // カニ歩き

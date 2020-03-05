@@ -1,26 +1,26 @@
 import '../game'
 
 rule.つくられたとき(async function() {
-	await this.costume('青色のリザードマン') // 見た目をきめる
-	this.family = ('▼ なかま', Family.ドクリツ) // なかまをきめる
-	this.n('たいりょく', ('▼ を', 'イコール'), 3) // 体力をきめる
-	this.n('こうげきりょく', ('▼ を', 'イコール'), 1) // こうげき力をきめる
+	await this.みためをかえる('青色のリザードマン')
+	this.なかま = なかま.ドクリツ
+	this.たいりょく = 3
+	this.こうげきりょく = 1
 
 	/*+ つくられたとき */
 })
 
 rule.つねに(async function() {
-	await this.turn(('▼ むき', Dir.ランダム)) // むきをランダムにする
-	await this.walk() // あるく
-	await this.attack() // こうげきする
-	await this.wait(1) // まつ
+	await this.むきをかえる(むき.ランダム)
+	await this.あるく()
+	await this.こうげきする()
+	await this.まつ(1)
 
 	/*+ つねに */
 })
 
 rule.すすめなかったとき(async function() {
-	await this.turn(('▼ むき', Dir.ランダム)) // むきをランダムにする
-	await this.walk() // あるく
+	await this.むきをかえる(むき.ランダム)
+	await this.あるく()
 
 	/*+ すすめなかったとき */
 })
