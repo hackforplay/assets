@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.おいかける('プレイヤー')
+	await this.おいかける('プレイヤー', true)
 	await this.こうげきする()
 	await this.まつ(1)
 
