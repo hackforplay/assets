@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('ざんげき')
-	this.ふれたときのダメージ = 1
+	this.ダメージ = 1
 	this.あるくはやさ = 2
 	this.かんつうするかいすう = 10
 

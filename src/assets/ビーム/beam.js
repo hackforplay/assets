@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('ビーム')
-	this.ふれたときのダメージ = 1
+	this.ダメージ = 1
 	this.あるくはやさ = 3
 	this.かんつうするかいすう = 10
 

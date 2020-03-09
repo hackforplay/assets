@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('でんげき')
-	this.ふれたときのダメージ = 1
+	this.ダメージ = 1
 	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 	this.たいりょく = 0 // きえる
 

@@ -3,7 +3,7 @@ import '../game'
 rule.つくられたとき(async function() {
 	await this.みためをかえる('トゲのゆか') // 見た目をかえる
 	this.なかま = なかま.モンスター
-	this.ふれたときのダメージ = 1
+	this.ダメージ = 1
 
 	/*+ つくられたとき */
 })

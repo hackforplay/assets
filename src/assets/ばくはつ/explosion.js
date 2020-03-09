@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('ばくはつ')
-	this.ふれたときのダメージ = 3
+	this.ダメージ = 3
 	this.あるくはやさ = 0
 	this.たいりょくがみえるか = false // HPひょうじを見えないようにする
 	this.たいりょく = 0 // きえる
@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 
 rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
-	this.ふれたときのダメージ = item.こうげきりょく // ばくだんの攻撃力と同じにする
+	this.ダメージ = item.こうげきりょく // ばくだんの攻撃力と同じにする
 
 	/*+ しょうかんされたとき */
 })
