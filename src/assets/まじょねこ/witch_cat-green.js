@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('緑色のまじょねこ')
-	this.なかま = なかま.ドクリツ
+	this.なかま = ('▼ なかま.', なかま.ドクリツ)
 	this.たいりょく = 3
 	this.こうげきりょく = 0
 	this.みえるきょり = 10
