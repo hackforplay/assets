@@ -10,7 +10,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.むきをかえる(むき.ランダム)
+	await this.むきをかえる(('▼ むき.', むき.ランダム))
 	await this.あるく()
 	await this.こうげきする()
 	await this.まつ(1)
@@ -19,7 +19,7 @@ rule.つねに(async function() {
 })
 
 rule.すすめなかったとき(async function() {
-	await this.むきをかえる(むき.ランダム)
+	await this.むきをかえる(('▼ むき.', むき.ランダム))
 	await this.あるく()
 
 	/*+ すすめなかったとき */

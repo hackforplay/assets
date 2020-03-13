@@ -15,7 +15,7 @@ rule.つねに(async function() {
 	await this.みつける()
 	await this.まつ(1)
 	await this.あるく()
-	this.むきをかえる(むき.ランダム)
+	this.むきをかえる(('▼ むき.', むき.ランダム))
 
 	/*+ つねに */
 })
