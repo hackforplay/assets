@@ -16,7 +16,7 @@ deploy:
     bucket: '$NODE_BUCKET_NAME'
     skip_cleanup: true
     local-dir: dist
-    cache_control: private, max-age=3600
+    cache_control: public, max-age=3600
     on:
       all_branches: true
       condition: '$TRAVIS_BRANCH =~ ^(master|release.*)$'
