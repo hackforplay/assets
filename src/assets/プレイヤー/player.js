@@ -3,7 +3,7 @@ import '../game'
 rule.つくられたとき(async function() {
 	Player.set(this)
 	await this.みためをかえる('ゆうしゃ男')
-	this.なかま = ('▼ なかま.', なかま.プレイヤー)
+	this.なかま = なかま.プレイヤー
 	this.たいりょく = 3
 	this.こうげきりょく = 1
 
