@@ -9,7 +9,6 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	this.とんでいく()
 	await this.まつ(1) // この秒数だけ待つ
@@ -25,21 +24,18 @@ rule.つねに(async function() {
 // ここまで つねに
 
 // ここから こうげきされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき
 
 // ここから ぶつかったとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.ぶつかったとき(async function(item) {
 	/*+ ぶつかったとき */
 })
 // ここまで ぶつかったとき
 
 // ここから メッセージされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 })
@@ -58,7 +54,6 @@ rule.すすめなかったとき(async function() {
 // ここまで すすめなかったとき
 
 // ここから みつけたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.みつけたとき(async function(item) {
 	/*+ みつけたとき */
 })

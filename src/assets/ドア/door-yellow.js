@@ -7,7 +7,6 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	await this.みためをかえる('ひらいた黄色のドア') // ひらく！
 	this.ぶつかるか = false // はいれるようにする
@@ -29,14 +28,12 @@ rule.つねに(async function() {
 // ここまで つねに
 
 // ここから こうげきされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき
 
 // ここから ぶつかったとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.ぶつかったとき(async function(item) {
 	/*+ ぶつかったとき */
 })
@@ -55,14 +52,12 @@ rule.すすめなかったとき(async function() {
 // ここまで すすめなかったとき
 
 // ここから みつけたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.みつけたとき(async function(item) {
 	/*+ みつけたとき */
 })
 // ここまで みつけたとき
 
 // ここから しょうかんされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 })

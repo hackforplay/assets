@@ -6,7 +6,6 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	this.メッセージする('黄色のとつブロック') // 黄色のブロックにメッセージ
 	this.メッセージする('緑色のとつブロック') // 緑色のブロックにメッセージ
@@ -22,7 +21,6 @@ rule.つねに(async function() {
 // ここまで つねに
 
 // ここから ぶつかったとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.ぶつかったとき(async function(item) {
 	/*+ ぶつかったとき */
 })
@@ -41,14 +39,12 @@ rule.すすめなかったとき(async function() {
 // ここまで すすめなかったとき
 
 // ここから みつけたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.みつけたとき(async function(item) {
 	/*+ みつけたとき */
 })
 // ここまで みつけたとき
 
 // ここから しょうかんされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 })
@@ -73,7 +69,6 @@ rule.タップされたとき(async function() {
 // ここまで タップされたとき
 
 // ここから メッセージされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 })

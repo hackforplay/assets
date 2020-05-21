@@ -6,7 +6,6 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.ぶつかったとき(async function(item) {
 	if (item.name === 'プレイヤー') {
 		this.forward = item.forward // あいてと同じ方向を向く
@@ -36,14 +35,12 @@ rule.つねに(async function() {
 // ここまで つねに
 
 // ここから こうげきされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき
 
 // ここから メッセージされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 })
@@ -56,14 +53,12 @@ rule.じかんがすすんだとき(async function() {
 // ここまで じかんがすすんだとき
 
 // ここから みつけたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.みつけたとき(async function(item) {
 	/*+ みつけたとき */
 })
 // ここまで みつけたとき
 
 // ここから しょうかんされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 })

@@ -30,7 +30,6 @@ rule.たおされたとき(async function() {
 	/*+ たおされたとき */
 })
 
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	this.へんしんする('赤色のミミック') // ミミックに へんしんする
 
@@ -57,14 +56,12 @@ rule.すすめなかったとき(async function() {
 // ここまで すすめなかったとき
 
 // ここから みつけたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.みつけたとき(async function(item) {
 	/*+ みつけたとき */
 })
 // ここまで みつけたとき
 
 // ここから しょうかんされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 })

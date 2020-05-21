@@ -22,14 +22,12 @@ rule.つねに(async function() {
 // ここまで つねに
 
 // ここから こうげきされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.こうげきされたとき(async function(item) {
 	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき
 
 // ここから メッセージされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 })
@@ -48,14 +46,12 @@ rule.すすめなかったとき(async function() {
 // ここまで すすめなかったとき
 
 // ここから みつけたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.みつけたとき(async function(item) {
 	/*+ みつけたとき */
 })
 // ここまで みつけたとき
 
 // ここから しょうかんされたとき
-rule.item = ('▼ あいて', Rule.Anyone)
 rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 })
