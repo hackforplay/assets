@@ -19,13 +19,15 @@ rule.つねに(async function() {
 	/*+ つねに */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.まつ(0.5) // この数字のぶん まつ
-	this.むてきか = false // ムテキかいじょ
-	await this.こうげきする()
-	await this.まつ(1) // この数字のぶん まつ
+	if (item.は('プレイヤー')) {
+		await this.まつ(0.5) // この数字のぶん まつ
+		this.むてきか = false // ムテキかいじょ
+		await this.こうげきする()
+		await this.まつ(1) // この数字のぶん まつ
 
+		/*+ みつけたとき */
+	}
 	/*+ みつけたとき */
 })
 
@@ -36,15 +38,19 @@ rule.たおされたとき(async function() {
 })
 
 // ここから こうげきされたとき
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.こうげきされたとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ こうげきされたとき */
+	}
 	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき
 
 // ここから ぶつかったとき
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ ぶつかったとき */
+	}
 	/*+ ぶつかったとき */
 })
 // ここまで ぶつかったとき

@@ -7,8 +7,10 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
+	if (!item.は('プレイヤー') === false) {
+		return // プレイヤーでなければスルー
+	}
 	const ねだん = 10
 
 	const こたえ = await this.はなす(

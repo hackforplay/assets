@@ -6,10 +6,12 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	item.teleport(this) // ふんだキャラクターがテレポートする
+	if (item.は('プレイヤー')) {
+		item.teleport(this) // ふんだキャラクターがテレポートする
 
+		/*+ ふまれたとき */
+	}
 	/*+ ふまれたとき */
 })
 

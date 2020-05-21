@@ -19,18 +19,22 @@ rule.つねに(async function() {
 	/*+ つねに */
 })
 
-rule.item = ('▼ あいて', Rule.Enemy)
 rule.みつけたとき(async function(item) {
-	await this.まつ(1)
-	await this.こうげきする()
-	await this.みつける()
+	if (this.てきかどうか(item)) {
+		await this.まつ(1)
+		await this.こうげきする()
+		await this.みつける()
 
+		/*+ みつけたとき */
+	}
 	/*+ みつけたとき */
 })
 
 // ここから ぶつかったとき
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ ぶつかったとき */
+	}
 	/*+ ぶつかったとき */
 })
 // ここまで ぶつかったとき
@@ -42,8 +46,10 @@ rule.たおされたとき(async function() {
 // ここまで たおされたとき
 
 // ここから こうげきされたとき
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.こうげきされたとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ こうげきされたとき */
+	}
 	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき

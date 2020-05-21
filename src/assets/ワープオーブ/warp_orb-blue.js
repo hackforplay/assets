@@ -6,12 +6,14 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
-	item.teleport(this) // ふんだキャラクターがテレポートする
-	await item.まつ(0.1)
-	await item.あるく()
+	if (item.は('プレイヤー')) {
+		item.teleport(this) // ふんだキャラクターがテレポートする
+		await item.まつ(0.1)
+		await item.あるく()
 
+		/*+ ぶつかったとき */
+	}
 	/*+ ぶつかったとき */
 })
 

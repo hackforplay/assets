@@ -6,11 +6,13 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = 'プレイヤー' // ぶつかるキャラクター
 rule.ぶつかったとき(async function(item) {
-	await this.ふりむく(item)
-	await this.はなす('こんにちは')
+	if (item.は('プレイヤー')) {
+		await this.ふりむく(item)
+		await this.はなす('こんにちは')
 
+		/*+ ぶつかったとき */
+	}
 	/*+ ぶつかったとき */
 })
 

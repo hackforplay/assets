@@ -20,12 +20,14 @@ rule.つねに(async function() {
 	/*+ つねに */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.あるく()
-	await this.こうげきする()
-	await this.みつける()
+	if (item.は('プレイヤー')) {
+		await this.あるく()
+		await this.こうげきする()
+		await this.みつける()
 
+		/*+ みつけたとき */
+	}
 	/*+ みつけたとき */
 })
 
@@ -35,15 +37,19 @@ rule.たおされたとき(async function() {
 })
 
 // ここから こうげきされたとき
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.こうげきされたとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ こうげきされたとき */
+	}
 	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき
 
 // ここから ぶつかったとき
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ ぶつかったとき */
+	}
 	/*+ ぶつかったとき */
 })
 // ここまで ぶつかったとき

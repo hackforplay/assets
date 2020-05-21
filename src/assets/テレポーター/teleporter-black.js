@@ -6,10 +6,12 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	await item.いく(8, 1) // この位置にテレポ-ト
+	if (item.は('プレイヤー')) {
+		await item.いく(8, 1) // この位置にテレポ-ト
 
+		/*+ ふまれたとき */
+	}
 	/*+ ふまれたとき */
 })
 

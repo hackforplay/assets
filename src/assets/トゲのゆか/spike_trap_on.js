@@ -15,8 +15,10 @@ rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ ふまれたとき */
+	}
 	/*+ ふまれたとき */
 })
 

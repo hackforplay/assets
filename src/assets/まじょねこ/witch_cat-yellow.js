@@ -21,13 +21,15 @@ rule.つねに(async function() {
 	/*+ つねに */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.みつけたとき(async function(item) {
-	await this.まつ(1)
-	this.しょうかんする('黄色のうず').flyToward(item) // itemにむかってとんでいく
-	await this.こうげきする()
-	await this.まつ(3)
+	if (item.は('プレイヤー')) {
+		await this.まつ(1)
+		this.しょうかんする('黄色のうず').flyToward(item) // itemにむかってとんでいく
+		await this.こうげきする()
+		await this.まつ(3)
 
+		/*+ みつけたとき */
+	}
 	/*+ みつけたとき */
 })
 
@@ -37,15 +39,19 @@ rule.たおされたとき(async function() {
 })
 
 // ここから こうげきされたとき
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.こうげきされたとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ こうげきされたとき */
+	}
 	/*+ こうげきされたとき */
 })
 // ここまで こうげきされたとき
 
 // ここから ぶつかったとき
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ぶつかったとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ ぶつかったとき */
+	}
 	/*+ ぶつかったとき */
 })
 // ここまで ぶつかったとき

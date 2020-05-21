@@ -6,11 +6,13 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー')
 rule.ふまれたとき(async function(item) {
-	item.おかね += 50
-	this.きえる()
+	if (item.は('プレイヤー')) {
+		item.おかね += 50
+		this.きえる()
 
+		/*+ ふまれたとき */
+	}
 	/*+ ふまれたとき */
 })
 

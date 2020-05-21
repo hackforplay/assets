@@ -14,10 +14,12 @@ rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 })
 
-rule.item = ('▼ あいて', 'プレイヤー') // ふむ キャラクター
 rule.ふまれたとき(async function(item) {
-	item.teleport(this) // もう一つのドアにテレポート
+	if (item.は('プレイヤー')) {
+		item.teleport(this) // もう一つのドアにテレポート
 
+		/*+ ふまれたとき */
+	}
 	/*+ ふまれたとき */
 })
 
