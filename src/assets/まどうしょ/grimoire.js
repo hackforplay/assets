@@ -1,4 +1,4 @@
 Hack.code = `
-プレイヤー.たいりょく = 10
+player.たいりょく = 10
 `.trim()
 Hack.emphasizeCode() // 魔導書が 光り輝く！
