@@ -114,5 +114,21 @@ module.exports = [
 		description: 'じぶんの いるばしょに ものや キャラクターを おとす',
 		icon: './drop.png', // アセットのアイコンへのパス
 		insert: './drop.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'ビックリマークをうかべる',
+		description: 'あたまの上に ! マークをうかべる',
+		icon: './think_exclamation.png', // アセットのアイコンへのパス
+		insert: './think_exclamation.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...base,
+				name: 'クエスチョンをうかべる',
+				description: 'あたまの上に ? マークをうかべる',
+				icon: './think_question.png',
+				insert: './think_question.js'
+			}
+		]
 	}
 ]
