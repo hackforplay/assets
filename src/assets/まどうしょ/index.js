@@ -29,6 +29,15 @@ module.exports = [
 		description:
 			'まどうしょがひかり、プログラミングのまほうが、つかえるようになる',
 		icon: './grimoire.png', // アセットのアイコンへのパス
-		insert: './grimoire.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+		insert: './grimoire.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		children: [
+			{
+				...base,
+				name: 'まどうしょをけす',
+				description: 'まどうしょのなかみを、はくしにする',
+				icon: './grimoire.png', // アセットのアイコンへのパス
+				insert: './grimoire_delete.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+			}
+		]
 	}
 ]
