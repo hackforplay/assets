@@ -1,6 +1,6 @@
 import '../game'
 
-rule.つくられたとき(async function() {
+rule.つくられたとき(async function () {
 	await this.みためをかえる('青色のうず')
 	this.ダメージ = 1
 	this.あるくはやさ = 1
@@ -9,7 +9,7 @@ rule.つくられたとき(async function() {
 	/*+ つくられたとき */
 })
 
-rule.しょうかんされたとき(async function(item) {
+rule.しょうかんされたとき(async function (item) {
 	this.とんでいく()
 	await this.まつ(5) // この秒数だけ待つ
 	this.きえる() // 青色のうず を けす
@@ -17,62 +17,42 @@ rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 })
 
-// ここから つねに
-rule.つねに(async function() {
+rule.つねに(async function () {
 	/*+ つねに */
 })
-// ここまで つねに
 
-// ここから こうげきされたとき
-rule.こうげきされたとき(async function(item) {
+rule.こうげきされたとき(async function (item) {
 	/*+ こうげきされたとき */
 })
-// ここまで こうげきされたとき
 
-// ここから ぶつかったとき
-rule.ぶつかったとき(async function(item) {
+rule.ぶつかったとき(async function (item) {
 	/*+ ぶつかったとき */
 })
-// ここまで ぶつかったとき
 
-// ここから メッセージされたとき
-rule.メッセージされたとき(async function(item) {
+rule.メッセージされたとき(async function (item) {
 	/*+ メッセージされたとき */
 })
-// ここまで メッセージされたとき
 
-// ここから じかんがすすんだとき
-rule.じかんがすすんだとき(async function() {
+rule.じかんがすすんだとき(async function () {
 	/*+ じかんがすすんだとき */
 })
-// ここまで じかんがすすんだとき
 
-// ここから すすめなかったとき
-rule.すすめなかったとき(async function() {
+rule.すすめなかったとき(async function () {
 	/*+ すすめなかったとき */
 })
-// ここまで すすめなかったとき
 
-// ここから みつけたとき
-rule.みつけたとき(async function(item) {
+rule.みつけたとき(async function (item) {
 	/*+ みつけたとき */
 })
-// ここまで みつけたとき
 
-// ここから こうげきするとき
-rule.こうげきするとき(async function() {
+rule.こうげきするとき(async function () {
 	/*+ こうげきするとき */
 })
-// ここまで こうげきするとき
 
-// ここから たおされたとき
-rule.たおされたとき(async function() {
+rule.たおされたとき(async function () {
 	/*+ たおされたとき */
 })
-// ここまで たおされたとき
 
-// ここから タップされたとき
-rule.タップされたとき(async function() {
+rule.タップされたとき(async function () {
 	/*+ タップされたとき */
 })
-// ここまで タップされたとき
