@@ -1,13 +1,13 @@
 import '../game'
 
-rule.つくられたとき(async function () {
+rule.つくられたとき(async function() {
 	await this.みためをかえる('黄色のたからばこ') // 見ためをきめる
 	this.あいた = false // まだ、あいていない（変数）
 
 	/*+ つくられたとき */
 })
 
-rule.こうげきされたとき(async function (item) {
+rule.こうげきされたとき(async function(item) {
 	if (item.は('プレイヤー')) {
 		if (this.あいた === true) return // もし、あいていたら、ここで終わる（変数）
 		await this.みためをかえる('あいた黄色のたからばこ') // 見ためをかえる
@@ -19,42 +19,42 @@ rule.こうげきされたとき(async function (item) {
 	/*+ こうげきされたとき */
 })
 
-rule.つねに(async function () {
+rule.つねに(async function() {
 	/*+ つねに */
 })
 
-rule.ぶつかったとき(async function (item) {
+rule.ぶつかったとき(async function(item) {
 	/*+ ぶつかったとき */
 })
 
-rule.メッセージされたとき(async function (item) {
+rule.メッセージされたとき(async function(item) {
 	/*+ メッセージされたとき */
 })
 
-rule.じかんがすすんだとき(async function () {
+rule.じかんがすすんだとき(async function() {
 	/*+ じかんがすすんだとき */
 })
 
-rule.すすめなかったとき(async function () {
+rule.すすめなかったとき(async function() {
 	/*+ すすめなかったとき */
 })
 
-rule.みつけたとき(async function (item) {
+rule.みつけたとき(async function(item) {
 	/*+ みつけたとき */
 })
 
-rule.しょうかんされたとき(async function (item) {
+rule.しょうかんされたとき(async function(item) {
 	/*+ しょうかんされたとき */
 })
 
-rule.こうげきするとき(async function () {
+rule.こうげきするとき(async function() {
 	/*+ こうげきするとき */
 })
 
-rule.たおされたとき(async function () {
+rule.たおされたとき(async function() {
 	/*+ たおされたとき */
 })
 
-rule.タップされたとき(async function () {
+rule.タップされたとき(async function() {
 	/*+ タップされたとき */
 })
