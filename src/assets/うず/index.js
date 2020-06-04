@@ -57,7 +57,8 @@ const scopeSummon = [
 	sco.みつけたとき,
 	sco.しょうかんされたとき,
 	sco.ぶつかったとき,
-	sco.ふまれたとき
+	sco.ふまれたとき,
+	sco.どかれたとき
 ]
 
 const scopeSkill = [
@@ -71,6 +72,7 @@ const scopeSkill = [
 const scopeGive = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.ふまれたとき,
+	sco.どかれたとき,
 	sco.ぶつかったとき
 ]
 

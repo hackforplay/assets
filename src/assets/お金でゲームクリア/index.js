@@ -11,6 +11,7 @@ const base = {
 const scopeItem = [
 	sco.ぶつかったとき,
 	sco.ふまれたとき,
+	sco.どかれたとき,
 	sco.メッセージされたとき,
 	sco.こうげきされたとき,
 	sco.メッセージされたとき

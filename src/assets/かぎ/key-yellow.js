@@ -17,6 +17,13 @@ rule.ふまれたとき(async function(item) {
 	/*+ ふまれたとき */
 })
 
+rule.どかれたとき(async function(item) {
+	if (item.は('プレイヤー')) {
+		/*+ どかれたとき */
+	}
+	/*+ どかれたとき */
+})
+
 rule.つねに(async function() {
 	/*+ つねに */
 })

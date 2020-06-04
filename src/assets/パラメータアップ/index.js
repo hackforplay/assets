@@ -19,7 +19,7 @@ const scope = [
 	sco.タップされたとき
 ]
 
-const scopeGive = [sco.ふまれたとき, sco.ぶつかったとき]
+const scopeGive = [sco.ふまれたとき, sco.どかれたとき, sco.ぶつかったとき]
 
 module.exports = [
 	//  this.n

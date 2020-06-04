@@ -69,3 +69,8 @@ exports.タップされたとき = {
 	name: 'タップされたとき',
 	defaultActiveCategory: categories.うごき
 }
+
+exports.どかれたとき = {
+	name: 'どかれたとき',
+	defaultActiveCategory: categories.もの
+}
