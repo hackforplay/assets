@@ -43,7 +43,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Upload to Bucket
-        if: github.ref == 'refs/branches/master' || startsWith(github.ref, 'refs/branches/release')
+        if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/heads/release')
         run: |
           gsutil -m -h "Cache-Control:public, max-age=3600" cp -r dist/** gs://$NODE_BUCKET_NAME
         env:
