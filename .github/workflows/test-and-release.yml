@@ -7,8 +7,6 @@ on:
   push:
     branches:
       - '*'
-  release:
-    types: [published]
 
 jobs:
   build:
@@ -44,8 +42,8 @@ jobs:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # https://bit.ly/3cllYHl
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Build and Upload
-        if: startsWith(github.ref, 'refs/tags/v')
+      - name: Upload to Bucket
+        if: github.ref == 'refs/branches/master' || startsWith(github.ref, 'refs/branches/release')
         run: |
           gsutil -m -h "Cache-Control:public, max-age=3600" cp -r dist gs://$NODE_BUCKET_NAME
         env:
