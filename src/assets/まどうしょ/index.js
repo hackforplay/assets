@@ -35,7 +35,7 @@ module.exports = [
 				...base,
 				name: 'まどうしょをけす',
 				description: 'まどうしょのなかみを、はくしにする',
-				icon: './grimoire.png', // アセットのアイコンへのパス
+				icon: './grimoire_delete.png', // アセットのアイコンへのパス
 				insert: './grimoire_delete.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 			}
 		]
