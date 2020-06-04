@@ -40,6 +40,7 @@ module.exports = [
 		scopes: [
 			sco.たおされたとき,
 			sco.ふまれたとき,
+			sco.どかれたとき,
 			sco.メッセージされたとき,
 			sco.すすめなかったとき
 		],

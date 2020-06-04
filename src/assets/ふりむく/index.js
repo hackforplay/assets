@@ -14,6 +14,7 @@ const scopeTo = [
 	sco.こうげきされたとき,
 	sco.メッセージされたとき,
 	sco.ふまれたとき,
+	sco.どかれたとき,
 	sco.みつけたとき,
 	sco.ぶつかったとき
 ]
@@ -27,6 +28,7 @@ const scopeToPlayer = [
 	sco.こうげきされたとき,
 	sco.つねに,
 	sco.ふまれたとき,
+	sco.どかれたとき,
 	sco.メッセージされたとき,
 	sco.すすめなかったとき,
 	sco.みつけたとき,
