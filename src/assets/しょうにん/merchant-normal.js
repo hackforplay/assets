@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.ぶつかったとき(async function(item) {
-	if (!item.は('プレイヤー') === false) {
+	if (item.は('プレイヤー') === false) {
 		return // プレイヤーでなければスルー
 	}
 	const ねだん = 5
