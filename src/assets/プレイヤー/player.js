@@ -20,6 +20,10 @@ rule.こうげきするとき(async function() {
 	/*+ こうげきするとき */
 })
 
+rule.マップがかわったとき(async function() {
+	/*+ マップがかわったとき */
+})
+
 rule.じかんがすすんだとき(async function() {
 	/*+ じかんがすすんだとき */
 })
