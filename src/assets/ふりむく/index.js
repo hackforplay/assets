@@ -31,6 +31,7 @@ const scopeToPlayer = [
 	sco.どかれたとき,
 	sco.メッセージされたとき,
 	sco.すすめなかったとき,
+	sco.マップがかわったとき,
 	sco.みつけたとき,
 	sco.こうげきするとき,
 	sco.タップされたとき

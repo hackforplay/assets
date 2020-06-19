@@ -66,6 +66,7 @@ const scopeSkill = [
 	sco.つくられたとき,
 	sco.つねに,
 	sco.すすめなかったとき,
+	sco.マップがかわったとき,
 	sco.タップされたとき
 ]
 

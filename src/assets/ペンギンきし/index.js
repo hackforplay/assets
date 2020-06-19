@@ -63,7 +63,8 @@ const scopeSummon = [
 	sco.ぶつかったとき,
 	sco.メッセージされたとき,
 	sco.みつけたとき,
-	sco.タップされたとき
+	sco.タップされたとき,
+	sco.マップがかわったとき
 ]
 
 module.exports = [

@@ -43,7 +43,8 @@ const scopeSummon = [
 	sco.メッセージされたとき,
 	sco.こうげきされたとき,
 	sco.みつけたとき,
-	sco.タップされたとき
+	sco.タップされたとき,
+	sco.マップがかわったとき
 ]
 
 const scopeGive = [

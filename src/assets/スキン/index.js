@@ -13,7 +13,8 @@ const base = {
 		sco.ぶつかったとき,
 		sco.みつけたとき,
 		sco.メッセージされたとき,
-		sco.タップされたとき
+		sco.タップされたとき,
+		sco.マップがかわったとき
 	],
 	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
 	production: false, // www.hackforplay.xyz に表示する場合は true. earlybird だけなら false

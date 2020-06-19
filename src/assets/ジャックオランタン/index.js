@@ -35,7 +35,8 @@ module.exports = [
 			sco.ふまれたとき,
 			sco.どかれたとき,
 			sco.メッセージされたとき,
-			sco.すすめなかったとき
+			sco.すすめなかったとき,
+			sco.マップがかわったとき
 		],
 		insert: './jack-o-lantern-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}

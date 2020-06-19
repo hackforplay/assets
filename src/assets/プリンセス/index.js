@@ -34,7 +34,8 @@ module.exports = [
 			sco.ぶつかったとき,
 			sco.メッセージされたとき,
 			sco.みつけたとき,
-			sco.タップされたとき
+			sco.タップされたとき,
+			sco.マップがかわったとき
 		],
 		insert: './princess-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}

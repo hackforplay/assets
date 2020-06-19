@@ -70,7 +70,8 @@ const scopeDrop = [
 	sco.ふまれたとき,
 	sco.どかれたとき,
 	sco.メッセージされたとき,
-	sco.すすめなかったとき
+	sco.すすめなかったとき,
+	sco.マップがかわったとき
 ]
 
 module.exports = [
