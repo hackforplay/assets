@@ -37,5 +37,12 @@ module.exports = [
 		description: 'せんたくしを えらんで かいわする',
 		icon: './ask.png', // アセットのアイコンへのパス
 		insert: './ask.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'マップではなす',
+		description: 'じぶんのいるマップが あっていれば はなす',
+		icon: './map_talk.png', // アセットのアイコンへのパス
+		insert: './map_talk.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
