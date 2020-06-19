@@ -74,3 +74,8 @@ exports.どかれたとき = {
 	name: 'どかれたとき',
 	defaultActiveCategory: categories.もの
 }
+
+exports.マップがかわったとき = {
+	name: 'マップがかわったとき',
+	defaultActiveCategory: categories.うごき
+}
