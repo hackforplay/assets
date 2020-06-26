@@ -91,6 +91,13 @@ module.exports = [
 	},
 	{
 		...base,
+		name: 'てきをみつける',
+		description: 'アイテムなどは むしして みつける',
+		icon: './findEnemy.png', // アセットのアイコンへのパス
+		insert: './findEnemy.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
 		name: 'テレポートランダム',
 		description: 'ランダムな位置に テレポート',
 		icon: './teleportRandom.png', // アセットのアイコンへのパス
