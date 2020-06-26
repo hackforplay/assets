@@ -14,19 +14,18 @@ rule.つくられたとき(async function() {
 
 rule.つねに(async function() {
 	await this.おいかける('プレイヤー')
-	await this.みつける()
+	await this.てきをみつける()
 
 	/*+ つねに */
 })
 
 rule.みつけたとき(async function(item) {
 	if (this.てきかどうか(item)) {
-		await this.まつ(1)
-		await this.こうげきする()
-		await this.みつける()
-
 		/*+ みつけたとき */
 	}
+	await this.まつ(1)
+	await this.こうげきする()
+	await this.てきをみつける()
 	/*+ みつけたとき */
 })
 

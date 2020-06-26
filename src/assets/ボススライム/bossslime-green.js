@@ -13,7 +13,7 @@ rule.つくられたとき(async function() {
 
 rule.つねに(async function() {
 	await this.まつ(3)
-	await this.みつける()
+	await this.てきをみつける()
 	await this.こうげきする()
 
 	/*+ つねに */

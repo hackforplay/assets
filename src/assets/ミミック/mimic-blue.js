@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	await this.みつける()
+	await this.てきをみつける()
 	await this.まつ(1)
 	await this.あるく()
 	this.むきをかえる(むき.ランダム)
@@ -24,7 +24,7 @@ rule.みつけたとき(async function(item) {
 	if (item.は('プレイヤー')) {
 		await this.おいかける(item)
 		await this.こうげきする()
-		await this.みつける()
+		await this.てきをみつける()
 
 		/*+ みつけたとき */
 	}

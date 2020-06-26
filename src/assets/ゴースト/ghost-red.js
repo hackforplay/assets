@@ -15,7 +15,7 @@ rule.つねに(async function() {
 	await this.まつ(2) // この数字のぶん まつ
 	this.みえやすさ -= 0.3 // うすくなる
 	await this.おいかける('プレイヤー')
-	await this.みつける()
+	await this.てきをみつける()
 
 	/*+ つねに */
 })

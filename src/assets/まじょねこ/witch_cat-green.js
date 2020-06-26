@@ -14,9 +14,9 @@ rule.つくられたとき(async function() {
 rule.つねに(async function() {
 	this.テレポートランダム()
 	await this.むきをかえる(むき.ランダム)
-	await this.みつける()
+	await this.てきをみつける()
 	await this.まつ(4) // 数字のぶん、まつ
-	await this.みつける()
+	await this.てきをみつける()
 
 	/*+ つねに */
 })
