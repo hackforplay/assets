@@ -10,8 +10,6 @@ rule.ふまれたとき(async function(item) {
 	if (item.は('プレイヤー')) {
 		await this.みためをかえる('おされた金色のボタン') // 見た目をかえる
 		this.メッセージする('金色のどうぞう')
-		await this.まつ(1)
-		await this.みためをかえる('金色のボタン') // 見た目をかえる
 
 		/*+ ふまれたとき */
 	}
@@ -20,6 +18,8 @@ rule.ふまれたとき(async function(item) {
 
 rule.どかれたとき(async function(item) {
 	if (item.は('プレイヤー')) {
+		await this.みためをかえる('金色のボタン') // 見た目をかえる
+
 		/*+ どかれたとき */
 	}
 	/*+ どかれたとき */
