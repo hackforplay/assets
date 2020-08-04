@@ -9,7 +9,6 @@ const base = {
 }
 
 const scope = [
-	sco.たおされたとき,
 	sco.しょうかんされたとき,
 	sco.こうげきされたとき,
 	sco.メッセージされたとき,
