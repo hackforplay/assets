@@ -13,7 +13,7 @@ rule.ぶつかったとき(async function(item) {
 	}
 	const ねだん = 5
 
-	const こたえ = await this.はなす(
+	var こたえ = await this.はなす(
 		`りんご は ${ねだん} えんだよ`,
 		'かう！',
 		'やめとく'

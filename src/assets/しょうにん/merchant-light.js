@@ -13,7 +13,7 @@ rule.ぶつかったとき(async function(item) {
 	}
 	const ねだん = 10
 
-	const こたえ = await this.はなす(
+	var こたえ = await this.はなす(
 		`黄色のスキルブック は ${ねだん} えんだよ`,
 		'かう！',
 		'やめとく'
