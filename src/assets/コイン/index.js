@@ -44,6 +44,7 @@ module.exports = [
 			sco.どかれたとき,
 			sco.あるいたとき,
 			sco.メッセージされたとき,
+			sco.へんすうがかわったとき,
 			sco.すすめなかったとき
 		],
 		insert: './coin-drop.js' // 追加ボタン用のコードへのパス. null の場合は追加不可

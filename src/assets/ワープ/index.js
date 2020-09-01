@@ -50,6 +50,7 @@ const scopeSummon = [
 	sco.どかれたとき,
 	sco.ぶつかったとき,
 	sco.メッセージされたとき,
+	sco.へんすうがかわったとき,
 	sco.みつけたとき,
 	sco.タップされたとき
 ]

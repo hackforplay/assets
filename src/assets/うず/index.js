@@ -53,6 +53,7 @@ const white = {
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.メッセージされたとき,
+	sco.へんすうがかわったとき,
 	sco.こうげきされたとき,
 	sco.みつけたとき,
 	sco.こうげきするとき,

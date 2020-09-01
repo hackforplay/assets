@@ -13,6 +13,7 @@ const scopeItem = [
 	sco.ふまれたとき,
 	sco.どかれたとき,
 	sco.メッセージされたとき,
+	sco.へんすうがかわったとき,
 	sco.こうげきされたとき,
 	sco.メッセージされたとき
 ]
@@ -20,6 +21,7 @@ const scopeItem = [
 const scopeThis = [
 	sco.つねに,
 	sco.メッセージされたとき,
+	sco.へんすうがかわったとき,
 	sco.じかんがすすんだとき,
 	sco.マップがかわったとき,
 	sco.タップされたとき
