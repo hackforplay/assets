@@ -60,6 +60,10 @@ rule.つねに(async function() {
 	/*+ つねに */
 })
 
+rule.へんすうがかわったとき(async function() {
+	/*+ へんすうがかわったとき */
+})
+
 rule.タップされたとき(async function() {
 	/*+ タップされたとき */
 })

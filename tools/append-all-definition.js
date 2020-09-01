@@ -3,6 +3,10 @@ const fs = require('fs')
 
 const text = `
 // ここから タップされたとき
+rule.へんすうがかわったとき(async function() {
+	/*+ へんすうがかわったとき */
+})
+
 rule.タップされたとき(async function() {
 	/*+ タップされたとき */
 })

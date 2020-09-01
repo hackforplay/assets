@@ -58,6 +58,10 @@ rule.たおされたとき(async function() {
 	/*+ たおされたとき */
 })
 
+rule.へんすうがかわったとき(async function() {
+	/*+ へんすうがかわったとき */
+})
+
 rule.タップされたとき(async function() {
 	/*+ タップされたとき */
 })

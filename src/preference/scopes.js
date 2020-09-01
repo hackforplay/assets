@@ -84,3 +84,8 @@ exports.あるいたとき = {
 	name: 'あるいたとき',
 	defaultActiveCategory: categories.つよさ
 }
+
+exports.へんすうがかわったとき = {
+	name: 'へんすうがかわったとき',
+	defaultActiveCategory: categories.システム
+}
