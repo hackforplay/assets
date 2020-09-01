@@ -47,7 +47,8 @@ const scopeSummon = [
 	sco.ぶつかったとき,
 	sco.みつけたとき,
 	sco.こうげきするとき,
-	sco.タップされたとき
+	sco.タップされたとき,
+	sco.こうげきするとき
 ]
 
 const scopeDrop = [
@@ -57,7 +58,8 @@ const scopeDrop = [
 	sco.どかれたとき,
 	sco.メッセージされたとき,
 	sco.すすめなかったとき,
-	sco.マップがかわったとき
+	sco.マップがかわったとき,
+	sco.あるいたとき
 ]
 
 module.exports = [

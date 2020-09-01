@@ -68,6 +68,7 @@ const scopeSummon = [
 	sco.ぶつかったとき,
 	sco.みつけたとき,
 	sco.こうげきするとき,
+	sco.こうげきするとき,
 	sco.タップされたとき
 ]
 
@@ -76,6 +77,7 @@ const scopeDrop = [
 	sco.たおされたとき,
 	sco.ふまれたとき,
 	sco.どかれたとき,
+	sco.あるいたとき,
 	sco.メッセージされたとき,
 	sco.すすめなかったとき,
 	sco.マップがかわったとき

@@ -17,7 +17,9 @@ const scope = [
 	sco.じかんがすすんだとき,
 	sco.すすめなかったとき,
 	sco.マップがかわったとき,
-	sco.タップされたとき
+	sco.タップされたとき,
+	sco.こうげきするとき,
+	sco.あるいたとき
 ]
 
 const scopeGive = [sco.ふまれたとき, sco.どかれたとき, sco.ぶつかったとき]

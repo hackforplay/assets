@@ -17,6 +17,7 @@ const base = {
 		sco.マップがかわったとき,
 		sco.みつけたとき,
 		sco.こうげきするとき,
+		sco.あるいたとき,
 		sco.タップされたとき
 	],
 	description: '',
