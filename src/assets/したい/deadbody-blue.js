@@ -55,6 +55,10 @@ rule.こうげきするとき(async function() {
 	/*+ こうげきするとき */
 })
 
+rule.あるいたとき(async function() {
+	/*+ あるいたとき */
+})
+
 rule.タップされたとき(async function() {
 	/*+ タップされたとき */
 })

@@ -79,3 +79,8 @@ exports.マップがかわったとき = {
 	name: 'マップがかわったとき',
 	defaultActiveCategory: categories.うごき
 }
+
+exports.あるいたとき = {
+	name: 'あるいたとき',
+	defaultActiveCategory: categories.つよさ
+}
