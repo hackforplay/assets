@@ -33,5 +33,12 @@ module.exports = [
 		description: 'ゲームの下に小さなもじがでる',
 		icon: './log.png', // アセットのアイコンへのパス
 		insert: './log.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
+		name: 'たいりょくログ',
+		description: 'ゲームの下に小さなもじで たいりょくが でる',
+		icon: './log_hp.png', // アセットのアイコンへのパス
+		insert: './log_hp.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
