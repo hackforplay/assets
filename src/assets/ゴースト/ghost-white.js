@@ -32,10 +32,10 @@ rule.みつけたとき(async function(item) {
 
 rule.こうげきされたとき(async function(item) {
 	if (item.は('プレイヤー')) {
-		this.みえやすさ = 1 // すがたをあらわす
-
 		/*+ こうげきされたとき */
 	}
+
+	this.みえやすさ = 1 // すがたをあらわす
 	/*+ こうげきされたとき */
 })
 
