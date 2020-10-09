@@ -83,15 +83,15 @@ module.exports = [
 		...base,
 		name: 'うごけなくなる',
 		description: '',
-		icon: './frozen_false.png', // アセットのアイコンへのパス
-		insert: './frozen_false.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		icon: './frozen_true.png', // アセットのアイコンへのパス
+		insert: './frozen_true.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		children: [
 			{
 				...base,
 				name: 'うごけるようになる',
 				description: '',
-				icon: './frozen_true.png', // アセットのアイコンへのパス
-				insert: './frozen_true.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+				icon: './frozen_false.png', // アセットのアイコンへのパス
+				insert: './frozen_false.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 			}
 		]
 	}
