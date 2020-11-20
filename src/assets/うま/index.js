@@ -12,7 +12,7 @@ const brown = {
 	name: '茶色のうま',
 	module: './horse-brown.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
 	icon: './horse_brown.png', // アセットのアイコンへのパス
-	plan: 'paid'
+	plan: 'free'
 }
 
 const black = {
@@ -20,7 +20,7 @@ const black = {
 	name: '黒色のうま',
 	module: './horse-black.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
 	icon: './horse_black.png', // アセットのアイコンへのパス
-	plan: 'paid'
+	plan: 'free'
 }
 
 const white = {
@@ -28,7 +28,7 @@ const white = {
 	name: '白色のうま',
 	module: './horse-white.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
 	icon: './horse_white.png', // アセットのアイコンへのパス
-	plan: 'free' // 'free' にする
+	plan: 'free'
 }
 
 const scopeCreate = [
