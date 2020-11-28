@@ -30,6 +30,9 @@ rule.みつけたとき(async function(item) {
 
 rule.こうげきされたとき(async function(item) {
 	if (item.は('プレイヤー')) {
+		await this.むきをかえる(むき.うしろ)
+		await this.あるく()
+
 		/*+ こうげきされたとき */
 	}
 	/*+ こうげきされたとき */
