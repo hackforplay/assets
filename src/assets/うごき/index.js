@@ -56,6 +56,13 @@ module.exports = [
 	},
 	{
 		...base,
+		name: 'うしろにあるく',
+		description: 'むいている ほうこうは そのまま',
+		icon: './walkBehind.png', // アセットのアイコンへのパス
+		insert: './walkBehind.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
 		name: '右にカニあるき',
 		description: 'むいている ほうこうは そのまま',
 		icon: './walkRight.png', // アセットのアイコンへのパス
