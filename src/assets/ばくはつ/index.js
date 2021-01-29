@@ -23,6 +23,14 @@ const lightning = {
 	icon: './lightning.png' // アセットのアイコンへのパス
 }
 
+const flame = {
+	...base,
+	name: 'かえん',
+	description: 'ボッ！と もえさかる かえん',
+	module: './flame.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './flame.png' // アセットのアイコンへのパス
+}
+
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.つくられたとき,
@@ -54,6 +62,11 @@ module.exports = [
 		scopes: scopeSummon,
 		insert: './lightning-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
+	{
+		...flame,
+		scopes: scopeSummon,
+		insert: './flame-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	// 踏んだ、ぶつかった相手にスキル付与
 	{
 		...explosion,
@@ -64,5 +77,10 @@ module.exports = [
 		...lightning,
 		scopes: scopeGive,
 		insert: './lightning-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...flame,
+		scopes: scopeGive,
+		insert: './flame-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
