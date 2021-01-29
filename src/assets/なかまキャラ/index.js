@@ -11,7 +11,6 @@ const samurai = {
 	...base,
 	name: 'サムライ',
 	description: 'てきをみつけると、ざんげきでこうげき',
-	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
 	module: './samurai.js',
 	icon: './samurai.png' // アセットのアイコンへのパス
 }
@@ -20,9 +19,16 @@ const hunter = {
 	...base,
 	name: 'ハンター',
 	description: 'てきをみつけると、弓矢でこうげき',
-	module: null, // 改造ボタン用のコードへのパス. null の場合は改造不可
 	module: './hunter.js',
 	icon: './hunter.png' // アセットのアイコンへのパス
+}
+
+const mage = {
+	...base,
+	name: 'メイジ',
+	description: 'てきをみつけると、かえんでこうげき',
+	module: './mage.js',
+	icon: './mage.png' // アセットのアイコンへのパス
 }
 
 const scopeCreate = [
@@ -58,6 +64,12 @@ module.exports = [
 		insert: './hunter-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
 		thumbnail: 'https://i.gyazo.com/8646c38f64bc2ce4cb94e9ff222b96bf.gif' // サムネイル画像
 	},
+	{
+		...mage,
+		scopes: scopeCreate,
+		insert: './mage-create.js', // 追加ボタン用のコードへのパス. null の場合は追加不可
+		thumbnail: 'https://i.gyazo.com/981b788134e39111cb541f4cf5a1855d.gif' // サムネイル画像
+	},
 	// 「◯◯の中身」ファイルに入るコード
 	{
 		...samurai,
@@ -68,5 +80,10 @@ module.exports = [
 		...hunter,
 		scopes: scopeSummon,
 		insert: './hunter-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...mage,
+		scopes: scopeSummon,
+		insert: './mage-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
