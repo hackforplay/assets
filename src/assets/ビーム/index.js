@@ -36,6 +36,13 @@ const arrow = {
 	icon: './arrow.png' // アセットのアイコンへのパス
 }
 
+const stone_beam = {
+	...base,
+	name: 'せきかこうせん',
+	module: './stone_beam.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './stone_beam.png' // アセットのアイコンへのパス
+}
+
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.つくられたとき,
@@ -77,6 +84,11 @@ module.exports = [
 		scopes: scopeSummon,
 		insert: './arrow-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
+	{
+		...stone_beam,
+		scopes: scopeSummon,
+		insert: './stone_beam-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	// 「ふんだ、ぶつかった」相手にスキルを与える
 	{
 		...beam,
@@ -97,5 +109,10 @@ module.exports = [
 		...arrow,
 		scopes: scopeGive,
 		insert: './arrow-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...stone_beam,
+		scopes: scopeGive,
+		insert: './stone_beam-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
