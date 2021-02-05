@@ -11,8 +11,8 @@ rule.つくられたとき(async function() {
 
 rule.しょうかんされたとき(async function(item) {
 	this.とんでいく()
-	await this.まつ(2) // この秒数だけ待つ
-	this.きえる() // ほのお を けす
+	await this.まつ(1.5) // この秒数だけ とぶ
+	this.きえる() // せきかこうせん を けす
 
 	/*+ しょうかんされたとき */
 })
@@ -32,7 +32,7 @@ rule.ぶつかったとき(async function(item) {
 	} else {
 		item.うごけない = true
 		await item.filter('grayscale(100%)') // 白黒になる
-		await item.まつ(1.5)
+		await item.まつ(1.5) // この秒数 石になる
 		item.うごけない = false
 		item.filter('')
 	}
