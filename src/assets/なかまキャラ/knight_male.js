@@ -6,7 +6,7 @@ rule.つくられたとき(async function() {
 	this.たいりょく = 20
 	this.こうげきりょく = 1
 	this.みえるきょり = 5
-	this.みえるはんい = 0
+	this.みえるはんい = 1
 
 	/*+ つくられたとき */
 })
@@ -20,7 +20,7 @@ rule.つねに(async function() {
 
 rule.みつけたとき(async function(item) {
 	if (this.てきかどうか(item)) {
-		await this.あるく()
+		await this.おいかける(item)
 		await this.こうげきする()
 		await this.まつ(2)
 		await this.てきをみつける()
