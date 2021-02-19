@@ -43,6 +43,13 @@ const stone_beam = {
 	icon: './stone_beam.png' // アセットのアイコンへのパス
 }
 
+const poison = {
+	...base,
+	name: 'どくえき',
+	module: './poison.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './poison.png' // アセットのアイコンへのパス
+}
+
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.つくられたとき,
@@ -89,6 +96,11 @@ module.exports = [
 		scopes: scopeSummon,
 		insert: './stone_beam-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
+	{
+		...poison,
+		scopes: scopeSummon,
+		insert: './poison-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	// 「ふんだ、ぶつかった」相手にスキルを与える
 	{
 		...beam,
@@ -114,5 +126,10 @@ module.exports = [
 		...stone_beam,
 		scopes: scopeGive,
 		insert: './stone_beam-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...poison,
+		scopes: scopeGive,
+		insert: './poison-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
