@@ -8,7 +8,7 @@ rule.つくられたとき(async function() {
 
 rule.ふまれたとき(async function(item) {
 	if (item.は('プレイヤー')) {
-		await item.いく(8, 4) // この位置にテレポ-ト
+		await item.いく(8, 4, 'map1') // この位置にテレポ-ト
 
 		/*+ ふまれたとき */
 	}
