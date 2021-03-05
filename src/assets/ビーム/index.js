@@ -50,6 +50,13 @@ const poison = {
 	icon: './poison.png' // アセットのアイコンへのパス
 }
 
+const dark_hand = {
+	...base,
+	name: 'ダークハンド',
+	module: './dark_hand.js', // 改造ボタン用のコードへのパス. null の場合は改造不可
+	icon: './dark_hand.png' // アセットのアイコンへのパス
+}
+
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.つくられたとき,
@@ -101,6 +108,11 @@ module.exports = [
 		scopes: scopeSummon,
 		insert: './poison-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	},
+	{
+		...dark_hand,
+		scopes: scopeSummon,
+		insert: './dark_hand-summon.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
 	// 「ふんだ、ぶつかった」相手にスキルを与える
 	{
 		...beam,
@@ -131,5 +143,10 @@ module.exports = [
 		...poison,
 		scopes: scopeGive,
 		insert: './poison-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...dark_hand,
+		scopes: scopeGive,
+		insert: './dark_hand-give.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
 	}
 ]
