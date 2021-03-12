@@ -2,7 +2,7 @@ import '../game'
 
 rule.つくられたとき(async function() {
 	await this.みためをかえる('ダイヤのボタン')
-	this.fixed = true // がめんに こてい
+	this.こてい = true // がめんに こてい
 
 	/*+ つくられたとき */
 })
