@@ -27,7 +27,7 @@ rule.こうげきされたとき(async function(item) {
 
 rule.ぶつかったとき(async function(item) {
 	// 相手が無敵状態か、または仲間のときは、石にならない
-	if (item.むてきか || this.なかま === item.なかま) {
+	if (item.むてき || this.なかま === item.なかま) {
 		return
 	} else {
 		item.うごけない = true

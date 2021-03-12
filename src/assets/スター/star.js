@@ -9,9 +9,9 @@ rule.つくられたとき(async function() {
 rule.ふまれたとき(async function(item) {
 	if (item.は('プレイヤー')) {
 		this.きえる()
-		item.むてきか = true
+		item.むてき = true
 		await item.まつ(3)
-		item.むてきか = false
+		item.むてき = false
 
 		/*+ ふまれたとき */
 	}

@@ -12,7 +12,7 @@ rule.つくられたとき(async function() {
 })
 
 rule.つねに(async function() {
-	this.むてきか = true // ムテキになる
+	this.むてき = true // ムテキになる
 	await this.おいかける('プレイヤー')
 	await this.てきをみつける()
 
@@ -22,7 +22,7 @@ rule.つねに(async function() {
 rule.みつけたとき(async function(item) {
 	if (item.は('プレイヤー')) {
 		await this.まつ(0.5) // この数字のぶん まつ
-		this.むてきか = false // ムテキかいじょ
+		this.むてき = false // ムテキかいじょ
 		await this.こうげきする()
 		await this.まつ(1) // この数字のぶん まつ
 
