@@ -81,6 +81,13 @@ module.exports = [
 	},
 	{
 		...base,
+		name: 'みつからない',
+		description: 'さがす や おいかける をされなくなる',
+		icon: './sneaking.png', // アセットのアイコンへのパス
+		insert: './sneaking.js' // 追加ボタン用のコードへのパス. null の場合は追加不可
+	},
+	{
+		...base,
 		name: 'うごけなくなる',
 		description: '',
 		icon: './frozen_true.png', // アセットのアイコンへのパス
