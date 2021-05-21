@@ -40,16 +40,21 @@ const scopeCreate = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.ゲームがはじまったとき
 ]
-/*
+
 const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.こうげきされたとき,
 	sco.たおされたとき,
-	sco.ふまれたとき,sco.どかれたとき,
+	sco.ふまれたとき,
+	sco.どかれたとき,
 	sco.ぶつかったとき,
-	sco.メッセージされたとき
+	sco.メッセージされたとき,
+	sco.へんすうがかわったとき,
+	sco.みつけたとき,
+	sco.こうげきするとき,
+	sco.あるいたとき,
+	sco.タップされたとき
 ]
-*/
 
 module.exports = [
 	// 「ステージ」ファイルに入るコード
@@ -76,8 +81,7 @@ module.exports = [
 		scopes: scopeCreate,
 		insert: './stairs-secret-create.js',
 		thumbnail: 'https://i.gyazo.com/7f7fda0b85ee4278a65dc5fa11045e47.gif' // サムネイル画像
-	}
-	/*
+	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
 		...stone,
@@ -101,5 +105,4 @@ module.exports = [
 		scopes: scopeSummon,
 		insert: './stairs-secret-summon.js'
 	}
-	*/
 ]

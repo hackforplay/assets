@@ -19,15 +19,20 @@ const scopeCreate = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.ゲームがはじまったとき
 ]
-/*
+const scopeSummon = [
 	// スコープの参照を配列で指定する. null の場合は常に表示
 	sco.こうげきされたとき,
 	sco.たおされたとき,
-	sco.ふまれたとき,sco.どかれたとき,
+	sco.ふまれたとき,
+	sco.どかれたとき,
 	sco.ぶつかったとき,
-	sco.メッセージされたとき
+	sco.メッセージされたとき,
+	sco.へんすうがかわったとき,
+	sco.みつけたとき,
+	sco.こうげきするとき,
+	sco.あるいたとき,
+	sco.タップされたとき
 ]
-*/
 
 module.exports = [
 	// 「ステージ」ファイルに入るコード
@@ -37,8 +42,7 @@ module.exports = [
 		insert: './down-stairs-create.js',
 		thumbnail: 'https://i.gyazo.com/4c045b6ab37a333cd8cf6b172a6c562b.gif', // サムネイル画像
 		children: []
-	}
-	/*
+	},
 	// 「◯◯を改造する」ファイルに入るコード
 	{
 		...down,
@@ -46,5 +50,4 @@ module.exports = [
 		insert: './down-stairs-summon.js',
 		children: []
 	}
-	*/
 ]
