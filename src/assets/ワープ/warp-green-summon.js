@@ -1,1 +1,2 @@
-this.しょうかんする('緑色のワープ', 0, 0)
+つくる('緑色のワープ', this.mapX, this.mapY, this.map.name)
+つくる('緑色のワープ', 7, 5, 'map2')
