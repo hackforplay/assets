@@ -15,6 +15,8 @@ rule.ぶつかったとき(async function(item) {
 	if (item.name === 'ゆきだま') {
 		this.きえる() // じぶんを けす
 		item.きえる() // あいてを けす
+		item.いく(-999, -999)
+		if (this.mapX === -999) return
 		this.しょうかんする('ゆきだるま', 1, 0)
 	}
 
