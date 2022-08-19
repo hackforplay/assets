@@ -11,7 +11,7 @@ rule.ぶつかったとき(async function(item) {
 	if (item.は('プレイヤー') === false) {
 		return // プレイヤーでなければスルー
 	}
-	const ねだん = 5
+	let ねだん = 5
 
 	var こたえ = await this.はなす(
 		`りんご は ${ねだん} えんだよ`,
