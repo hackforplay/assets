@@ -27,14 +27,11 @@ rule.つねに(async function() {
 })
 
 rule.みつけたとき(async function(item) {
-	if (item.は('プレイヤー')) {
-		await this.うしろにあるく()
-		await this.こうげきする()
-		await this.まつ(1)
-		await this.てきをみつける()
+	await this.うしろにあるく()
+	await this.こうげきする()
+	await this.まつ(1)
+	await this.てきをみつける()
 
-		/*+ みつけたとき */
-	}
 	/*+ みつけたとき */
 })
 
