@@ -42,7 +42,7 @@
 	"devDependencies": {
 		"@babel/parser": "^7.2.3",
 		"@types/node": "^10.12.12",
-		"ava": "^2.3.0",
+		"ava": "^5.2.0",
 		"prettier": "^1.15.3",
 		"semantic-release": "^15.13.3",
 		"ts-node": "^7.0.1",
